@@ -24,6 +24,9 @@ uv run ruff check . && uv run ruff format --check .
 uv run mypy
 uv run pytest                   # add -m "not integration" to skip DB tests
 uv run beantracker --help
+docker compose up -d db && uv run beantracker db upgrade
+uv run beantracker scrape <slug> --no-store   # live check, prints a table, writes nothing
+uv run beantracker scrape <slug> [--cache]    # stores a run; scrape-all; runs list
 ```
 Windows note: Python is installed to `C:\Users\USER\uvpython` (env var `UV_PYTHON_INSTALL_DIR`) because uv's default location failed with a junction error.
 
@@ -34,3 +37,6 @@ Shopify: Nomena (ILS, Hebrew, grams=0), September (USD), Hydrangea (oz; variant 
 - selectolax 1.0 dropped the Modest backend: import from `selectolax.lexbor`.
 - Shopify `grams` is unreliable (0, or copied across variants): size comes from the variant title first. Grind variants with identical size+price collapse into one Bean.
 - Fixtures in `tests/fixtures/` are real captures; refresh them deliberately, never in tests.
+- Runs: the run row is committed before fetching; fetch AND persistence errors become `failed` runs (never left `running`). Warning runs don't become the count-drop baseline; the first ok run is flagged `baseline` (everything is 'new').
+- Live findings (Oct 2026): September/Hydrangea keep their whole sold-out back catalog (~90% out of stock) and sell gear/gift cards in the same feed, so per-roaster `exclude_*` options matter. ~45% of September titles name no country (None, not guessed). Nomena lists each coffee twice (product types `coffee` and `קפה`); not deduplicated yet. DAK `Steeped` has no weight.
+- Tests that need Postgres use a throwaway `beantracker_test` database (`tests/conftest.py`).

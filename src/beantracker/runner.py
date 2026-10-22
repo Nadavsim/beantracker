@@ -63,12 +63,26 @@ async def run_scrape(
         return RunResult(run_id, RunStatus.failed, error=error)
 
     beans = [b for _, bs in items for b in bs]
-    with sessions.begin() as session:
-        run = session.get_one(ScrapeRun, run_id)
-        previous = repo.previous_ok_count(session, roaster_id, run_id)
-        report = evaluate(len(items), previous, beans, config.health)
-        stats = repo.save_products(session, run, items)
-        repo.finish_run(session, run, report, len(items))
+    try:
+        with sessions.begin() as session:
+            run = session.get_one(ScrapeRun, run_id)
+            previous = repo.previous_ok_count(session, roaster_id, run_id)
+            report = evaluate(len(items), previous, beans, config.health)
+            stats = repo.save_products(session, run, items)
+            repo.finish_run(session, run, report, len(items))
+    except Exception as exc:
+        # The save transaction rolled back; record the failure in a fresh one so the run
+        # is never left 'running'.
+        error = f"{type(exc).__name__}: {exc}"
+        with sessions.begin() as session:
+            repo.finish_run(
+                session,
+                session.get_one(ScrapeRun, run_id),
+                HealthReport(RunStatus.failed, [], 0.0),
+                len(items),
+                error[:2000],
+            )
+        return RunResult(run_id, RunStatus.failed, product_count=len(items), error=error[:2000])
     return RunResult(
         run_id,
         report.status,

@@ -9,11 +9,18 @@ roasters:
     base_url: https://september.coffee
     adapter: shopify
     currency: USD
+    options:
+      # Gear and consumables share the catalog with beans.
+      exclude_product_types: [gear]
+      exclude_title_keywords: [filters, brew water, espresso tonic]
   - slug: hydrangea
     name: Hydrangea Coffee Roasters
     base_url: https://hydrangea.coffee
     adapter: shopify
     currency: USD
+    options:
+      exclude_product_types: [gear, cupping]
+      exclude_title_keywords: [gift card, mineral concentrate, double walled, packs]
   - slug: dak
     name: DAK Coffee Roasters
     base_url: https://www.dakcoffeeroasters.com

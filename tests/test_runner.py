@@ -118,3 +118,17 @@ async def test_count_drop_warns_and_does_not_lower_baseline(
     assert again.status == RunStatus.warning
     with sessions() as s:
         assert repo.previous_ok_count(s, 1, again.run_id or 0) == 10
+
+
+async def test_persistence_error_is_recorded_not_left_running(
+    sessions: sessionmaker[Session],
+) -> None:
+    bad = product("1")
+    bad.title = "x" * 300  # exceeds coffee.name VARCHAR(256) -> DataError on save
+    result = await run_scrape(sessions, FakeAdapter([bad]), CONFIG)
+    assert result.status == RunStatus.failed
+    assert result.error is not None
+    assert "DataError" in result.error
+    with sessions() as s:
+        assert s.get_one(ScrapeRun, result.run_id).status == RunStatus.failed
+        assert count(s, Coffee) == 0  # the failed save rolled back completely

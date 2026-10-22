@@ -151,6 +151,13 @@ def test_labelled_fields_and_notes() -> None:
     assert split_notes(fields["tastes like"]) == ["Blue Raspberry Candy", "Passion Fruit"]
 
 
+def test_labelled_value_does_not_swallow_trailing_prose() -> None:
+    text = "Variety: 74110, 74165 Importer: Crop to Cup. " + "Musa's coffee is lovely. " * 80
+    fields = labelled_fields(text)
+    assert fields["variety"] == "74110, 74165 Importer: Crop to Cup"[: len(fields["variety"])]
+    assert len(fields["variety"]) <= 120
+
+
 def _fixture_products(slug: str, base: str, currency: str) -> list[RawProduct]:
     # Parse via the adapter's own _parse so tests exercise real Shopify payloads.
     cfg = RoasterConfig(slug=slug, name=slug, base_url=base, adapter="shopify", currency=currency)
