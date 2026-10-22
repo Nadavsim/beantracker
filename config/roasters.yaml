@@ -1,0 +1,21 @@
+roasters:
+  - slug: nomena
+    name: Nomena Roasters
+    base_url: https://nomenaroasters.com
+    adapter: shopify
+    currency: ILS
+  - slug: september
+    name: September Coffee
+    base_url: https://september.coffee
+    adapter: shopify
+    currency: USD
+  - slug: hydrangea
+    name: Hydrangea Coffee Roasters
+    base_url: https://hydrangea.coffee
+    adapter: shopify
+    currency: USD
+  - slug: dak
+    name: DAK Coffee Roasters
+    base_url: https://www.dakcoffeeroasters.com
+    adapter: dak
+    currency: EUR
