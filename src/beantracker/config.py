@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     database_url: str = "postgresql+psycopg://beantracker:beantracker@localhost:5432/beantracker"
-    user_agent: str = "beantracker/0.1 (+https://github.com/ndvsim/beantracker; portfolio project)"
+    user_agent: str = "beantracker/0.1 (+https://github.com/Nadavsim/beantracker; portfolio project)"
     request_delay_s: float = 2.0
     cache_dir: Path | None = None  # dev-only response cache; off unless set
 
