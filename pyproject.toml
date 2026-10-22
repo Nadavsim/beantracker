@@ -1,0 +1,54 @@
+[project]
+name = "beantracker"
+version = "0.1.0"
+description = "Specialty coffee bean catalog: scrapes roasters, normalizes, keeps price history."
+authors = [
+    { name = "Nadav Simchai", email = "ndvsim@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.20.1",
+    "httpx>=0.28.1",
+    "psycopg[binary]>=3.3.6",
+    "pydantic>=2.14.1",
+    "pydantic-settings>=2.16.1",
+    "pyyaml>=6.0.3",
+    "selectolax>=1.0.1",
+    "sqlalchemy>=2",
+    "typer>=0.27.3",
+]
+
+[project.scripts]
+beantracker = "beantracker.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.0",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "respx>=0.23.1",
+    "ruff>=0.17.1",
+    "types-pyyaml>=6.0.12.20260906",
+]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+# E/F pyflakes+pycodestyle, I imports, B bugbear, UP pyupgrade, SIM simplify, ASYNC async pitfalls
+select = ["E", "F", "I", "B", "UP", "SIM", "ASYNC"]
+
+[tool.mypy]
+strict = true
+plugins = ["pydantic.mypy"]
+files = ["src", "tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = ["integration: needs a running Postgres (DATABASE_URL)"]
