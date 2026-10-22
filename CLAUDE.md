@@ -28,4 +28,9 @@ uv run beantracker --help
 Windows note: Python is installed to `C:\Users\USER\uvpython` (env var `UV_PYTHON_INSTALL_DIR`) because uv's default location failed with a junction error.
 
 ## Roasters
-Shopify: Nomena (ILS, Hebrew, grams=0), September (USD), Hydrangea (oz; variant grams disagree with titles). Custom HTML: DAK (WooCommerce, EUR). Extras for config-only demos: La Cabra, The Barn.
+Shopify: Nomena (ILS, Hebrew, grams=0), September (USD), Hydrangea (oz; variant grams disagree with titles). Custom HTML: DAK (WooCommerce, EUR; `adapters/dak.py`: listing cards give everything but weight, which costs one detail-page request per coffee; only the default size is priced - other sizes need the WooCommerce Store API). Extras for config-only demos: La Cabra, The Barn.
+
+## Gotchas
+- selectolax 1.0 dropped the Modest backend: import from `selectolax.lexbor`.
+- Shopify `grams` is unreliable (0, or copied across variants): size comes from the variant title first. Grind variants with identical size+price collapse into one Bean.
+- Fixtures in `tests/fixtures/` are real captures; refresh them deliberately, never in tests.
