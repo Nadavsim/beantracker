@@ -6,7 +6,7 @@ Scrapes specialty coffee roasters, normalizes their products into one searchable
 keeps a price and stock history for every size, so "what is new" and "what changed price" are
 questions you can ask the database.
 
-Python 3.12, PostgreSQL, SQLAlchemy 2, Alembic, httpx, Typer. 268 offline tests, strict mypy.
+Python 3.12, PostgreSQL, SQLAlchemy 2, Alembic, httpx, Typer. 282 offline tests, strict mypy.
 
 **Status:** Phase 1 is done: four roasters (three Shopify shops configured in YAML, one custom
 HTML scraper), a CLI, per-run health checks and a stored history. Not built yet: web UI, API,
@@ -183,7 +183,7 @@ src/beantracker/
   adapters/              base protocol, registry, generic Shopify adapter, DAK
   normalize/             weight, price, origin, process/roast, and the pipeline
   http/                  PoliteClient, robots.txt matcher, per-host throttle
-tests/                   268 tests; fixtures/ holds real captured pages and feeds
+tests/                   282 tests; fixtures/ holds real captured pages and feeds
 ```
 
 ## Development

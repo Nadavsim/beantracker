@@ -177,3 +177,39 @@ def test_september_does_not_list_its_seasoning_as_a_bean() -> None:
     # Real coffees, including one with a similar-looking word, are untouched.
     assert a._parse(_september_item("Seasonal Blend - Colombia")) is not None
     assert a._parse(_september_item("Muchagara AB")) is not None
+
+
+@pytest.mark.parametrize(
+    "title",
+    [
+        "Gift Card",
+        "Coffee Subscription",
+        "(Extra-Light) Coffee Subscription",
+        "(International) Coffee Subscription [Extra-Light]",
+        "CEADO Hoop Coffee Brewer",
+        "September Crewneck - Black",
+        "September Hat Beanie (Alpine)",
+        "Seasoning Coffee",
+    ],
+)
+def test_september_does_not_list_its_non_coffee_products(title: str) -> None:
+    september = load_roasters(Path("config/roasters.yaml"))["september"]
+    a = ShopifyAdapter(september, PoliteClient("t"))
+    assert a._parse(_september_item(title)) is None
+
+
+@pytest.mark.parametrize(
+    "title",
+    [
+        "Buttercream",
+        "Golden Hour",
+        "Cloudburst - Milk Espresso",
+        "Muchagara AB (Extra-light)",
+        "Habtamu Fikadu - Danche (Extra-light)",
+        "Finca El Paraiso - Colombia Washed Sudan",
+    ],
+)
+def test_september_still_lists_its_real_coffees(title: str) -> None:
+    september = load_roasters(Path("config/roasters.yaml"))["september"]
+    a = ShopifyAdapter(september, PoliteClient("t"))
+    assert a._parse(_september_item(title)) is not None

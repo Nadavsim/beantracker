@@ -15,7 +15,9 @@ roasters:
     options:
       # Gear and consumables share the catalog with beans.
       exclude_product_types: [gear]
-      exclude_title_keywords: [filters, brew water, espresso tonic, seasoning]
+      # Gear, consumables and merchandise share the feed with the beans.
+      exclude_title_keywords:
+        [filters, brew water, espresso tonic, seasoning, gift card, subscription, brewer, crewneck, beanie]
       # The feed has no description, so origin, process and roast level are only on each
       # product page. Read the pages of what is in stock (a few dozen requests per run).
       details_from_pages: {parser: parameter_list, only: in_stock}
