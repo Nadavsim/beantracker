@@ -15,7 +15,7 @@ roasters:
     options:
       # Gear and consumables share the catalog with beans.
       exclude_product_types: [gear]
-      exclude_title_keywords: [filters, brew water, espresso tonic]
+      exclude_title_keywords: [filters, brew water, espresso tonic, seasoning]
   - slug: hydrangea
     name: Hydrangea Coffee Roasters
     base_url: https://hydrangea.coffee
