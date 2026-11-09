@@ -15,6 +15,7 @@ class Settings(BaseSettings):
     )
     request_delay_s: float = 2.0
     cache_dir: Path | None = None  # dev-only response cache; off unless set
+    cache_ttl_hours: float = 6.0  # cached pages older than this are fetched again
 
 
 class HealthThresholds(BaseModel):

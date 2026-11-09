@@ -36,7 +36,10 @@ app.add_typer(runs_app, name="runs")
 console = Console()
 
 ConfigOpt = Annotated[Path, typer.Option("--config", help="Roaster config file.")]
-CacheOpt = Annotated[bool, typer.Option("--cache", help="Cache responses on disk (dev only).")]
+CacheOpt = Annotated[
+    bool,
+    typer.Option("--cache", help="Cache pages on disk for a few hours. Only with --no-store."),
+]
 StrictOpt = Annotated[
     bool, typer.Option("--strict", help="Exit 1 for warning runs too, not only failed ones.")
 ]
@@ -67,10 +70,17 @@ def _check_adapters(roasters: Iterable[RoasterConfig], path: Path) -> None:
         )
 
 
-def _client(cache: bool) -> PoliteClient:
+def _client(cache: bool, store: bool) -> PoliteClient:
+    """A stored run never reads the cache: cached pages would be saved as fresh snapshots
+    under today's timestamp. The cache only serves the live check (`--no-store`)."""
     settings = Settings()
-    cache_dir = Path(".http_cache") if cache else settings.cache_dir
-    return PoliteClient(settings.user_agent, settings.request_delay_s, cache_dir)
+    cache_dir = None if store else (Path(".http_cache") if cache else settings.cache_dir)
+    return PoliteClient(
+        settings.user_agent,
+        settings.request_delay_s,
+        cache_dir,
+        cache_ttl_s=settings.cache_ttl_hours * 3600,
+    )
 
 
 def _exit_for(results: list[RunResult], strict: bool) -> None:
@@ -105,6 +115,8 @@ def scrape(
     """Scrape one roaster. With --no-store this is the manual live check."""
     if no_store and reset_baseline:
         _usage_error("--reset-baseline needs a stored run; drop --no-store.")
+    if cache and not no_store:
+        _usage_error("--cache would store cached pages as fresh data; use it with --no-store.")
     roasters = _load_config(config)
     if slug not in roasters:
         _usage_error(f"Unknown roaster {slug!r}. Known: {', '.join(sorted(roasters))}")
@@ -124,7 +136,6 @@ def scrape(
 @app.command("scrape-all")
 def scrape_all(
     config: ConfigOpt = Path("config/roasters.yaml"),
-    cache: CacheOpt = False,
     strict: StrictOpt = False,
 ) -> None:
     """Scrape every configured roaster and store the results.
@@ -139,7 +150,7 @@ def scrape_all(
     try:
         for cfg in roasters.values():
             try:
-                result = asyncio.run(_scrape_one(cfg, cache, sessions, False))
+                result = asyncio.run(_scrape_one(cfg, False, sessions, False))
             except Exception as exc:  # not KeyboardInterrupt: Ctrl+C must still stop everything
                 error = f"{type(exc).__name__}: {exc}"
                 console.print(f"[bold]{cfg.slug}[/bold]: [red]failed[/red] before it could run")
@@ -159,7 +170,7 @@ async def _scrape_one(
     reset_baseline: bool,
 ) -> RunResult | None:
     """`sessions=None` is the live check: print what would be stored, store nothing."""
-    client = _client(cache)
+    client = _client(cache, store=sessions is not None)
     try:
         adapter = build_adapter(cfg, client)
         if sessions is None:

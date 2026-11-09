@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session, sessionmaker
 from typer.testing import CliRunner
 
 from beantracker.adapters.registry import ADAPTERS
-from beantracker.cli import app
+from beantracker.cli import _client, app
 from beantracker.config import RoasterConfig
 from beantracker.domain.raw import RawProduct, RawVariant
 from beantracker.http.client import PoliteClient
@@ -115,6 +115,26 @@ def test_reset_baseline_needs_a_stored_run(config_file: Path) -> None:
     )
     assert result.exit_code == 2
     assert "--reset-baseline" in result.output
+
+
+def test_cache_with_a_stored_run_is_refused(config_file: Path) -> None:
+    result = runner.invoke(app, ["scrape", "fake", "--cache", "--config", str(config_file)])
+    assert result.exit_code == 2
+    assert "--no-store" in result.output
+    assert FAKE["calls"] == []
+
+
+def test_only_the_live_check_may_use_the_cache(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setenv("CACHE_DIR", str(tmp_path))  # even a cache set in the environment
+    stored = _client(cache=True, store=True)
+    live = _client(cache=False, store=False)
+    flagged = _client(cache=True, store=False)
+    assert stored._cache_dir is None
+    assert live._cache_dir == tmp_path
+    assert flagged._cache_dir == Path(".http_cache")
+    assert flagged._cache_ttl_s == 6 * 3600
 
 
 def test_no_store_prints_beans_and_needs_no_database(
