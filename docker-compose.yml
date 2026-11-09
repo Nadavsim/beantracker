@@ -14,5 +14,19 @@ services:
       interval: 5s
       retries: 10
 
+  # The CLI, run against the db above. Not started by `docker compose up`. `run` does not
+  # rebuild the image after code changes: `docker compose build scrape` first. Use
+  #   docker compose run --rm scrape db upgrade
+  #   docker compose run --rm scrape scrape-all --strict
+  #   docker compose run --rm scrape catalog --in-stock --limit 10
+  scrape:
+    build: .
+    profiles: ["tools"]
+    environment:
+      DATABASE_URL: postgresql+psycopg://beantracker:beantracker@db:5432/beantracker
+    depends_on:
+      db:
+        condition: service_healthy
+
 volumes:
   pgdata:

@@ -1,0 +1,39 @@
+name: canary
+
+# Scrapers rarely fail loudly: a site redesign quietly returns less. This scrapes every
+# configured roaster live, once a week, into a throwaway database. It fails if any adapter no
+# longer works (nothing found, an error, a markup change that loses fields), so the site change
+# is noticed within a week instead of whenever someone next looks at the data.
+#
+# It makes about 120 polite requests a week, spread over six sites, under the same robots.txt,
+# rate-limit and User-Agent rules as any other run. Delete this file to stop it.
+on:
+  schedule:
+    - cron: "17 6 * * 1"  # Mondays 06:17 UTC
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: beantracker
+          POSTGRES_PASSWORD: beantracker
+          POSTGRES_DB: beantracker
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U beantracker" --health-interval 5s --health-retries 10
+    env:
+      DATABASE_URL: postgresql+psycopg://beantracker:beantracker@localhost:5432/beantracker
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv sync --locked
+      - run: uv run beantracker db upgrade
+      # --strict: a warning (for example lost field coverage) fails the check too.
+      - run: uv run beantracker scrape-all --strict

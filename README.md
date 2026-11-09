@@ -6,7 +6,7 @@ Scrapes specialty coffee roasters, normalizes their products into one searchable
 keeps a price and stock history for every size, so "what is new" and "what changed price" are
 questions you can ask the database.
 
-Python 3.12, PostgreSQL, SQLAlchemy 2, Alembic, httpx, Typer. 321 offline tests, strict mypy.
+Python 3.12, PostgreSQL, SQLAlchemy 2, Alembic, httpx, Typer. 322 offline tests, strict mypy.
 
 **Status:** Phase 1 is done: six roasters (five Shopify shops configured in YAML, one custom
 HTML scraper), a CLI, per-run health checks and a stored history. Not built yet: web UI, API,
@@ -135,6 +135,31 @@ Runs that error out, are interrupted (Ctrl+C) or die are recorded too, never lef
 `running`. After a roaster really changes its catalog size, `scrape <slug> --reset-baseline`
 accepts the new normal.
 
+## Running it in Docker, and on a schedule
+
+The image runs the same CLI. Compose adds a `scrape` service next to the database:
+
+```bash
+docker compose build scrape        # after pulling changes: compose does not rebuild by itself
+docker compose run --rm scrape db upgrade
+docker compose run --rm scrape scrape-all --strict
+docker compose run --rm scrape catalog --in-stock --limit 10
+```
+
+To scrape regularly, run `scrape-all` from cron (or Task Scheduler). `--strict` makes a warning
+exit non-zero, so a scheduler's own failure alert fires when a roaster degrades:
+
+```cron
+0 6 * * *  cd /path/to/beantracker && docker compose run --rm scrape scrape-all --strict
+```
+
+Each run is compared with the previous healthy ones, so history is what makes the health checks
+meaningful. The database needs somewhere to live between runs (the compose volume does that).
+
+A separate **canary** workflow (`.github/workflows/canary.yml`) scrapes every roaster live once a
+week into a throwaway database and fails if any adapter stopped working. It is not a data
+pipeline; it exists so a site redesign is noticed within a week.
+
 ## Roasters
 
 | Slug | Site | Kind | Notes |
@@ -185,7 +210,7 @@ src/beantracker/
   adapters/              base protocol, registry, generic Shopify adapter, DAK
   normalize/             weight, price, origin, process/roast, and the pipeline
   http/                  PoliteClient, robots.txt matcher, per-host throttle
-tests/                   321 tests; fixtures/ holds real captured pages and feeds
+tests/                   322 tests; fixtures/ holds real captured pages and feeds
 ```
 
 ## Development

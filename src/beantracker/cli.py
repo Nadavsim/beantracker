@@ -142,6 +142,12 @@ def scrape(
     try:
         sessions = make_session_factory(engine) if engine is not None else None
         result = asyncio.run(_scrape_one(cfg, cache, sessions, reset_baseline))
+    except Exception as exc:
+        if not no_store:
+            raise  # a stored run records its own failures; anything else is a real bug
+        # The live check has no run to record into, so say what went wrong in one line.
+        console.print(f"[red]{cfg.slug}: the live check failed: {type(exc).__name__}: {exc}")
+        raise typer.Exit(EXIT_RUN_FAILED) from exc
     finally:
         if engine is not None:
             engine.dispose()

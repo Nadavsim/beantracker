@@ -254,3 +254,11 @@ def test_catalog_says_so_when_currencies_are_mixed(
     assert "several currencies" not in " ".join(only_usd.output.split())
     assert "EUR" not in only_usd.output
     assert "2 sizes" in only_usd.output  # the fake adapter sells 1 size per product
+
+
+def test_a_failing_live_check_is_one_line_not_a_traceback(config_file: Path) -> None:
+    FAKE["error"] = RuntimeError("429 Too Many Requests")
+    result = runner.invoke(app, ["scrape", "fake", "--no-store", "--config", str(config_file)])
+    assert result.exit_code == 1
+    assert "the live check failed: RuntimeError: 429 Too Many Requests" in result.output
+    assert "Traceback" not in result.output
