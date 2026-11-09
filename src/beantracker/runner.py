@@ -8,7 +8,13 @@ from beantracker.adapters.base import RoasterAdapter
 from beantracker.config import RoasterConfig
 from beantracker.domain.bean import Bean
 from beantracker.domain.raw import RawProduct
-from beantracker.health import BASELINE_RESET, HealthReport, baseline_count, evaluate
+from beantracker.health import (
+    BASELINE_RESET,
+    HealthReport,
+    baseline_count,
+    baseline_coverage,
+    evaluate,
+)
 from beantracker.models.orm import RunStatus, ScrapeRun
 from beantracker.normalize.pipeline import normalize
 
@@ -27,6 +33,7 @@ class RunResult:
     product_count: int = 0
     bean_count: int = 0
     new_coffees: int = 0
+    delisted: int = 0  # on the site in the previous ok run, absent from this one
     snapshots: int = 0
     baseline: bool = False  # first healthy run: every coffee is "new", so alerts should skip it
     error: str | None = None
@@ -101,13 +108,22 @@ async def run_scrape(
     try:
         with sessions.begin() as session:
             run = session.get_one(ScrapeRun, run_id)
-            counts = repo.recent_ok_counts(session, roaster_id, run_id, config.health.baseline_runs)
-            baseline = None if reset_baseline else baseline_count(counts)
-            report = evaluate(len(items), baseline, beans, config.health)
+            history = repo.recent_ok_runs(session, roaster_id, run_id, config.health.baseline_runs)
+            baseline = None if reset_baseline else baseline_count([c for c, _ in history])
+            usual_coverage = (
+                None if reset_baseline else baseline_coverage([v for _, v in history if v])
+            )
+            report = evaluate(len(items), baseline, beans, config.health, usual_coverage)
             if reset_baseline:
                 report = replace(report, flags=[*report.flags, BASELINE_RESET])
             stats = repo.save_products(session, run, items)
             repo.finish_run(session, run, report, len(items))
+            # Only a healthy run can say what has gone: a partial one proves nothing.
+            delisted = (
+                len(repo.delisted_coffees(session, roaster_id, run_id))
+                if report.status == RunStatus.ok
+                else 0
+            )
     except Exception as exc:
         # The save transaction rolled back; record the failure in a fresh one.
         return _failed(sessions, run_id, f"{type(exc).__name__}: {exc}", len(items))
@@ -121,6 +137,7 @@ async def run_scrape(
         product_count=len(items),
         bean_count=len(beans),
         new_coffees=stats.new_coffees,
+        delisted=delisted,
         snapshots=stats.snapshots,
         baseline=baseline is None and not reset_baseline and report.status == RunStatus.ok,
     )

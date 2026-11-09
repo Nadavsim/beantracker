@@ -128,4 +128,13 @@ class DakAdapter:
                 )
             ],
             attributes=card.attributes,
+            # Everything the adapter read, so the stored row can be re-normalized later.
+            raw={
+                "title": card.title,
+                "url": card.url,
+                "price": card.price,
+                "in_stock": card.in_stock,
+                "weight_label": weight_label,
+                "attributes": card.attributes,
+            },
         )

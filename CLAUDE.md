@@ -25,8 +25,9 @@ uv run mypy
 uv run pytest                   # add -m "not integration" to skip DB tests
 uv run beantracker --help
 docker compose up -d db && uv run beantracker db upgrade
-uv run beantracker scrape <slug> --no-store   # live check, prints a table, writes nothing
-uv run beantracker scrape <slug> [--cache]    # stores a run; scrape-all; runs list
+uv run beantracker scrape <slug> --no-store   # live check, prints a table, writes nothing (--cache: reuse pages for 6 h)
+uv run beantracker scrape <slug>              # stores a run (--strict, --reset-baseline); scrape-all; runs list
+uv run beantracker catalog --origin Ethiopia --in-stock   # search the stored catalog, cheapest per 100 g first
 ```
 Windows note: Python is installed to `C:\Users\USER\uvpython` (env var `UV_PYTHON_INSTALL_DIR`) because uv's default location failed with a junction error.
 
@@ -42,3 +43,8 @@ Shopify: Nomena (ILS, Hebrew, grams=0), September (USD), Hydrangea (oz; variant 
 - CLI exit codes: 0 ok (warnings too, unless `--strict`), 1 a run failed, 2 bad usage/config (unknown slug, missing or invalid config file, unknown adapter). `scrape-all` validates the config up front and isolates roasters: one unexpected error does not stop the rest.
 - Live findings (Oct 2026): September/Hydrangea keep their whole sold-out back catalog (~90% out of stock) and sell gear/gift cards in the same feed, so per-roaster `exclude_*` options matter. ~45% of September titles name no country (None, not guessed). Nomena lists each coffee twice (product types `coffee` and `קפה`); not deduplicated yet. DAK `Steeped` has no weight.
 - Tests that need Postgres use a throwaway `beantracker_test` database (`tests/conftest.py`).
+- HTTP: `http/robots.py` implements RFC 9309 (wildcards, `$`, longest match, named groups); the stdlib parser ignores wildcards. robots.txt that cannot be read (5xx, 429, 401/403, network error) means the site is off limits; a missing file or other 4xx means no restrictions. Redirects are followed by hand so every hop is robots-checked and throttled per host. Network errors and 429/5xx are retried (Retry-After as seconds or date, capped at 60 s, longer waits give up).
+- Cache: pages expire after `cache_ttl_hours` (6). A stored run never reads the cache and `--cache` needs `--no-store`, so cached pages cannot become fresh-looking snapshots.
+- Health also watches descriptive-field coverage (origin, process, roast, varietal, notes): a field normally filled for >= 20% of sizes that falls by > 30 points vs the median of recent ok runs warns as `coverage_drop:<field>`. Coverage is stored per run in `scrape_run.field_coverage`.
+- Catalog: `repo.current_beans()` = latest snapshot per size, restricted to coffees seen in the roaster's latest *ok* run (so delisted ones disappear, and a coffee first seen in a warning run appears after the next ok run). `repo.delisted_coffees()` reports what left between two ok runs; `scrape` prints the count.
+- `coffee.raw` is slimmed: Shopify keeps only what `_parse` reads (plus timestamps), so a stored payload re-parses to the same product; DAK stores everything its adapter read.

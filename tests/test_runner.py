@@ -214,3 +214,57 @@ async def test_stale_running_rows_are_closed_by_the_next_run(
         assert stale.error is not None and stale.error.startswith("Stale")
         # A run only a minute old may be a concurrent scrape, so it is left alone.
         assert s.get_one(ScrapeRun, recent_id).status == RunStatus.running
+
+
+def stripped(n: int) -> list[RawProduct]:
+    """The same products with the country and process gone from the title, as if a site
+    redesign or a renamed label stopped the parsers finding them."""
+    out = many(n)
+    for p in out:
+        p.title = f"Lot {p.external_id}"
+    return out
+
+
+async def test_lost_descriptive_fields_warn_though_every_product_is_still_there(
+    sessions: sessionmaker[Session],
+) -> None:
+    await run_scrape(sessions, FakeAdapter(many(10)), CONFIG)
+    await run_scrape(sessions, FakeAdapter(many(10)), CONFIG)
+    broken = await run_scrape(sessions, FakeAdapter(stripped(10)), CONFIG)
+    # Same product count, same weights: neither the count check nor the weight check fires.
+    assert broken.status == RunStatus.warning
+    assert broken.flags == ["coverage_drop:origin_country", "coverage_drop:process"]
+    with sessions() as s:
+        coverage = s.get_one(ScrapeRun, broken.run_id).field_coverage
+        assert coverage is not None
+        assert coverage["origin_country"] == 0.0
+
+
+async def test_reset_baseline_also_accepts_a_new_field_coverage(
+    sessions: sessionmaker[Session],
+) -> None:
+    await run_scrape(sessions, FakeAdapter(many(10)), CONFIG)
+    accepted = await run_scrape(sessions, FakeAdapter(stripped(10)), CONFIG, reset_baseline=True)
+    assert accepted.status == RunStatus.ok
+    assert accepted.flags == ["baseline_reset"]
+    later = await run_scrape(sessions, FakeAdapter(stripped(10)), CONFIG)
+    assert later.status == RunStatus.ok
+
+
+async def test_a_coffee_missing_from_the_next_ok_run_is_reported_delisted(
+    sessions: sessionmaker[Session],
+) -> None:
+    await run_scrape(sessions, FakeAdapter(many(5)), CONFIG)
+    second = await run_scrape(sessions, FakeAdapter(many(4)), CONFIG)  # product "4" is gone
+    assert second.status == RunStatus.ok
+    assert second.delisted == 1
+    with sessions() as s:
+        gone = repo.delisted_coffees(s, 1, second.run_id or 0)
+        assert [c.external_id for c in gone] == ["4"]
+
+
+async def test_a_partial_warning_run_delists_nothing(sessions: sessionmaker[Session]) -> None:
+    await run_scrape(sessions, FakeAdapter(many(10)), CONFIG)
+    warned = await run_scrape(sessions, FakeAdapter(many(3)), CONFIG)
+    assert warned.status == RunStatus.warning
+    assert warned.delisted == 0  # seven coffees are missing, but a partial run proves nothing

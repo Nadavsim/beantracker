@@ -252,3 +252,13 @@ def test_unparseable_price_variant_is_skipped() -> None:
         variants=[RawVariant(external_id="a", title="250g", price="n/a", available=True)],
     )
     assert normalize(product, "x", "USD", NOW) == []
+
+
+@pytest.mark.parametrize(
+    ("minor", "currency", "shown"),
+    [(2750, "USD", "27.50"), (5800, "ILS", "58.00"), (3000, "JPY", "3000"), (1234, "BHD", "1.234")],
+)
+def test_from_minor_respects_the_currency_exponent(minor: int, currency: str, shown: str) -> None:
+    from beantracker.normalize.price import from_minor
+
+    assert str(from_minor(minor, currency)) == shown

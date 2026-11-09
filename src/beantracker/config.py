@@ -23,6 +23,11 @@ class HealthThresholds(BaseModel):
     max_missing_rate: float = 0.3
     # How many recent ok runs form the baseline for the count-drop check (their median).
     baseline_runs: int = Field(default=5, ge=1)
+    # A descriptive field (origin, process, ...) that is usually filled in for at least
+    # `min_baseline_coverage` of sizes warns when its share falls by more than
+    # `max_coverage_drop` (absolute, 0.3 = 30 percentage points) against the median.
+    max_coverage_drop: float = Field(default=0.3, ge=0, le=1)
+    min_baseline_coverage: float = Field(default=0.2, ge=0, le=1)
 
 
 class RoasterConfig(BaseModel):

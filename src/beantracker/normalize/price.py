@@ -43,6 +43,14 @@ def to_minor(price: str, currency: str) -> int | None:
     )
 
 
+def from_minor(price_minor: int, currency: str) -> Decimal:
+    """Minor units back to a displayable amount: 2750 USD -> 27.50, 3000 JPY -> 3000.
+
+    Quantized so trailing zeros survive ('27.50', not '27.5')."""
+    exponent = _exponent(currency)
+    return (Decimal(price_minor) / Decimal(10) ** exponent).quantize(Decimal(10) ** -exponent)
+
+
 def price_per_100g(price_minor: int, currency: str, weight_g: int | None) -> Decimal | None:
     if not weight_g:
         return None

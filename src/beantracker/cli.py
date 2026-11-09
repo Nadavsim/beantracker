@@ -17,8 +17,10 @@ from beantracker.adapters.base import RoasterAdapter
 from beantracker.adapters.registry import ADAPTERS, build_adapter
 from beantracker.config import RoasterConfig, Settings, load_roasters
 from beantracker.db import make_engine, make_session_factory
+from beantracker.domain.bean import Bean
 from beantracker.http.client import PoliteClient
 from beantracker.models.orm import RunStatus
+from beantracker.normalize.price import from_minor
 from beantracker.runner import RunResult, collect, run_scrape
 
 # Exit codes are the contract for cron and CI:
@@ -183,23 +185,31 @@ async def _scrape_one(
         await client.aclose()
 
 
+def _bean_table(title: str, beans: Iterable[Bean], *, roaster_column: bool = False) -> Table:
+    table = Table(title=title)
+    columns = ["Name", "Size", "Price", "/100g", "Stock", "Origin", "Process"]
+    if roaster_column:
+        columns.insert(0, "Roaster")
+    for col in columns:
+        table.add_column(col)
+    for b in beans:
+        row = [
+            b.name[:48],
+            f"{b.weight_g} g" if b.weight_g else "?",
+            f"{from_minor(b.price_minor, b.currency)} {b.currency}",
+            f"{b.price_per_100g}" if b.price_per_100g else "?",
+            "yes" if b.in_stock else "no",
+            ", ".join(x for x in (b.origin_country, b.origin_region) if x) or "?",
+            b.process or "?",
+        ]
+        table.add_row(*([b.roaster, *row] if roaster_column else row))
+    return table
+
+
 async def _print_live(cfg: RoasterConfig, adapter: RoasterAdapter) -> None:
     items = await collect(adapter, cfg)
-    table = Table(title=f"{cfg.name}: {len(items)} products (not stored)")
-    for col in ("Name", "Size", "Price", "/100g", "Stock", "Origin", "Process"):
-        table.add_column(col)
-    for _, beans in items:
-        for b in beans:
-            table.add_row(
-                b.name[:48],
-                f"{b.weight_g} g" if b.weight_g else "?",
-                f"{b.price_minor / 100:.2f} {b.currency}",
-                f"{b.price_per_100g}" if b.price_per_100g else "?",
-                "yes" if b.in_stock else "no",
-                ", ".join(x for x in (b.origin_country, b.origin_region) if x) or "?",
-                b.process or "?",
-            )
-    console.print(table)
+    beans = [b for _, bs in items for b in bs]
+    console.print(_bean_table(f"{cfg.name}: {len(items)} products (not stored)", beans))
 
 
 def _print_result(cfg: RoasterConfig, r: RunResult) -> None:
@@ -209,7 +219,7 @@ def _print_result(cfg: RoasterConfig, r: RunResult) -> None:
         console.print(f"  error: {r.error}")
     console.print(
         f"  {r.product_count} products, {r.bean_count} sizes, "
-        f"{r.snapshots} snapshots, {r.new_coffees} new"
+        f"{r.snapshots} snapshots, {r.new_coffees} new, {r.delisted} delisted"
         + (" (first run: baseline)" if r.baseline else "")
     )
     if r.flags:
@@ -220,6 +230,37 @@ def _print_result(cfg: RoasterConfig, r: RunResult) -> None:
 def db_upgrade() -> None:
     """Apply Alembic migrations to the configured database."""
     command.upgrade(Config("alembic.ini"), "head")
+
+
+@app.command()
+def catalog(
+    roaster: Annotated[str | None, typer.Option(help="Only this roaster (slug).")] = None,
+    origin: Annotated[str | None, typer.Option(help="Country, e.g. Ethiopia.")] = None,
+    process: Annotated[str | None, typer.Option(help="Process contains, e.g. natural.")] = None,
+    search: Annotated[str | None, typer.Option(help="Name contains.")] = None,
+    in_stock: Annotated[bool, typer.Option("--in-stock", help="Hide sold-out sizes.")] = False,
+    delisted: Annotated[
+        bool, typer.Option("--delisted", help="Include coffees no longer on the site.")
+    ] = False,
+    limit: int = 30,
+) -> None:
+    """Search the stored catalog: the latest price of every size, cheapest per 100 g first."""
+    engine = make_engine()
+    try:
+        with make_session_factory(engine)() as session:
+            beans = repo.current_beans(
+                session,
+                roaster=roaster,
+                country=origin,
+                process=process,
+                search=search,
+                in_stock=True if in_stock else None,
+                include_delisted=delisted,
+                limit=limit,
+            )
+    finally:
+        engine.dispose()
+    console.print(_bean_table(f"Catalog: {len(beans)} sizes", beans, roaster_column=True))
 
 
 @runs_app.command("list")

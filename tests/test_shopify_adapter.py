@@ -89,3 +89,37 @@ def test_unknown_adapter_name_is_an_error() -> None:
     )
     with pytest.raises(ValueError, match="Unknown adapter"):
         build_adapter(cfg, PoliteClient("t"))
+
+
+def test_stored_raw_is_slim_and_reparses_to_the_same_product() -> None:
+    import json
+
+    cfg = RoasterConfig(
+        slug="n", name="n", base_url="https://nomenaroasters.com", adapter="shopify", currency="ILS"
+    )
+    adapter = ShopifyAdapter(cfg, PoliteClient("t"))
+    items = json.loads((FIXTURES / "nomena" / "products_page1.json").read_text(encoding="utf-8"))[
+        "products"
+    ]
+    full_size = slim_size = 0
+    for item in items:
+        product = adapter._parse(item)
+        assert product is not None
+        assert "images" not in product.raw
+        assert "options" not in product.raw
+        assert set(product.raw["variants"][0]) <= {
+            "id",
+            "title",
+            "price",
+            "grams",
+            "available",
+            "sku",
+        }
+        # The point of keeping raw: parsing it again gives the same product, so normalization
+        # can be re-run from the database without re-scraping.
+        again = adapter._parse(product.raw)
+        assert again is not None
+        assert again.model_dump(exclude={"raw"}) == product.model_dump(exclude={"raw"})
+        full_size += len(json.dumps(item))
+        slim_size += len(json.dumps(product.raw))
+    assert slim_size < full_size * 0.5

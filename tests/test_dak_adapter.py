@@ -52,6 +52,10 @@ async def test_fetch_end_to_end_into_beans() -> None:
     await client.aclose()
 
     assert len(products) == 24
+    # Stored raw holds what the adapter read, so DAK rows can be re-normalized later.
+    assert products[0].raw["attributes"]["origin"] == "Ethiopia"
+    assert products[0].raw["weight_label"] == "250g"
+    assert products[0].raw["price"] == "€24,95"
     beans = normalize(products[0], "dak", "EUR", datetime(2026, 10, 22, tzinfo=UTC))
     (bean,) = beans
     assert (bean.price_minor, bean.currency, bean.weight_g) == (2495, "EUR", 250)

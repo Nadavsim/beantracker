@@ -217,3 +217,18 @@ def test_reset_baseline_flag_accepts_the_new_size(
     assert "baseline_reset" in accepted.output
     again = runner.invoke(app, [*args, "--strict"])
     assert again.exit_code == 0, again.output  # 3 products is now the normal size
+
+
+@pytest.mark.integration
+def test_catalog_command_lists_stored_sizes(
+    config_file: Path, sessions: sessionmaker[Session]
+) -> None:
+    args = ["scrape", "fake", "--config", str(config_file)]
+    FAKE["count"] = 2
+    runner.invoke(app, args)
+    listing = runner.invoke(app, ["catalog", "--roaster", "fake"])
+    assert listing.exit_code == 0, listing.output
+    assert "Lot 1" in listing.output
+    assert "2 sizes" in listing.output
+    assert "0 sizes" in runner.invoke(app, ["catalog", "--origin", "Kenya"]).output
+    assert "delisted" in runner.invoke(app, args).output  # the run summary reports it

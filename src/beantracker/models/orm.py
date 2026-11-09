@@ -60,6 +60,8 @@ class ScrapeRun(Base):
     product_count: Mapped[int] = mapped_column(Integer, default=0)
     missing_field_rate: Mapped[Decimal | None] = mapped_column(Numeric(5, 4))
     health_flags: Mapped[list[str]] = mapped_column(ARRAY(String), default=list)
+    # Share of sizes with each descriptive field filled, for the coverage health check.
+    field_coverage: Mapped[dict[str, float] | None] = mapped_column(JSONB)
     error: Mapped[str | None] = mapped_column(String)
 
 
@@ -68,7 +70,8 @@ class Coffee(Base):
     __table_args__ = (UniqueConstraint("roaster_id", "external_id"),)
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    roaster_id: Mapped[int] = mapped_column(ForeignKey("roaster.id"), index=True)
+    # No separate index: the unique (roaster_id, external_id) index already leads with it.
+    roaster_id: Mapped[int] = mapped_column(ForeignKey("roaster.id"))
     external_id: Mapped[str] = mapped_column(String(128))
     name: Mapped[str] = mapped_column(String(256))
     url: Mapped[str] = mapped_column(String(512))
@@ -78,7 +81,8 @@ class Coffee(Base):
     varietal: Mapped[str | None] = mapped_column(String(128))
     roast_level: Mapped[str | None] = mapped_column(String(32))
     tasting_notes: Mapped[list[str]] = mapped_column(ARRAY(String), default=list)
-    first_seen_run_id: Mapped[int] = mapped_column(ForeignKey("scrape_run.id"))
+    # Indexed because "what is new in this run" filters on it.
+    first_seen_run_id: Mapped[int] = mapped_column(ForeignKey("scrape_run.id"), index=True)
     first_seen_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
@@ -93,7 +97,7 @@ class Offer(Base):
     __table_args__ = (UniqueConstraint("coffee_id", "variant_external_id"),)
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    coffee_id: Mapped[int] = mapped_column(ForeignKey("coffee.id"), index=True)
+    coffee_id: Mapped[int] = mapped_column(ForeignKey("coffee.id"))  # unique index leads with it
     variant_external_id: Mapped[str] = mapped_column(String(128))
     weight_g: Mapped[int | None] = mapped_column(Integer)
 
@@ -105,7 +109,7 @@ class OfferSnapshot(Base):
     __table_args__ = (UniqueConstraint("offer_id", "run_id"),)
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True)
-    offer_id: Mapped[int] = mapped_column(ForeignKey("offer.id"), index=True)
+    offer_id: Mapped[int] = mapped_column(ForeignKey("offer.id"))  # unique index leads with it
     run_id: Mapped[int] = mapped_column(ForeignKey("scrape_run.id"), index=True)
     # Integer minor units (agorot/cents) avoid float rounding in price history.
     price_minor: Mapped[int] = mapped_column(Integer)

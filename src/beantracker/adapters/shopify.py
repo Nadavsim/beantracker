@@ -74,8 +74,35 @@ class ShopifyAdapter:
             tags=tags,
             product_type=ptype,
             variants=variants,
-            raw=item,
+            raw=_slim(item),
         )
+
+
+# What `_parse` reads, plus a few timestamps. Everything else in a Shopify product (images,
+# option lists, dozens of per-variant fields) is bulk that normalization never looks at; it
+# made up 44-79% of the stored payload. Because `_parse` accepts this slim form, a stored
+# payload can be re-parsed and re-normalized without re-scraping.
+_KEEP = (
+    "id",
+    "title",
+    "handle",
+    "body_html",
+    "product_type",
+    "tags",
+    "vendor",
+    "created_at",
+    "updated_at",
+    "published_at",
+)
+_VARIANT_KEEP = ("id", "title", "price", "grams", "available", "sku")
+
+
+def _slim(item: dict[str, Any]) -> dict[str, Any]:
+    slim = {k: item[k] for k in _KEEP if k in item}
+    slim["variants"] = [
+        {k: v[k] for k in _VARIANT_KEEP if k in v} for v in item.get("variants", [])
+    ]
+    return slim
 
 
 def _price(raw: str) -> Decimal:
