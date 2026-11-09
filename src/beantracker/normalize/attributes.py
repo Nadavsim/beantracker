@@ -31,6 +31,25 @@ def parse_process(*texts: str) -> str | None:
     return None
 
 
+_MARKER = re.compile(r"(?<!\w)(?:process(?:ed|ing)?|עיבוד|תהליך)(?!\w)")
+
+
+def parse_process_stated(text: str) -> str | None:
+    """Process from free prose, only when the text says it is talking about processing.
+
+    A bare 'natural sweetness' or 'notes of honey' must not set the process, so a base
+    word counts only within 30 characters of 'process', 'processed' or the Hebrew
+    equivalents.
+    """
+    lowered = (text or "").lower()
+    for marker in _MARKER.finditer(lowered):
+        window = lowered[max(0, marker.start() - 30) : marker.end() + 30]
+        found = parse_process(window)
+        if found:
+            return found
+    return None
+
+
 _ROAST_RULES: list[tuple[str, str]] = [
     (r"medium[- ]dark|בינונית[- ]כהה", "medium-dark"),
     (r"(?:extra|ultra)[- ]?light|light[- ]roast|קלי?יה בהירה", "light"),

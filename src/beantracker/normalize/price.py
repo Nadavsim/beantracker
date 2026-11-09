@@ -8,19 +8,34 @@ def _exponent(currency: str) -> int:
     return _EXPONENT.get(currency.upper(), 2)
 
 
+def _plain_number(text: str, exponent: int) -> str:
+    """Rewrite '1.234,50', '1,234.50', '27,50', '1,234' as a plain decimal string.
+
+    With both separators the last one is the decimal point ('1.234,50' is European).
+    With one kind, exactly three trailing digits mean thousands ('1,234'), unless the
+    currency itself has three decimals; otherwise it is the decimal point ('27,50').
+    """
+    last_dot, last_comma = text.rfind("."), text.rfind(",")
+    if last_dot != -1 and last_comma != -1:
+        decimal = "." if last_dot > last_comma else ","
+        thousands = "," if decimal == "." else "."
+        return text.replace(thousands, "").replace(decimal, ".")
+    if last_dot == -1 and last_comma == -1:
+        return text
+    sep = "," if last_comma != -1 else "."
+    parts = text.split(sep)
+    if len(parts) > 2 or (len(parts[-1]) == 3 and exponent != 3):
+        return "".join(parts)
+    return f"{parts[0]}.{parts[1]}"
+
+
 def to_minor(price: str, currency: str) -> int | None:
     """'27.50','USD' -> 2750. Accepts '1,234.50' and '27,50'; None if unparseable."""
     cleaned = "".join(ch for ch in price if ch.isdigit() or ch in ".,")
     if not cleaned:
         return None
-    if "," in cleaned and "." in cleaned:
-        cleaned = cleaned.replace(",", "")  # comma is a thousands separator
-    elif "," in cleaned:
-        head, _, tail = cleaned.rpartition(",")
-        # '27,50' is a decimal comma; '1,234' is thousands.
-        cleaned = f"{head}.{tail}" if len(tail) != 3 else cleaned.replace(",", "")
     try:
-        value = Decimal(cleaned)
+        value = Decimal(_plain_number(cleaned, _exponent(currency)))
     except InvalidOperation:
         return None
     return int(

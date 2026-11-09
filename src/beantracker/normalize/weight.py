@@ -1,7 +1,15 @@
 import re
 from decimal import Decimal
 
-_NUM = r"(\d+(?:[.,]\d+)?)"
+# Thousands-grouped ('1,000') is tried before a plain decimal ('1,5' or '1.5').
+_NUM = r"(\d{1,3}(?:,\d{3})+|\d+(?:[.,]\d+)?)"
+_GROUPED = re.compile(r"\d{1,3}(?:,\d{3})+")
+
+
+def _to_decimal(raw: str) -> Decimal:
+    if _GROUPED.fullmatch(raw):
+        return Decimal(raw.replace(",", ""))
+    return Decimal(raw.replace(",", "."))
 
 
 def _unit_re(words: str) -> re.Pattern[str]:
@@ -31,7 +39,7 @@ def parse_weight_g(*texts: str) -> int | None:
         for pattern, factor in _CONVERSIONS:
             m = pattern.search(text)
             if m:
-                value = Decimal(m.group(1).replace(",", ".")) * factor
+                value = _to_decimal(m.group(1)) * factor
                 return int(value.quantize(Decimal(1)))
         if _BARE_KILO.search(text.strip()):
             return 1000

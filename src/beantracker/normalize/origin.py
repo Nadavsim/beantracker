@@ -48,6 +48,10 @@ REGIONS: dict[str, tuple[str, tuple[str, ...]]] = {
     "Tolima": ("Colombia", ("tolima",)),
     "Antioquia": ("Colombia", ("antioquia",)),
     "Tarrazú": ("Costa Rica", ("tarrazu", "tarrazú")),
+    "Gedeo": ("Ethiopia", ("gedeo",)),
+    "Chiriquí": ("Panama", ("chiriqui", "chiriquí")),
+    "Quindío": ("Colombia", ("quindio", "quindío")),
+    "Yunnan": ("China", ("yunnan",)),
 }
 
 
@@ -75,18 +79,32 @@ def find_region(text: str) -> tuple[str, str] | None:
     return None
 
 
+def _labelled_region(before_country: list[str], country: str) -> str | None:
+    """Region from the parts preceding the country in 'Farm, Region, Country'.
+
+    A known region anywhere in them wins (and is returned in canonical spelling). Without
+    one, only the exact three-part shape is trusted: with two parts the first is usually
+    the farm, and with four or more the middle ones are localities, not regions.
+    """
+    for part in before_country:
+        hit = find_region(part)
+        if hit and hit[1] == country:
+            return hit[0]
+    return before_country[-1] if len(before_country) == 2 else None
+
+
 def parse_origin(origin_field: str | None, *fallback_texts: str) -> tuple[str | None, str | None]:
     """(country, region).
 
-    A labelled origin like 'Finca El Turpial, Nariño, Colombia' is authoritative: the last
-    comma part is the country and the one before it the region. Otherwise fall back to
-    keyword search over the given texts (title, description).
+    A labelled origin like 'Finca El Turpial, Nariño, Colombia' is authoritative for the
+    country (the last comma part). The region is only taken when it is trustworthy, see
+    _labelled_region. Otherwise fall back to keyword search over the given texts.
     """
     if origin_field:
         parts = [p.strip() for p in origin_field.split(",") if p.strip()]
         country = find_country(parts[-1]) if parts else None
         if country:
-            return country, parts[-2] if len(parts) >= 2 else None
+            return country, _labelled_region(parts[:-1], country)
         country = find_country(origin_field)
         if country:
             return country, None

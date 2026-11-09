@@ -40,6 +40,9 @@ NOW = datetime(2026, 10, 22, tzinfo=UTC)
         ("Default Title", None),
         ("", None),
         ("Whole bean, 2 pack", None),
+        ("1,000g", 1000),  # comma is a thousands separator, not a decimal point
+        ("1,000 g", 1000),
+        ("2,5 kg", 2500),  # but a single digit after the comma is a decimal comma
     ],
 )
 def test_parse_weight(text: str, grams: int | None) -> None:
@@ -59,6 +62,11 @@ def test_parse_weight(text: str, grams: int | None) -> None:
         ("3000", "JPY", 3000),  # zero-decimal currency
         ("227.00", "NOK", 22700),
         ("free", "USD", None),
+        ("1.234,50", "EUR", 123450),  # European: last separator is the decimal point
+        ("1.234", "EUR", 123400),  # three digits after a lone dot: thousands
+        ("1.234.567,89", "EUR", 123456789),
+        ("27.5", "USD", 2750),
+        ("1,234", "BHD", 1234),  # BHD has 3 decimals, so this is 1.234
     ],
 )
 def test_to_minor(price: str, currency: str, minor: int | None) -> None:
@@ -95,6 +103,13 @@ def test_find_country(text: str, country: str | None) -> None:
         ("Chelbesa, Gedeb, Ethiopia", ("Ethiopia", "Gedeb")),
         ("Brazil", ("Brazil", None)),
         ("Huila Colombia", ("Colombia", None)),
+        ("Finca X, Colombia", ("Colombia", None)),  # two parts: first is the farm
+        ("Talamanca Farm, Volcan, Piedra candela, Panama", ("Panama", None)),  # localities
+        ("Farm, Unknownville, Kenya", ("Kenya", "Unknownville")),  # exact triple is trusted
+        ("Some Farm, Narino, Colombia", ("Colombia", "Nariño")),  # canonical spelling
+        ("Some Station, Gedeb, Ethiopia", ("Ethiopia", "Gedeb")),
+        ("Finca A, Volcan, Chiriquí, Panama", ("Panama", "Chiriquí")),  # known region, 4 parts
+        ("Lao Farm, Pu'er, Yunnan, China", ("China", "Yunnan")),
     ],
 )
 def test_parse_origin_labelled(origin: str, expected: tuple[str, str | None]) -> None:
@@ -138,6 +153,35 @@ def test_parse_process(text: str, process: str | None) -> None:
 )
 def test_parse_roast(text: str, roast: str | None) -> None:
     assert parse_roast(text) == roast
+
+
+@pytest.mark.parametrize(
+    ("description", "process"),
+    [
+        ("Notes of natural sweetness and honey", None),  # adjectives and tasting notes
+        ("A clean washed cup", None),  # no 'process' marker nearby
+        ("Processed using the natural method", "Natural"),
+        ("Process: Anaerobic Washed", "Anaerobic Washed"),
+        ("The process is honey and dried on raised beds", "Honey"),
+        ("תהליך עיבוד נטורל", "Natural"),
+    ],
+)
+def test_process_from_prose_needs_a_marker(description: str, process: str | None) -> None:
+    from beantracker.normalize.attributes import parse_process_stated
+
+    assert parse_process_stated(description) == process
+
+
+def test_description_adjective_does_not_set_process() -> None:
+    product = RawProduct(
+        external_id="1",
+        title="Pink Bourbon - Colombia",
+        url="https://x.test/p",
+        description="<p>Notes of natural sweetness and honey.</p>",
+        variants=[RawVariant(external_id="a", title="250g", price="25.00", available=True)],
+    )
+    (bean,) = normalize(product, "x", "USD", NOW)
+    assert bean.process is None
 
 
 def test_labelled_fields_and_notes() -> None:

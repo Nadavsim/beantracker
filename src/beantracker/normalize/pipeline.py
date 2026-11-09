@@ -2,7 +2,12 @@ from datetime import datetime
 
 from beantracker.domain.bean import Bean
 from beantracker.domain.raw import RawProduct
-from beantracker.normalize.attributes import parse_process, parse_roast, split_notes
+from beantracker.normalize.attributes import (
+    parse_process,
+    parse_process_stated,
+    parse_roast,
+    split_notes,
+)
 from beantracker.normalize.origin import parse_origin
 from beantracker.normalize.price import price_per_100g, to_minor
 from beantracker.normalize.text import html_to_text, labelled_fields
@@ -22,8 +27,8 @@ def normalize(product: RawProduct, roaster: str, currency: str, scraped_at: date
     country, region = parse_origin(attrs.get("origin") or fields.get("origin"), product.title, text)
     region = attrs.get("region") or region
     process = parse_process(
-        attrs.get("process", ""), fields.get("process", ""), product.title, text
-    )
+        attrs.get("process", ""), fields.get("process", ""), product.title
+    ) or parse_process_stated(text)
     roast = parse_roast(attrs.get("roast", ""), fields.get("roast", ""), product.title, text)
     varietal = attrs.get("varietal") or fields.get("variety") or fields.get("varietal")
     notes = split_notes(
