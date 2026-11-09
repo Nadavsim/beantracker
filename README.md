@@ -216,3 +216,8 @@ CI runs lint, the format check, mypy and the full suite against a Postgres servi
 - Not built yet: scheduled scraping, a Dockerfile, a web UI and API, alerts for new lots that
   match your criteria. The data model already supports them (new-lot and delisting queries, a
   first-run `baseline` flag).
+
+## License
+
+[MIT](LICENSE). The scraped data belongs to the roasters; this project only reads their public
+pages, politely, and does not redistribute them.

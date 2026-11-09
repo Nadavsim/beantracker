@@ -6,6 +6,8 @@ authors = [
     { name = "Nadav Simchai", email = "ndvsim@gmail.com" }
 ]
 requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
 dependencies = [
     "alembic>=1.20.1",
     "httpx>=0.28.1",
