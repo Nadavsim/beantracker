@@ -30,6 +30,26 @@ roasters:
       exclude_product_types: [gear, cupping]
       exclude_title_keywords:
         [gift card, mineral concentrate, double walled, packs, subscription, sticker, advent calendar, bundle]
+  - slug: lacabra
+    name: La Cabra
+    base_url: https://lacabra.com
+    adapter: shopify
+    currency: DKK  # the storefront's own Shopify.currency; /products.json carries none
+    options:
+      # Coffee shares the shop with equipment, apparel, cups, bundles and gift cards.
+      exclude_product_types:
+        [equipment, würtz, apparel, single serve, coffee bundle, chocolate, gift card, subscription gift card]
+  - slug: thebarn
+    name: The Barn
+    base_url: https://www.thebarn.de
+    adapter: shopify
+    currency: EUR
+    options:
+      exclude_product_types:
+        [equipment, merchandise, misc, coffee bundle, subscription, gift subscription, instant & capsules, book, vouchers]
+      # Some non-coffee products have no product type at all.
+      exclude_title_keywords:
+        [advent calendar, matcha, tote bag, canister, kettle, scale, server, bundle]
   - slug: dak
     name: DAK Coffee Roasters
     base_url: https://www.dakcoffeeroasters.com

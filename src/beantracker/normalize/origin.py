@@ -3,27 +3,30 @@ import re
 from beantracker.normalize.text import clean_quotes
 
 # canonical country -> aliases (English + Hebrew), matched as whole words, case-insensitive.
+# Nationality words ("Kenyan season", "our Guatemalan portfolio") are aliases too: roasters
+# often write those instead of the country name. India and China are left out on purpose:
+# "Indian" and "Chinese" turn up in prose that is not about where a coffee grew.
 COUNTRIES: dict[str, tuple[str, ...]] = {
-    "Ethiopia": ("ethiopia", "אתיופיה"),
-    "Kenya": ("kenya", "קניה", "קנייה"),
-    "Rwanda": ("rwanda", "רואנדה"),
-    "Burundi": ("burundi", "בורונדי"),
-    "Uganda": ("uganda", "אוגנדה"),
-    "Tanzania": ("tanzania", "טנזניה"),
-    "Yemen": ("yemen", "תימן"),
-    "Colombia": ("colombia", "קולומביה"),
-    "Brazil": ("brazil", "ברזיל"),
-    "Peru": ("peru", "פרו"),
-    "Bolivia": ("bolivia", "בוליביה"),
-    "Ecuador": ("ecuador", "אקוודור"),
-    "Panama": ("panama", "פנמה"),
-    "Costa Rica": ("costa rica", "קוסטה ריקה"),
-    "Nicaragua": ("nicaragua", "ניקרגואה"),
-    "Honduras": ("honduras", "הונדורס"),
-    "El Salvador": ("el salvador", "אל סלבדור"),
-    "Guatemala": ("guatemala", "גואטמלה"),
-    "Mexico": ("mexico", "מקסיקו"),
-    "Jamaica": ("jamaica", "ג'מייקה"),
+    "Ethiopia": ("ethiopia", "ethiopian", "אתיופיה"),
+    "Kenya": ("kenya", "kenyan", "קניה", "קנייה"),
+    "Rwanda": ("rwanda", "rwandan", "רואנדה"),
+    "Burundi": ("burundi", "burundian", "בורונדי"),
+    "Uganda": ("uganda", "ugandan", "אוגנדה"),
+    "Tanzania": ("tanzania", "tanzanian", "טנזניה"),
+    "Yemen": ("yemen", "yemeni", "תימן"),
+    "Colombia": ("colombia", "colombian", "קולומביה"),
+    "Brazil": ("brazil", "brazilian", "ברזיל"),
+    "Peru": ("peru", "peruvian", "פרו"),
+    "Bolivia": ("bolivia", "bolivian", "בוליביה"),
+    "Ecuador": ("ecuador", "ecuadorian", "אקוודור"),
+    "Panama": ("panama", "panamanian", "פנמה"),
+    "Costa Rica": ("costa rica", "costa rican", "קוסטה ריקה"),
+    "Nicaragua": ("nicaragua", "nicaraguan", "ניקרגואה"),
+    "Honduras": ("honduras", "honduran", "הונדורס"),
+    "El Salvador": ("el salvador", "salvadoran", "אל סלבדור"),
+    "Guatemala": ("guatemala", "guatemalan", "גואטמלה"),
+    "Mexico": ("mexico", "mexican", "מקסיקו"),
+    "Jamaica": ("jamaica", "jamaican", "ג'מייקה"),
     "India": ("india", "הודו"),
     "Indonesia": ("indonesia", "אינדונזיה"),
     "Papua New Guinea": ("papua new guinea", "פפואה גינאה החדשה"),
@@ -52,6 +55,8 @@ REGIONS: dict[str, tuple[str, tuple[str, ...]]] = {
     "Chiriquí": ("Panama", ("chiriqui", "chiriquí")),
     "Quindío": ("Colombia", ("quindio", "quindío")),
     "Yunnan": ("China", ("yunnan",)),
+    "Boquete": ("Panama", ("boquete",)),
+    "Huehuetenango": ("Guatemala", ("huehuetenango",)),
 }
 
 

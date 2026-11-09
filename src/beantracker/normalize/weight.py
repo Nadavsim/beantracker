@@ -31,6 +31,19 @@ _CONVERSIONS: list[tuple[re.Pattern[str], Decimal]] = [
 ]
 
 
+_COUNT_BEFORE = re.compile(r"(\d+)\s*[x×]\s*$", re.IGNORECASE)  # "2 x " before "250g"
+_COUNT_AFTER = re.compile(r"\s*[x×]\s*(\d+)(?![\d.,]*\s*(?:g|kg|oz|lb))", re.IGNORECASE)  # " x 2"
+
+
+def _pack_count(text: str, start: int, end: int) -> int:
+    """How many of the stated unit are in the pack: '2 x 250g' and '250g x 2' are 500 g."""
+    before = _COUNT_BEFORE.search(text[:start])
+    if before:
+        return int(before.group(1))
+    after = _COUNT_AFTER.match(text, end)
+    return int(after.group(1)) if after else 1
+
+
 def parse_weight_g(*texts: str) -> int | None:
     """Weight in grams from the first text that states one; None rather than a guess."""
     for text in texts:
@@ -39,7 +52,7 @@ def parse_weight_g(*texts: str) -> int | None:
         for pattern, factor in _CONVERSIONS:
             m = pattern.search(text)
             if m:
-                value = _to_decimal(m.group(1)) * factor
+                value = _to_decimal(m.group(1)) * factor * _pack_count(text, m.start(), m.end())
                 return int(value.quantize(Decimal(1)))
         if _BARE_KILO.search(text.strip()):
             return 1000

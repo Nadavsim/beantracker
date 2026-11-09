@@ -1,0 +1,2916 @@
+{
+ "products": [
+  {
+   "id": 7990231466251,
+   "title": "SANTA TERESA",
+   "handle": "santa-teresa",
+   "body_html": "<p data-pm-slice=\"1 1 []\"><span>From the highlands of Tarrazú, Costa Rica, Santa Teresa returns with a new microlot from renowned producer Roger Ureña.</span></p>\n<p><span>Known for his meticulous approach to coffee cultivation and processing, Roger continues to explore the potential of his exceptional terroir. This Yellow Honey lot offers a comforting balance of fruit and sweetness, with notes of cocoa, dried cranberries and vanilla.</span></p>",
+   "published_at": "2026-11-05T13:17:13+01:00",
+   "created_at": "2022-08-10T12:37:29+02:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "THE BARN Beans",
+   "product_type": "",
+   "tags": [
+    "Beans",
+    "Single Bean Bag"
+   ],
+   "variants": [
+    {
+     "id": 43583747064075,
+     "title": "250g",
+     "option1": "250g",
+     "option2": null,
+     "option3": null,
+     "sku": "SANTA TERESA 250g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": false,
+     "price": "18.90",
+     "grams": 260,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 7990231466251,
+     "created_at": "2022-08-10T12:37:29+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 57714704187767,
+     "title": "1000g",
+     "option1": "1000g",
+     "option2": null,
+     "option3": null,
+     "sku": null,
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": false,
+     "price": "73.60",
+     "grams": 260,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 7990231466251,
+     "created_at": "2026-11-05T13:46:30+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 45937470734603,
+     "created_at": "2024-02-15T14:19:40+01:00",
+     "position": 1,
+     "updated_at": "2024-02-15T14:19:44+01:00",
+     "product_id": 7990231466251,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/santateresab2cbag.png?v=1708003184",
+     "width": 2571,
+     "height": 2571
+    },
+    {
+     "id": 47766273229067,
+     "created_at": "2024-06-25T16:28:22+02:00",
+     "position": 2,
+     "updated_at": "2024-06-25T16:29:31+02:00",
+     "product_id": 7990231466251,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Image_25.06.24_at_16.01.jpg?v=1719325771",
+     "width": 752,
+     "height": 752
+    },
+    {
+     "id": 40641928462603,
+     "created_at": "2022-08-15T21:25:37+02:00",
+     "position": 3,
+     "updated_at": "2024-06-25T16:33:26+02:00",
+     "product_id": 7990231466251,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/IMG_9508.jpg?v=1719326006",
+     "width": 2967,
+     "height": 2967
+    },
+    {
+     "id": 40641928528139,
+     "created_at": "2022-08-15T21:25:37+02:00",
+     "position": 4,
+     "updated_at": "2024-06-25T16:33:26+02:00",
+     "product_id": 7990231466251,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/IMG_9531.jpg?v=1719326006",
+     "width": 2967,
+     "height": 2967
+    },
+    {
+     "id": 40641928495371,
+     "created_at": "2022-08-15T21:25:37+02:00",
+     "position": 5,
+     "updated_at": "2024-06-25T16:33:26+02:00",
+     "product_id": 7990231466251,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/IMG_9533.jpg?v=1719326006",
+     "width": 2967,
+     "height": 2967
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "250g",
+      "1000g"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 15583088083319,
+   "title": "CABALLERO BLACK EDITION",
+   "handle": "caballero-black-edition",
+   "body_html": "<p data-pm-slice=\"1 1 []\"><strong><span>Introducing our limited Black Edition coffee from Honduras, available exclusively in November.</span></strong></p>\n<p><span>For over twenty years, Marysabel Caballero and Moises Herrera have dedicated themselves to producing exceptional coffee. This carefully washed Catuai reflects their commitment to quality, offering a beautifully balanced cup with notes of </span><strong><span>apricot and caramel</span></strong><span>.</span></p>",
+   "published_at": "2026-11-01T07:17:48+01:00",
+   "created_at": "2026-10-20T12:31:59+02:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "The BARN Berlin Coffee Roasters",
+   "product_type": "Filter Coffee",
+   "tags": [
+    "Active",
+    "Beans",
+    "Discounted For Subscriber",
+    "Espresso",
+    "Filter",
+    "Single Bean Bag"
+   ],
+   "variants": [
+    {
+     "id": 57621978481015,
+     "title": "200g",
+     "option1": "200g",
+     "option2": null,
+     "option3": null,
+     "sku": "CABALLERO BLACK EDITION 200g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "14.90",
+     "grams": 200,
+     "compare_at_price": "17.50",
+     "position": 1,
+     "product_id": 15583088083319,
+     "created_at": "2026-10-20T12:32:00+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 87197352395127,
+     "created_at": "2026-10-29T10:50:19+01:00",
+     "position": 1,
+     "updated_at": "2026-10-29T10:50:22+01:00",
+     "product_id": 15583088083319,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/caballero_blackedition.png?v=1793267422",
+     "width": 1263,
+     "height": 1246
+    },
+    {
+     "id": 82570137338231,
+     "created_at": "2025-11-24T13:53:04+01:00",
+     "position": 2,
+     "updated_at": "2026-03-03T12:17:30+01:00",
+     "product_id": 15583088083319,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/ENG_final_all_coffee_cards_web_1.jpg?v=1772536650",
+     "width": 1667,
+     "height": 1667
+    },
+    {
+     "id": 45328916709643,
+     "created_at": "2023-12-28T08:52:27+01:00",
+     "position": 3,
+     "updated_at": "2026-03-03T12:17:30+01:00",
+     "product_id": 15583088083319,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Bildschirmfoto2021-08-09um12.16.50_73771fc9-bce4-4dca-b7db-e66db8fc2e4c.png?v=1772536650",
+     "width": 1118,
+     "height": 1118
+    },
+    {
+     "id": 45328916742411,
+     "created_at": "2023-12-28T08:52:27+01:00",
+     "position": 4,
+     "updated_at": "2026-03-03T12:17:30+01:00",
+     "product_id": 15583088083319,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/IMG_9812_d487e9ee-5ffa-42ec-ba03-69865716e3d4.jpg?v=1772536650",
+     "width": 3024,
+     "height": 3024
+    },
+    {
+     "id": 45328916807947,
+     "created_at": "2023-12-28T08:52:27+01:00",
+     "position": 5,
+     "updated_at": "2026-03-03T12:17:30+01:00",
+     "product_id": 15583088083319,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Bildschirmfoto2021-08-09um12.18.31_021012b2-c0ab-4e42-87ed-c6832b0c0e7c.png?v=1772536650",
+     "width": 1112,
+     "height": 1112
+    },
+    {
+     "id": 85575921074551,
+     "created_at": "2026-05-07T11:56:18+02:00",
+     "position": 6,
+     "updated_at": "2026-05-07T11:58:54+02:00",
+     "product_id": 15583088083319,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_espresso_coffee.jpg?v=1778147934",
+     "width": 2200,
+     "height": 2200
+    },
+    {
+     "id": 84811969331575,
+     "created_at": "2026-02-18T19:17:31+01:00",
+     "position": 7,
+     "updated_at": "2026-05-07T11:54:03+02:00",
+     "product_id": 15583088083319,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_filter_coffee.jpg?v=1778147643",
+     "width": 1536,
+     "height": 1536
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "200g"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 15573774958967,
+   "title": "LOS PIRINEOS ANAEROBIC",
+   "handle": "los-pirineos-anaerobic",
+   "body_html": "<p><span><meta charset=\"utf-8\">At Los Pirineos in El Salvador, producer Diego Baraona continues the pioneering approach of his father. This anaerobic Pacamara combines vibrant tropical fruit with plush sweetness and remarkable depth. Notes of papaya, mango and lemon candy meet rich nougat and chocolate ganache, creating a bold, layered profile.</span></p>",
+   "published_at": "2026-10-14T08:52:35+02:00",
+   "created_at": "2026-10-12T10:19:05+02:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "The Barn Coffee Roasters Berlin",
+   "product_type": "Filter Coffee",
+   "tags": [
+    "Active",
+    "Beans",
+    "Discounted For Subscriber",
+    "Filter"
+   ],
+   "variants": [
+    {
+     "id": 57544108081527,
+     "title": "250g",
+     "option1": "250g",
+     "option2": null,
+     "option3": null,
+     "sku": "LOS PIRINEOS ANAEROBIC 250g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "18.90",
+     "grams": 260,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 15573774958967,
+     "created_at": "2026-10-12T10:19:06+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 57544108114295,
+     "title": "1000g",
+     "option1": "1000g",
+     "option2": null,
+     "option3": null,
+     "sku": "LOS PIRINEOS ANAEROBIC 1000g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "73.60",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 15573774958967,
+     "created_at": "2026-10-12T10:19:06+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 87078436897143,
+     "created_at": "2026-10-13T15:18:57+02:00",
+     "position": 1,
+     "updated_at": "2026-10-13T15:19:03+02:00",
+     "product_id": 15573774958967,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/bag_los_pirineos_anaerobic_b2c.png?v=1791897543",
+     "width": 2571,
+     "height": 2571
+    },
+    {
+     "id": 87079203111287,
+     "created_at": "2026-10-13T16:36:46+02:00",
+     "position": 2,
+     "updated_at": "2026-10-13T16:36:49+02:00",
+     "product_id": 15573774958967,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/hovercard_los_pirineos_anaerobic_a179e8c9-0ae9-49a2-b9dd-42cf210cc9f1.jpg?v=1791902209",
+     "width": 1667,
+     "height": 1667
+    },
+    {
+     "id": 45017161498891,
+     "created_at": "2023-11-30T09:47:10+01:00",
+     "position": 3,
+     "updated_at": "2026-04-10T12:20:08+02:00",
+     "product_id": 15573774958967,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/FDD85405-A4E6-4CF9-8AC7-42B9DF200110_1_201_a_36aacc4b-08d8-4bf9-b7dc-423a73c52ba3.jpg?v=1775816408",
+     "width": 768,
+     "height": 768
+    },
+    {
+     "id": 45017161531659,
+     "created_at": "2023-11-30T09:47:10+01:00",
+     "position": 4,
+     "updated_at": "2026-04-10T12:20:08+02:00",
+     "product_id": 15573774958967,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/IMG_9070_1ca2833b-eefe-4083-bc6d-985a053bd6b3.jpg?v=1775816408",
+     "width": 2952,
+     "height": 2952
+    },
+    {
+     "id": 45017161564427,
+     "created_at": "2023-11-30T09:47:10+01:00",
+     "position": 5,
+     "updated_at": "2026-04-10T12:20:08+02:00",
+     "product_id": 15573774958967,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/362AB9A7-41A9-4AE8-8724-1308BFF57B61_1_201_a_30dd5bc4-3e9e-4514-a757-06e2f0c3a0a5.jpg?v=1775816408",
+     "width": 682,
+     "height": 682
+    },
+    {
+     "id": 45017161597195,
+     "created_at": "2023-11-30T09:47:10+01:00",
+     "position": 6,
+     "updated_at": "2026-04-10T12:20:08+02:00",
+     "product_id": 15573774958967,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/IMG_9087_a6d1427b-f29e-492c-874a-6c5b0bf00cdf.jpg?v=1775816408",
+     "width": 2929,
+     "height": 2929
+    },
+    {
+     "id": 45017161629963,
+     "created_at": "2023-11-30T09:47:10+01:00",
+     "position": 7,
+     "updated_at": "2026-04-10T12:20:08+02:00",
+     "product_id": 15573774958967,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/IMG_9113_49b08a38-546b-4ae9-8f99-fb9fb186c582.jpg?v=1775816408",
+     "width": 2954,
+     "height": 2954
+    },
+    {
+     "id": 45017161662731,
+     "created_at": "2023-11-30T09:47:10+01:00",
+     "position": 8,
+     "updated_at": "2026-04-10T12:20:08+02:00",
+     "product_id": 15573774958967,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/IMG_9080_1d096a63-fc28-468b-bce5-1ae077562d05.jpg?v=1775816408",
+     "width": 2929,
+     "height": 2929
+    },
+    {
+     "id": 84811969331575,
+     "created_at": "2026-02-18T19:17:31+01:00",
+     "position": 9,
+     "updated_at": "2026-05-07T11:54:03+02:00",
+     "product_id": 15573774958967,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_filter_coffee.jpg?v=1778147643",
+     "width": 1536,
+     "height": 1536
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "250g",
+      "1000g"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 15517364355447,
+   "title": "ATLAS COFFEE",
+   "handle": "atlas-coffee",
+   "body_html": "<p data-start=\"128\" data-end=\"408\" class=\"PDq2pG_selectionAnchorContainer\"><strong data-start=\"128\" data-end=\"171\">Introducing Atlas: our new Core Coffee.</strong><br data-start=\"171\" data-end=\"174\">From its birthplace in Ethiopia, coffee journeyed to the volcanic highlands of Central America, where generations of producers shaped one of the most celebrated coffee-growing regions. Atlas is our expression of that legacy.<span aria-hidden=\"true\" class=\"PDq2pG_selectionAnchor\"></span></p>\n<p data-start=\"413\" data-end=\"640\">Grown at Finca Santa Clara in Antigua, Guatemala, this single origin coffee offers remarkable sweetness, clarity and balance. Rich volcanic soils, cool mountain air, and generations of expertise create a cup that feels complete.</p>\n<p data-start=\"645\" data-end=\"761\">Atlas is our tribute to Central American flavour: a specialty coffee shaped by exploration, craftsmanship, and place.</p>\n<p data-start=\"766\" data-end=\"823\"><strong data-start=\"766\" data-end=\"823\">Available to order now and featured in our <a href=\"https://thebarn.de/products/core-collection\">Core Collection</a>.</strong></p>",
+   "published_at": "2026-07-24T12:53:17+02:00",
+   "created_at": "2026-07-20T13:43:04+02:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "The BARN Berlin Coffee Roasters",
+   "product_type": "Espresso Coffee",
+   "tags": [
+    "Active",
+    "Beans",
+    "Discounted For Subscriber",
+    "Espresso",
+    "Filter",
+    "Single Bean Bag"
+   ],
+   "variants": [
+    {
+     "id": 57321625354615,
+     "title": "2 x 250g",
+     "option1": "2 x 250g",
+     "option2": null,
+     "option3": null,
+     "sku": "ATLAS 500g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "27.80",
+     "grams": 500,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 15517364355447,
+     "created_at": "2026-07-24T12:51:34+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 57312683852151,
+     "title": "250g",
+     "option1": "250g",
+     "option2": null,
+     "option3": null,
+     "sku": "ATLAS 250g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "13.90",
+     "grams": 250,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 15517364355447,
+     "created_at": "2026-07-20T13:43:04+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 57312683884919,
+     "title": "1000g",
+     "option1": "1000g",
+     "option2": null,
+     "option3": null,
+     "sku": "ATLAS 1000g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "53.60",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 3,
+     "product_id": 15517364355447,
+     "created_at": "2026-07-20T13:43:04+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 86294478455159,
+     "created_at": "2026-07-23T12:40:17+02:00",
+     "position": 1,
+     "updated_at": "2026-07-23T12:40:22+02:00",
+     "product_id": 15517364355447,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/bag_atlas_b2c.png?v=1784803222",
+     "width": 2571,
+     "height": 2571
+    },
+    {
+     "id": 86300844982647,
+     "created_at": "2026-07-24T10:05:46+02:00",
+     "position": 2,
+     "updated_at": "2026-07-24T10:05:50+02:00",
+     "product_id": 15517364355447,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/hovercard_atlas.jpg?v=1784880350",
+     "width": 1667,
+     "height": 1667
+    },
+    {
+     "id": 86295532011895,
+     "created_at": "2026-07-23T15:11:18+02:00",
+     "position": 3,
+     "updated_at": "2026-07-23T15:11:22+02:00",
+     "product_id": 15517364355447,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Image_23.07.26_at_15.11.jpg?v=1784812282",
+     "width": 1479,
+     "height": 1476
+    },
+    {
+     "id": 86300864708983,
+     "created_at": "2026-07-24T10:08:32+02:00",
+     "position": 4,
+     "updated_at": "2026-07-24T10:08:36+02:00",
+     "product_id": 15517364355447,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/IMG_8960.jpg?v=1784880516",
+     "width": 2827,
+     "height": 2827
+    },
+    {
+     "id": 84280559894903,
+     "created_at": "2026-01-09T14:11:37+01:00",
+     "position": 5,
+     "updated_at": "2026-03-03T11:45:07+01:00",
+     "product_id": 15517364355447,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Image09.01.26at14.07.jpg?v=1772534707",
+     "width": 1074,
+     "height": 1074
+    },
+    {
+     "id": 84280559763831,
+     "created_at": "2026-01-09T14:11:37+01:00",
+     "position": 6,
+     "updated_at": "2026-03-03T11:45:07+01:00",
+     "product_id": 15517364355447,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Image09.01.26at14.11_1.jpg?v=1772534707",
+     "width": 1350,
+     "height": 1350
+    },
+    {
+     "id": 84280559796599,
+     "created_at": "2026-01-09T14:11:37+01:00",
+     "position": 7,
+     "updated_at": "2026-03-03T11:45:07+01:00",
+     "product_id": 15517364355447,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Image09.01.26at14.11.jpg?v=1772534707",
+     "width": 1342,
+     "height": 1342
+    },
+    {
+     "id": 84280559829367,
+     "created_at": "2026-01-09T14:11:37+01:00",
+     "position": 8,
+     "updated_at": "2026-03-03T11:45:07+01:00",
+     "product_id": 15517364355447,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Image09.01.26at14.10.jpg?v=1772534707",
+     "width": 1073,
+     "height": 1073
+    },
+    {
+     "id": 84280559862135,
+     "created_at": "2026-01-09T14:11:37+01:00",
+     "position": 9,
+     "updated_at": "2026-03-03T11:45:07+01:00",
+     "product_id": 15517364355447,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Image09.01.26at14.08.jpg?v=1772534707",
+     "width": 1077,
+     "height": 1077
+    },
+    {
+     "id": 85575921074551,
+     "created_at": "2026-05-07T11:56:18+02:00",
+     "position": 10,
+     "updated_at": "2026-05-07T11:58:54+02:00",
+     "product_id": 15517364355447,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_espresso_coffee.jpg?v=1778147934",
+     "width": 2200,
+     "height": 2200
+    },
+    {
+     "id": 84811969331575,
+     "created_at": "2026-02-18T19:17:31+01:00",
+     "position": 11,
+     "updated_at": "2026-05-07T11:54:03+02:00",
+     "product_id": 15517364355447,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_filter_coffee.jpg?v=1778147643",
+     "width": 1536,
+     "height": 1536
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "2 x 250g",
+      "250g",
+      "1000g"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 8476229239051,
+   "title": "ANNIVERSARY COFFEE",
+   "handle": "los-pirineos-pacamara-anaerobic",
+   "body_html": "<p><span data-mce-fragment=\"1\"><strong data-mce-fragment=\"1\"><span style=\"font-weight: 400;\"><strong>Celebrating Our 16th Birthday</strong><br></span></strong></span><span data-mce-fragment=\"1\"><strong data-mce-fragment=\"1\"><span style=\"font-weight: 400;\">Our limited edition Anniversary Coffee, produced by our friend Diego Baraona at the stunning Los Pirineos estate, just up the road from the town of Berlin!</span></strong></span></p>\n<p><span data-mce-fragment=\"1\"><strong data-mce-fragment=\"1\"><span style=\"font-weight: 400;\">Anaerobic fermentation brings sweet tropicals to the Pacamara beans, with the meticulous quality that keeps us returning to Los Pirineos every season. A celebration in your cup!</span></strong></span></p>\n<ul></ul>",
+   "published_at": "2026-05-29T12:52:15+02:00",
+   "created_at": "2024-02-21T14:27:57+01:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "The Barn Coffee Roasters Berlin",
+   "product_type": "",
+   "tags": [
+    "Beans",
+    "Single Bean Bag"
+   ],
+   "variants": [
+    {
+     "id": 57149524607351,
+     "title": "200g",
+     "option1": "200g",
+     "option2": null,
+     "option3": null,
+     "sku": "ANNIVERSARY COFFEE 200g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": false,
+     "price": "16.00",
+     "grams": 200,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 8476229239051,
+     "created_at": "2026-06-05T08:35:48+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 57149524640119,
+     "title": "2 x 200g",
+     "option1": "2 x 200g",
+     "option2": null,
+     "option3": null,
+     "sku": "ANNIVERSARY COFFEE 400g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": false,
+     "price": "32.00",
+     "grams": 400,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 8476229239051,
+     "created_at": "2026-06-05T08:35:48+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 85777758060919,
+     "created_at": "2026-05-29T12:20:04+02:00",
+     "position": 1,
+     "updated_at": "2026-05-29T12:20:09+02:00",
+     "product_id": 8476229239051,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/bag_anniversary_coffee_200g.png?v=1780050009",
+     "width": 2571,
+     "height": 2571
+    },
+    {
+     "id": 85777220862327,
+     "created_at": "2026-05-29T11:12:42+02:00",
+     "position": 2,
+     "updated_at": "2026-05-29T11:12:46+02:00",
+     "product_id": 8476229239051,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/hovercard_los_pirineos_anniversary.jpg?v=1780045966",
+     "width": 1667,
+     "height": 1667
+    },
+    {
+     "id": 85833564750199,
+     "created_at": "2026-06-03T17:09:57+02:00",
+     "position": 3,
+     "updated_at": "2026-06-03T17:12:14+02:00",
+     "product_id": 8476229239051,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/IMG_0422.jpg?v=1780499534",
+     "width": 3024,
+     "height": 3024
+    },
+    {
+     "id": 85777804394871,
+     "created_at": "2026-05-29T12:26:57+02:00",
+     "position": 4,
+     "updated_at": "2026-05-29T12:27:31+02:00",
+     "product_id": 8476229239051,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Image_29.05.26_at_12.26.jpg?v=1780050451",
+     "width": 1075,
+     "height": 1075
+    },
+    {
+     "id": 46006780231947,
+     "created_at": "2024-02-21T14:28:28+01:00",
+     "position": 5,
+     "updated_at": "2025-06-18T11:37:34+02:00",
+     "product_id": 8476229239051,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/IMG_9070_fcff9964-4711-482e-89ad-175f12a72974.jpg?v=1750239454",
+     "width": 2952,
+     "height": 2952
+    },
+    {
+     "id": 46006780264715,
+     "created_at": "2024-02-21T14:28:28+01:00",
+     "position": 6,
+     "updated_at": "2025-06-18T11:37:34+02:00",
+     "product_id": 8476229239051,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/362AB9A7-41A9-4AE8-8724-1308BFF57B61_1_201_a_e74ebc62-c3bb-494f-b5d2-f08fd3174971.jpg?v=1750239454",
+     "width": 682,
+     "height": 682
+    },
+    {
+     "id": 46006780297483,
+     "created_at": "2024-02-21T14:28:28+01:00",
+     "position": 7,
+     "updated_at": "2025-06-18T11:37:34+02:00",
+     "product_id": 8476229239051,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/IMG_9087_b6a09b24-a2bb-41f7-8ade-2221cd03c534.jpg?v=1750239454",
+     "width": 2929,
+     "height": 2929
+    },
+    {
+     "id": 46006780395787,
+     "created_at": "2024-02-21T14:28:28+01:00",
+     "position": 8,
+     "updated_at": "2025-06-18T11:37:34+02:00",
+     "product_id": 8476229239051,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/IMG_9080_baa7320e-65f7-48a9-a0d2-b8172836eea3.jpg?v=1750239454",
+     "width": 2929,
+     "height": 2929
+    },
+    {
+     "id": 84811969331575,
+     "created_at": "2026-02-18T19:17:31+01:00",
+     "position": 9,
+     "updated_at": "2026-05-07T11:54:03+02:00",
+     "product_id": 8476229239051,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_filter_coffee.jpg?v=1778147643",
+     "width": 1536,
+     "height": 1536
+    },
+    {
+     "id": 85575921074551,
+     "created_at": "2026-05-07T11:56:18+02:00",
+     "position": 10,
+     "updated_at": "2026-05-07T11:58:54+02:00",
+     "product_id": 8476229239051,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_espresso_coffee.jpg?v=1778147934",
+     "width": 2200,
+     "height": 2200
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "200g",
+      "2 x 200g"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 8016345039115,
+   "title": "IVAN DOS SANTOS",
+   "handle": "ivan-dos-santos-espresso",
+   "body_html": "<p><span style=\"font-weight: 400;\">The dos Santos family have deep roots across the mountain range of Caconde, producing coffee for over 40 years. This season, our Red Bourbon lot is sweetly flavoured with notes of vanilla and chocolate.</span></p>",
+   "published_at": "2025-07-11T09:36:57+02:00",
+   "created_at": "2022-11-03T09:10:42+01:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "The BARN Berlin Coffee Roasters",
+   "product_type": "",
+   "tags": [
+    "Beans",
+    "Region:Brazil"
+   ],
+   "variants": [
+    {
+     "id": 43652893475083,
+     "title": "250g",
+     "option1": "250g",
+     "option2": null,
+     "option3": null,
+     "sku": "IVAN DOS SANTOS 250g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": false,
+     "price": "16.40",
+     "grams": 260,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 8016345039115,
+     "created_at": "2022-11-03T09:10:42+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 44518898925835,
+     "title": "1000g",
+     "option1": "1000g",
+     "option2": null,
+     "option3": null,
+     "sku": "IVAN DOS SANTOS 1000g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": false,
+     "price": "63.60",
+     "grams": 1100,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 8016345039115,
+     "created_at": "2023-08-14T15:11:09+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 84913473585527,
+     "created_at": "2026-03-03T12:16:53+01:00",
+     "position": 1,
+     "updated_at": "2026-03-03T12:17:07+01:00",
+     "product_id": 8016345039115,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/bag_ivan_dos_santos_b2c.png?v=1772536627",
+     "width": 2571,
+     "height": 2571
+    },
+    {
+     "id": 84681420341623,
+     "created_at": "2026-02-06T16:52:47+01:00",
+     "position": 2,
+     "updated_at": "2026-03-03T12:17:07+01:00",
+     "product_id": 8016345039115,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/hovercard_ivan.jpg?v=1772536627",
+     "width": 1667,
+     "height": 1667
+    },
+    {
+     "id": 41069074514187,
+     "created_at": "2022-11-03T09:10:59+01:00",
+     "position": 3,
+     "updated_at": "2026-03-03T12:17:07+01:00",
+     "product_id": 8016345039115,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/Ivan_dos_santos_4_8ef5a05b-1e16-4e92-8fa0-0abb3fceb926.jpg?v=1772536627",
+     "width": 1511,
+     "height": 1512
+    },
+    {
+     "id": 41069074546955,
+     "created_at": "2022-11-03T09:10:59+01:00",
+     "position": 4,
+     "updated_at": "2026-03-03T12:17:07+01:00",
+     "product_id": 8016345039115,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/Ivan_dos_santos_1_6e3fa26b-fdbd-4d7d-aa1d-9eeccf1d7272.jpg?v=1772536627",
+     "width": 959,
+     "height": 959
+    },
+    {
+     "id": 41069074579723,
+     "created_at": "2022-11-03T09:10:59+01:00",
+     "position": 5,
+     "updated_at": "2026-03-03T12:17:07+01:00",
+     "product_id": 8016345039115,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/RalfDryingBedCaparao_e825eb6d-2400-4b1f-9ef4-8c7511dbd50d.jpg?v=1772536627",
+     "width": 469,
+     "height": 469
+    },
+    {
+     "id": 41069074612491,
+     "created_at": "2022-11-03T09:10:59+01:00",
+     "position": 6,
+     "updated_at": "2026-03-03T12:17:07+01:00",
+     "product_id": 8016345039115,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/IMG_5201_e054dcc0-febe-40b3-9c30-270b78836cd7.jpg?v=1772536627",
+     "width": 469,
+     "height": 469
+    },
+    {
+     "id": 41069074645259,
+     "created_at": "2022-11-03T09:11:00+01:00",
+     "position": 7,
+     "updated_at": "2026-03-03T12:17:07+01:00",
+     "product_id": 8016345039115,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/IMG_3643_c9352f92-1d68-44de-b31f-12843dc179c8.jpg?v=1772536627",
+     "width": 465,
+     "height": 465
+    },
+    {
+     "id": 85575921074551,
+     "created_at": "2026-05-07T11:56:18+02:00",
+     "position": 8,
+     "updated_at": "2026-05-07T11:58:54+02:00",
+     "product_id": 8016345039115,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_espresso_coffee.jpg?v=1778147934",
+     "width": 2200,
+     "height": 2200
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "250g",
+      "1000g"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 14891313594743,
+   "title": "HIMALAYA MARAGOGYPE",
+   "handle": "himalaya-maragogype",
+   "body_html": "<p><span>Our friend and partner Mauricio Salaverria continues to produce some of the most expressive coffees in El Salvador. Maragogype is one of his standout varietals, and a beautiful match for natural processing. Slowly dried at Finca Himalaya, this lot is luscious and fruit-driven, with cherry and mango balanced by rich dark chocolate.</span></p>",
+   "published_at": "2026-09-29T13:06:13+02:00",
+   "created_at": "2025-01-16T11:14:46+01:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "The Barn Coffee Roasters",
+   "product_type": "Filter Coffee",
+   "tags": [
+    "Active",
+    "Beans",
+    "Discounted For Subscriber",
+    "Filter",
+    "new-release",
+    "Region:El Salvador",
+    "Single Bean Bag"
+   ],
+   "variants": [
+    {
+     "id": 54884701634935,
+     "title": "250g",
+     "option1": "250g",
+     "option2": null,
+     "option3": null,
+     "sku": "HIMALAYA MARAGOGYPE 250g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "18.90",
+     "grams": 260,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 14891313594743,
+     "created_at": "2025-01-16T11:14:46+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 54887782973815,
+     "title": "1000g",
+     "option1": "1000g",
+     "option2": null,
+     "option3": null,
+     "sku": "HIMALAYA MARAGOGYPE 1000g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "73.60",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 14891313594743,
+     "created_at": "2025-01-17T12:13:44+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 86955316347255,
+     "created_at": "2026-09-29T12:57:55+02:00",
+     "position": 1,
+     "updated_at": "2026-09-29T12:57:59+02:00",
+     "product_id": 14891313594743,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/bag_himalaya_maragogype_b2c.png?v=1790679479",
+     "width": 2571,
+     "height": 2571
+    },
+    {
+     "id": 86955429921143,
+     "created_at": "2026-09-29T13:18:44+02:00",
+     "position": 2,
+     "updated_at": "2026-09-29T13:18:46+02:00",
+     "product_id": 14891313594743,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/hovercard_himalaya_maragogype_81beb52b-de5f-4a54-b586-fa19e869cec6.jpg?v=1790680726",
+     "width": 1667,
+     "height": 1667
+    },
+    {
+     "id": 72724747059575,
+     "created_at": "2025-01-17T10:34:30+01:00",
+     "position": 3,
+     "updated_at": "2025-12-17T15:59:28+01:00",
+     "product_id": 14891313594743,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/DSCF3014.jpg?v=1765983568",
+     "width": 4000,
+     "height": 4000
+    },
+    {
+     "id": 72724746994039,
+     "created_at": "2025-01-17T10:34:30+01:00",
+     "position": 4,
+     "updated_at": "2025-12-17T15:59:28+01:00",
+     "product_id": 14891313594743,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/DSCF3006.jpg?v=1765983568",
+     "width": 4000,
+     "height": 4000
+    },
+    {
+     "id": 16840596815952,
+     "created_at": "2020-11-24T11:01:12+01:00",
+     "position": 5,
+     "updated_at": "2025-12-17T15:59:28+01:00",
+     "product_id": 14891313594743,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/IMG_8863_109a67f7-6d3f-4994-b0c8-332e18735e90.jpg?v=1765983568",
+     "width": 480,
+     "height": 480
+    },
+    {
+     "id": 72724746830199,
+     "created_at": "2025-01-17T10:34:26+01:00",
+     "position": 6,
+     "updated_at": "2025-12-17T15:59:28+01:00",
+     "product_id": 14891313594743,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Image_16.12.24_at_17.13_a2d9f186-481c-4647-bac6-07732b704696.jpg?v=1765983568",
+     "width": 1011,
+     "height": 1011
+    },
+    {
+     "id": 72724746895735,
+     "created_at": "2025-01-17T10:34:26+01:00",
+     "position": 7,
+     "updated_at": "2025-12-17T15:59:28+01:00",
+     "product_id": 14891313594743,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Image_18.12.24_at_20.04_f5a1eafc-a15e-4014-94f1-3fb8e99a6dfb.jpg?v=1765983568",
+     "width": 1492,
+     "height": 1492
+    },
+    {
+     "id": 72729548063095,
+     "created_at": "2025-01-17T14:46:38+01:00",
+     "position": 8,
+     "updated_at": "2025-12-17T15:59:28+01:00",
+     "product_id": 14891313594743,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Image_02.01.25_at_15.50.jpg?v=1765983568",
+     "width": 743,
+     "height": 743
+    },
+    {
+     "id": 84811969331575,
+     "created_at": "2026-02-18T19:17:31+01:00",
+     "position": 9,
+     "updated_at": "2026-05-07T11:54:03+02:00",
+     "product_id": 14891313594743,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_filter_coffee.jpg?v=1778147643",
+     "width": 1536,
+     "height": 1536
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "250g",
+      "1000g"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 8242419368203,
+   "title": "LA COLINA WASHED",
+   "handle": "la-colina",
+   "body_html": "<p><meta charset=\"utf-8\">La Colina has become a favourite in our Guatemalan portfolio, combining rich sweetness with delicate fruit. This washed Caturra from producer Antonio Medina is silky and balanced, with notes of milk chocolate, pear and stone fruit. Approachable yet expressive, it is a versatile specialty coffee that works beautifully as both filter and espresso.</p>",
+   "published_at": "2026-08-19T11:07:51+02:00",
+   "created_at": "2023-05-10T10:45:09+02:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "The BARN Berlin Coffee Roasters",
+   "product_type": "Espresso Coffee",
+   "tags": [
+    "Active",
+    "Balanced",
+    "Beans",
+    "Discounted For Subscriber",
+    "Espresso",
+    "Filter",
+    "Region:Guatemala",
+    "Single Bean Bag"
+   ],
+   "variants": [
+    {
+     "id": 44365244170507,
+     "title": "250g",
+     "option1": "250g",
+     "option2": null,
+     "option3": null,
+     "sku": "LA COLINA WASHED 250g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "15.40",
+     "grams": 250,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 8242419368203,
+     "created_at": "2023-05-10T10:45:10+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 44709243814155,
+     "title": "1000g",
+     "option1": "1000g",
+     "option2": null,
+     "option3": null,
+     "sku": "LA COLINA WASHED 1000g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "59.60",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 8242419368203,
+     "created_at": "2023-11-17T17:39:54+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 86392863523191,
+     "created_at": "2026-08-04T14:39:18+02:00",
+     "position": 1,
+     "updated_at": "2026-08-04T14:39:23+02:00",
+     "product_id": 8242419368203,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/bag_la_colina_washed_b2c.png?v=1785847163",
+     "width": 2571,
+     "height": 2571
+    },
+    {
+     "id": 86536576434551,
+     "created_at": "2026-08-19T11:06:29+02:00",
+     "position": 2,
+     "updated_at": "2026-08-19T11:06:33+02:00",
+     "product_id": 8242419368203,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/hovercard_la_colina_washed.jpg?v=1787130393",
+     "width": 1667,
+     "height": 1667
+    },
+    {
+     "id": 79421081354615,
+     "created_at": "2025-09-26T13:28:02+02:00",
+     "position": 3,
+     "updated_at": "2025-09-29T21:02:30+02:00",
+     "product_id": 8242419368203,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/DSCF2708.jpg?v=1759172550",
+     "width": 4000,
+     "height": 4000
+    },
+    {
+     "id": 46818805612811,
+     "created_at": "2024-04-22T13:21:38+02:00",
+     "position": 4,
+     "updated_at": "2025-09-29T21:02:30+02:00",
+     "product_id": 8242419368203,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Image22.04.24at13.11.jpg?v=1759172550",
+     "width": 1173,
+     "height": 1173
+    },
+    {
+     "id": 46818805907723,
+     "created_at": "2024-04-22T13:21:38+02:00",
+     "position": 5,
+     "updated_at": "2025-09-29T21:02:30+02:00",
+     "product_id": 8242419368203,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Image22.04.24at13.16.jpg?v=1759172550",
+     "width": 949,
+     "height": 949
+    },
+    {
+     "id": 43244190728459,
+     "created_at": "2023-05-10T10:45:30+02:00",
+     "position": 6,
+     "updated_at": "2025-09-29T21:02:30+02:00",
+     "product_id": 8242419368203,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/IMG_9170_fc0ba72c-9538-47d3-9ce2-b0b5de5371d9.jpg?v=1759172550",
+     "width": 2736,
+     "height": 2736
+    },
+    {
+     "id": 79421081387383,
+     "created_at": "2025-09-26T13:28:02+02:00",
+     "position": 7,
+     "updated_at": "2025-09-29T21:02:30+02:00",
+     "product_id": 8242419368203,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/DSCF2745.jpg?v=1759172550",
+     "width": 4000,
+     "height": 4000
+    },
+    {
+     "id": 84811969331575,
+     "created_at": "2026-02-18T19:17:31+01:00",
+     "position": 8,
+     "updated_at": "2026-05-07T11:54:03+02:00",
+     "product_id": 8242419368203,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_filter_coffee.jpg?v=1778147643",
+     "width": 1536,
+     "height": 1536
+    },
+    {
+     "id": 85575921074551,
+     "created_at": "2026-05-07T11:56:18+02:00",
+     "position": 9,
+     "updated_at": "2026-05-07T11:58:54+02:00",
+     "product_id": 8242419368203,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_espresso_coffee.jpg?v=1778147934",
+     "width": 2200,
+     "height": 2200
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "250g",
+      "1000g"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 15600519348599,
+   "title": "HIMALAYA TWIN BOX",
+   "handle": "himalaya-twin-box",
+   "body_html": "<p><strong>Two coffees from the same farm, each with its own character.</strong></p>\n<p><span>We bring together two exceptional coffees from Himalaya Estate in El Salvador. Grown on the same farm but in different varieties, they offer a wonderful opportunity to explore how processing shapes flavour. </span><span>Enjoy both coffees together at a </span><span>special bundle price</span><span>, available for a limited time.<br><br></span><span><meta charset=\"utf-8\"></span><a href=\"https://thebarn.de/products/autumn-coffee?_pos=5&amp;_psq=pinea&amp;_psid=c857d5dcb&amp;_ss=e\" rel=\"noopener\" target=\"_blank\"><span>Himalaya Pineapple (Autumn Coffee)</span></a><br><span>Our seasonal favourite is made from Bourbon cherries using Mauricio's signature natural process. Slowly dried in the shade for almost 30 days, it offers notes of candied apple, almond and dark chocolate, with a rich, rounded sweetness.</span><span></span></p>\n<p data-pm-slice=\"1 1 []\"><span><a href=\"https://thebarn.de/products/himalaya-maragogype?_pos=1&amp;_psq=margog&amp;_psid=34506c95e&amp;_ss=e\">Himalaya Maragogype</a><br></span><span>Made from the distinctive, large-bean Maragogype variety, this naturally processed coffee brings a brighter fruit character. Expect juicy cherry, ripe mango and strawberry, followed by a smooth dark chocolate finish.</span></p>",
+   "published_at": "2026-11-06T11:13:03+01:00",
+   "created_at": "2026-11-05T17:25:06+01:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "THE BARN Berlin Coffee Roasters",
+   "product_type": "Coffee Bundle",
+   "tags": [
+    "Active",
+    "Beans",
+    "Bundles",
+    "Filter",
+    "Gifts_Beans_and_Bundles",
+    "Specials"
+   ],
+   "variants": [
+    {
+     "id": 57715499827575,
+     "title": "2 x 250g",
+     "option1": "2 x 250g",
+     "option2": null,
+     "option3": null,
+     "sku": "HIMALAYA TWIN BOX",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "31.30",
+     "grams": 500,
+     "compare_at_price": "34.80",
+     "position": 1,
+     "product_id": 15600519348599,
+     "created_at": "2026-11-05T17:25:06+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 87325592289655,
+     "created_at": "2026-11-06T10:29:46+01:00",
+     "position": 1,
+     "updated_at": "2026-11-06T10:31:09+01:00",
+     "product_id": 15600519348599,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Himalaya_twin_box.png?v=1793957469",
+     "width": 820,
+     "height": 820
+    },
+    {
+     "id": 86984327528823,
+     "created_at": "2026-10-04T11:00:40+02:00",
+     "position": 2,
+     "updated_at": "2026-11-06T10:15:26+01:00",
+     "product_id": 15600519348599,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/instagram-image-225d492a-9008-4d03-84f1-b14cda49647b.jpg?v=1793956526",
+     "width": 1536,
+     "height": 1536
+    },
+    {
+     "id": 46565731139851,
+     "created_at": "2024-04-01T10:50:50+02:00",
+     "position": 3,
+     "updated_at": "2025-03-21T16:22:04+01:00",
+     "product_id": 15600519348599,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/F3765D43-2706-49B9-858B-452EEAB55CD1.jpg?v=1742570524",
+     "width": 1164,
+     "height": 1164
+    },
+    {
+     "id": 84811969331575,
+     "created_at": "2026-02-18T19:17:31+01:00",
+     "position": 4,
+     "updated_at": "2026-05-07T11:54:03+02:00",
+     "product_id": 15600519348599,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_filter_coffee.jpg?v=1778147643",
+     "width": 1536,
+     "height": 1536
+    },
+    {
+     "id": 85575921074551,
+     "created_at": "2026-05-07T11:56:18+02:00",
+     "position": 5,
+     "updated_at": "2026-05-07T11:58:54+02:00",
+     "product_id": 15600519348599,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_espresso_coffee.jpg?v=1778147934",
+     "width": 2200,
+     "height": 2200
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "2 x 250g"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 15401005580663,
+   "title": "ROASTERS CHOICE SUBSCRIPTION",
+   "handle": "roaster-choice-subscription",
+   "body_html": "<p><strong>A Curated Journey<br></strong></p>\n<p>Every month, we source stunning coffees from around the world. Our Curated Subscription is the best way to explore the origins, varietals, and processes that make Single Origin flavour so special.</p>\n<p class=\"p1\">Choose espresso or filter, delivered when you need it. We are dedicated to bringing you the best coffee experience possible, so let’s discover incredible flavour together.</p>",
+   "published_at": "2026-03-01T06:02:53+01:00",
+   "created_at": "2026-02-27T13:14:39+01:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "THE BARN Berlin Coffee Roasters",
+   "product_type": "Subscription",
+   "tags": [
+    "Bestseller",
+    "Bundles",
+    "EcoShipable",
+    "Favoritos",
+    "free-shipping",
+    "Gift",
+    "hide-compare-at-price",
+    "Subscription"
+   ],
+   "variants": [
+    {
+     "id": 56808965276023,
+     "title": "Filter / 2 x 250g / Every 4 weeks · Commit to 12 months · Save 20%",
+     "option1": "Filter",
+     "option2": "2 x 250g",
+     "option3": "Every 4 weeks · Commit to 12 months · Save 20%",
+     "sku": "2/250/Filter Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "26.50",
+     "grams": 500,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-28T09:38:56+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56806069600631,
+     "title": "Filter / 2 x 250g / Every 4 weeks · Commit to 6 months · Save 12%",
+     "option1": "Filter",
+     "option2": "2 x 250g",
+     "option3": "Every 4 weeks · Commit to 6 months · Save 12%",
+     "sku": "2/250/Filter Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "28.00",
+     "grams": 500,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-27T13:14:39+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56806069567863,
+     "title": "Filter / 2 x 250g / Every 4 weeks · Monthly · Save 6%",
+     "option1": "Filter",
+     "option2": "2 x 250g",
+     "option3": "Every 4 weeks · Monthly · Save 6%",
+     "sku": "2/250/Filter Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "30.00",
+     "grams": 500,
+     "compare_at_price": null,
+     "position": 3,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-27T13:14:39+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56808965374327,
+     "title": "Filter / 4 x 250g / Every 4 weeks · Commit to 12 months · Save 20%",
+     "option1": "Filter",
+     "option2": "4 x 250g",
+     "option3": "Every 4 weeks · Commit to 12 months · Save 20%",
+     "sku": "4/250/Filter Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "53.00",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 4,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-28T09:38:56+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56808965341559,
+     "title": "Filter / 4 x 250g / Every 4 weeks · Commit to 6 months · Save 12%",
+     "option1": "Filter",
+     "option2": "4 x 250g",
+     "option3": "Every 4 weeks · Commit to 6 months · Save 12%",
+     "sku": "4/250/Filter Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "56.00",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 5,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-28T09:38:56+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56808965308791,
+     "title": "Filter / 4 x 250g / Every 4 weeks · Monthly · Save 6%",
+     "option1": "Filter",
+     "option2": "4 x 250g",
+     "option3": "Every 4 weeks · Monthly · Save 6%",
+     "sku": "4/250/Filter Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "60.00",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 6,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-28T09:38:56+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56808965472631,
+     "title": "Filter / 6 x 250g / Every 4 weeks · Commit to 12 months · Save 20%",
+     "option1": "Filter",
+     "option2": "6 x 250g",
+     "option3": "Every 4 weeks · Commit to 12 months · Save 20%",
+     "sku": "6/250/Filter Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "79.50",
+     "grams": 1500,
+     "compare_at_price": null,
+     "position": 7,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-28T09:38:56+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56808965439863,
+     "title": "Filter / 6 x 250g / Every 4 weeks · Commit to 6 months · Save 12%",
+     "option1": "Filter",
+     "option2": "6 x 250g",
+     "option3": "Every 4 weeks · Commit to 6 months · Save 12%",
+     "sku": "6/250/Filter Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "84.00",
+     "grams": 1500,
+     "compare_at_price": null,
+     "position": 8,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-28T09:38:56+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56808965407095,
+     "title": "Filter / 6 x 250g / Every 4 weeks · Monthly · Save 6%",
+     "option1": "Filter",
+     "option2": "6 x 250g",
+     "option3": "Every 4 weeks · Monthly · Save 6%",
+     "sku": "6/250/Filter Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "90.00",
+     "grams": 1500,
+     "compare_at_price": null,
+     "position": 9,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-28T09:38:56+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56808965505399,
+     "title": "Espresso / 2 x 250g / Every 4 weeks · Commit to 12 months · Save 20%",
+     "option1": "Espresso",
+     "option2": "2 x 250g",
+     "option3": "Every 4 weeks · Commit to 12 months · Save 20%",
+     "sku": "2/250/Espresso Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "26.50",
+     "grams": 500,
+     "compare_at_price": null,
+     "position": 10,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-28T09:38:56+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56806069666167,
+     "title": "Espresso / 2 x 250g / Every 4 weeks · Commit to 6 months · Save 12%",
+     "option1": "Espresso",
+     "option2": "2 x 250g",
+     "option3": "Every 4 weeks · Commit to 6 months · Save 12%",
+     "sku": "2/250/Espresso Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "28.00",
+     "grams": 500,
+     "compare_at_price": null,
+     "position": 11,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-27T13:14:39+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56806069633399,
+     "title": "Espresso / 2 x 250g / Every 4 weeks · Monthly · Save 6%",
+     "option1": "Espresso",
+     "option2": "2 x 250g",
+     "option3": "Every 4 weeks · Monthly · Save 6%",
+     "sku": "2/250/Espresso Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "30.00",
+     "grams": 500,
+     "compare_at_price": null,
+     "position": 12,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-27T13:14:39+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56808965603703,
+     "title": "Espresso / 4 x 250g / Every 4 weeks · Commit to 12 months · Save 20%",
+     "option1": "Espresso",
+     "option2": "4 x 250g",
+     "option3": "Every 4 weeks · Commit to 12 months · Save 20%",
+     "sku": "4/250/Espresso Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "53.00",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 13,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-28T09:38:56+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56808965570935,
+     "title": "Espresso / 4 x 250g / Every 4 weeks · Commit to 6 months · Save 12%",
+     "option1": "Espresso",
+     "option2": "4 x 250g",
+     "option3": "Every 4 weeks · Commit to 6 months · Save 12%",
+     "sku": "4/250/Espresso Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "56.00",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 14,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-28T09:38:56+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56808965538167,
+     "title": "Espresso / 4 x 250g / Every 4 weeks · Monthly · Save 6%",
+     "option1": "Espresso",
+     "option2": "4 x 250g",
+     "option3": "Every 4 weeks · Monthly · Save 6%",
+     "sku": "4/250/Espresso Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "60.00",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 15,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-28T09:38:56+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56808965702007,
+     "title": "Espresso / 6 x 250g / Every 4 weeks · Commit to 12 months · Save 20%",
+     "option1": "Espresso",
+     "option2": "6 x 250g",
+     "option3": "Every 4 weeks · Commit to 12 months · Save 20%",
+     "sku": "6/250/Espresso Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "79.50",
+     "grams": 1500,
+     "compare_at_price": null,
+     "position": 16,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-28T09:38:56+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56808965669239,
+     "title": "Espresso / 6 x 250g / Every 4 weeks · Commit to 6 months · Save 12%",
+     "option1": "Espresso",
+     "option2": "6 x 250g",
+     "option3": "Every 4 weeks · Commit to 6 months · Save 12%",
+     "sku": "6/250/Espresso Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "84.00",
+     "grams": 1500,
+     "compare_at_price": null,
+     "position": 17,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-28T09:38:56+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 56808965636471,
+     "title": "Espresso / 6 x 250g / Every 4 weeks · Monthly · Save 6%",
+     "option1": "Espresso",
+     "option2": "6 x 250g",
+     "option3": "Every 4 weeks · Monthly · Save 6%",
+     "sku": "6/250/Espresso Subscription/Tracked",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "90.00",
+     "grams": 1500,
+     "compare_at_price": null,
+     "position": 18,
+     "product_id": 15401005580663,
+     "created_at": "2026-02-28T09:38:56+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 86242660811127,
+     "created_at": "2026-07-17T12:39:49+02:00",
+     "position": 1,
+     "updated_at": "2026-07-17T12:46:41+02:00",
+     "product_id": 15401005580663,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/bag_roasters_choice_july_2026.png?v=1784285201",
+     "width": 1950,
+     "height": 1950
+    },
+    {
+     "id": 72819964051831,
+     "created_at": "2025-01-27T17:09:04+01:00",
+     "position": 2,
+     "updated_at": "2026-03-01T06:10:59+01:00",
+     "product_id": 15401005580663,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/A546B912-3AD7-4910-BF92-93B67BA5D06A-2950-000002F3340090BF.jpg?v=1772341859",
+     "width": 1184,
+     "height": 1185
+    },
+    {
+     "id": 85575921074551,
+     "created_at": "2026-05-07T11:56:18+02:00",
+     "position": 3,
+     "updated_at": "2026-05-07T11:58:54+02:00",
+     "product_id": 15401005580663,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_espresso_coffee.jpg?v=1778147934",
+     "width": 2200,
+     "height": 2200
+    },
+    {
+     "id": 84811969331575,
+     "created_at": "2026-02-18T19:17:31+01:00",
+     "position": 4,
+     "updated_at": "2026-05-07T11:54:03+02:00",
+     "product_id": 15401005580663,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_filter_coffee.jpg?v=1778147643",
+     "width": 1536,
+     "height": 1536
+    }
+   ],
+   "options": [
+    {
+     "name": "Roast",
+     "position": 1,
+     "values": [
+      "Filter",
+      "Espresso"
+     ]
+    },
+    {
+     "name": "Size",
+     "position": 2,
+     "values": [
+      "2 x 250g",
+      "4 x 250g",
+      "6 x 250g"
+     ]
+    },
+    {
+     "name": "Delivery & Payment",
+     "position": 3,
+     "values": [
+      "Every 4 weeks · Commit to 12 months · Save 20%",
+      "Every 4 weeks · Commit to 6 months · Save 12%",
+      "Every 4 weeks · Monthly · Save 6%"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 8744866742539,
+   "title": "INSPIRATION COFFEE ADVENT CALENDAR",
+   "handle": "speciality-coffee-calendar",
+   "body_html": "<p dir=\"ltr\"><strong>This is our best Coffee Calendar ever. Secure yours!</strong></p>\n<p dir=\"ltr\"><strong>24 Coffees. One Journey.<br></strong><span>Exceptional Single Origin coffees from our closest farm partners. Your countdown to Christmas: Brew a new coffee every day.</span></p>\n<p><span>Each door contains </span><strong><span>50g of roasted coffee</span></strong><span> from different origins, varieties, processes, and flavour profiles. All coffees are roasted omni-style for both filter and espresso.</span></p>\n<p><span><meta charset=\"utf-8\"> <strong>Last year our Advent Calendar sold out far too early. Make sure you reserve yours now!</strong></span></p>\n<p class=\"isSelectedEnd\"><strong><span>Inside:</span></strong></p>\n<ul>\n<li><span>24 × 50g Single Origin coffees</span></li>\n<li><span>1.2kg coffee in total</span></li>\n<li><span>Tasting Diary with details on every coffee</span></li>\n<li><span>Limited Edition illustrated Calendar</span></li>\n<li><span>Suitable for filter &amp; espresso</span></li>\n</ul>\n<p dir=\"ltr\"><strong>Unfortunately, we cannot accepts refunds or returns. </strong></p>",
+   "published_at": "2026-08-28T21:31:00+02:00",
+   "created_at": "2024-07-25T13:49:59+02:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "THE BARN Coffee Roasters Berlin",
+   "product_type": "",
+   "tags": [
+    "Advent Calendar",
+    "Discounted For Subscriber"
+   ],
+   "variants": [
+    {
+     "id": 45680606150923,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "INSPIRATION CALENDAR",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "129.00",
+     "grams": 2000,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 8744866742539,
+     "created_at": "2024-07-25T13:49:59+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 86607050965367,
+     "created_at": "2026-08-21T12:02:00+02:00",
+     "position": 1,
+     "updated_at": "2026-08-21T12:02:25+02:00",
+     "product_id": 8744866742539,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/photo_advent_calendar_3.jpg?v=1787306545",
+     "width": 986,
+     "height": 986
+    },
+    {
+     "id": 86606854881655,
+     "created_at": "2026-08-21T11:58:57+02:00",
+     "position": 2,
+     "updated_at": "2026-08-21T11:59:16+02:00",
+     "product_id": 8744866742539,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/photo_advent_calendar_4.jpg?v=1787306356",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "id": 86622166876535,
+     "created_at": "2026-08-21T17:06:37+02:00",
+     "position": 3,
+     "updated_at": "2026-08-21T17:07:01+02:00",
+     "product_id": 8744866742539,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/photo_advent_calendar_5.jpg?v=1787324821",
+     "width": 950,
+     "height": 950
+    },
+    {
+     "id": 86622169071991,
+     "created_at": "2026-08-21T17:07:21+02:00",
+     "position": 4,
+     "updated_at": "2026-08-21T17:07:47+02:00",
+     "product_id": 8744866742539,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/E298590C-060C-42D0-ACF1-0372EB3455AC-4331-000001B5B8EA5E84.jpg?v=1787324867",
+     "width": 1184,
+     "height": 1184
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 15009943519607,
+   "title": "MATCHA BOWL",
+   "handle": "matcha-bowl",
+   "body_html": "<p><strong>Our Matcha Bowl</strong><br>Handmade in Berlin by Uliana Tepikina, our Matcha bowl was specially designed for our first ever <a rel=\"noopener\" href=\"https://thebarn.de/products/the-barn-ceremonial-matcha\" target=\"_blank\">Ceremonial Matcha</a>.</p>\n<p>With clay from the <span>Westerwald mountains, the beautifully shaped bowls are</span> tactile to hold, with a sandy glaze. <span>Each bowl is created by hand, with colours and textures that vary from piece to piece.</span></p>\n<ul>\n<li>\n<span class=\"metafield-multi_line_text_field\">Colour: Sandy brown</span><span class=\"metafield-multi_line_text_field\"><br></span>\n</li>\n<li><span class=\"metafield-multi_line_text_field\">Dishwasher and microwave safe<br></span></li>\n<li><span class=\"metafield-multi_line_text_field\">Dimensions: 13cm width, 7cm height</span></li>\n<li>\n<span class=\"metafield-multi_line_text_field\">Made in Berlin</span><span class=\"metafield-multi_line_text_field\"></span>\n</li>\n</ul>",
+   "published_at": "2025-06-14T07:52:08+02:00",
+   "created_at": "2025-06-12T13:56:52+02:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "Uli Tepikina",
+   "product_type": "",
+   "tags": [
+    "Active",
+    "Discounted For Subscriber",
+    "Gifts_Beans_and_Bundles"
+   ],
+   "variants": [
+    {
+     "id": 55307402314103,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "MATCHA BOWL",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "70.00",
+     "grams": 1400,
+     "compare_at_price": "70.00",
+     "position": 1,
+     "product_id": 15009943519607,
+     "created_at": "2025-06-12T13:56:53+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 75138210136439,
+     "created_at": "2025-06-13T12:14:59+02:00",
+     "position": 1,
+     "updated_at": "2025-06-13T12:15:35+02:00",
+     "product_id": 15009943519607,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/IMG_2652_2.jpg?v=1749809735",
+     "width": 1353,
+     "height": 1353
+    },
+    {
+     "id": 75138210038135,
+     "created_at": "2025-06-13T12:14:59+02:00",
+     "position": 2,
+     "updated_at": "2025-06-13T12:15:35+02:00",
+     "product_id": 15009943519607,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/IMG_2675_2.jpg?v=1749809735",
+     "width": 1536,
+     "height": 1536
+    },
+    {
+     "id": 75138209907063,
+     "created_at": "2025-06-13T12:14:59+02:00",
+     "position": 3,
+     "updated_at": "2025-06-13T12:15:35+02:00",
+     "product_id": 15009943519607,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/IMG_2677_2.jpg?v=1749809735",
+     "width": 1362,
+     "height": 1362
+    },
+    {
+     "id": 73055768281463,
+     "created_at": "2025-02-10T17:01:52+01:00",
+     "position": 4,
+     "updated_at": "2025-06-13T12:15:35+02:00",
+     "product_id": 15009943519607,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/E8CC9B6E-8B17-4795-A50E-3C72F0AE3411.jpg?v=1749809735",
+     "width": 1536,
+     "height": 1536
+    },
+    {
+     "id": 73065607364983,
+     "created_at": "2025-02-11T08:14:05+01:00",
+     "position": 5,
+     "updated_at": "2025-06-13T12:15:35+02:00",
+     "product_id": 15009943519607,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/AE2F6EE3-CCCD-4AF6-9065-6AE70BCA54A6.jpg?v=1749809735",
+     "width": 1536,
+     "height": 1536
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 8794554564875,
+   "title": "GUAVA BANANA SAMPLE 35g",
+   "handle": "subscriber-campaign-sample-bag",
+   "body_html": "",
+   "published_at": "2026-04-24T11:20:43+02:00",
+   "created_at": "2024-09-02T05:33:18+02:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "The Barn Coffee Roasters Berlin",
+   "product_type": "",
+   "tags": [],
+   "variants": [
+    {
+     "id": 45814280126731,
+     "title": "35g",
+     "option1": "35g",
+     "option2": null,
+     "option3": null,
+     "sku": "SAMPLE BAG GUAVA BANANA 35g",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "0.00",
+     "grams": 35,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 8794554564875,
+     "created_at": "2024-09-02T05:33:18+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 48905792291083,
+     "created_at": "2024-09-02T06:24:45+02:00",
+     "position": 1,
+     "updated_at": "2024-09-02T06:24:49+02:00",
+     "product_id": 8794554564875,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/Subscriber_Free_Bag.png?v=1725251089",
+     "width": 1510,
+     "height": 1510
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "35g"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 6644995063888,
+   "title": "TOTE BAG: LOVE IN A CUP",
+   "handle": "tote-bag-love-in-a-cup",
+   "body_html": "<meta charset=\"utf-8\"><meta charset=\"utf-8\">\n<p><span style=\"font-weight: 400;\">For a limited period, we are bringing back Tote Bags that were very popular in our earlier years. Now is your chance to complete your collection!<br><br>\"Love in a Cup\" is showing a drawing with note addressed to Ralf, by one of his special regulars at the Roastery Cafe: Marie Suppli Lundquist. We simply love Marie and we love her note to Ralf. Straight from the heart!<br><br></span>The Material:<br>Your Tote bag is made out of recycled cotton. Produced in Germany. Up to 2500 liters of water are saved during its production process and no nasty chemicals are used. <br><br>A practical companion, use our Tote Bag for shopping, going to gym class or just have it folded in your back-pocket in case you need to carry something you find a long the way.<br><br>Colour: Grey<br>Material: recycled cotton<br>Dimensions: 38 x 41 cm</p>\n<ul></ul>",
+   "published_at": "2024-01-04T16:09:59+01:00",
+   "created_at": "2022-02-08T12:33:54+01:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "The Barn Coffee Roasters",
+   "product_type": "",
+   "tags": [],
+   "variants": [
+    {
+     "id": 39659176067152,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "Tote Bag Grey (Love in a cup motive)",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": false,
+     "price": "15.00",
+     "grams": 100,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 6644995063888,
+     "created_at": "2022-02-08T12:33:54+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 29496134828112,
+     "created_at": "2022-02-08T12:34:11+01:00",
+     "position": 1,
+     "updated_at": "2024-07-22T09:45:55+02:00",
+     "product_id": 6644995063888,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/IMG_6328.jpg?v=1721634355",
+     "width": 480,
+     "height": 480
+    },
+    {
+     "id": 29496134762576,
+     "created_at": "2022-02-08T12:34:11+01:00",
+     "position": 2,
+     "updated_at": "2024-07-22T09:45:58+02:00",
+     "product_id": 6644995063888,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/IMG_6329.jpg?v=1721634358",
+     "width": 480,
+     "height": 480
+    },
+    {
+     "id": 29496134795344,
+     "created_at": "2022-02-08T12:34:11+01:00",
+     "position": 3,
+     "updated_at": "2024-07-22T09:46:01+02:00",
+     "product_id": 6644995063888,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/IMG_6330.jpg?v=1721634361",
+     "width": 480,
+     "height": 480
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 4835958489168,
+   "title": "FELLOW STAGG EKG KETTLE",
+   "handle": "fellow-stagg-ekg-kettle",
+   "body_html": "<p>Fellow is a young American brand that brings style and elegance to any table. The Stagg EKG Kettle won the Red Dot Design Award and is now available in black or white. This kettle will be your countertop partner in the pursuit of a ridiculously good cup of coffee.<br></p>\n<p>Variable temperature control from 40 to 100 degrees Celsius (LCD). The HOLD mode allows you to keep the set temperature for up to 60 minutes. 1200 Watt power ensure quick heating to the desired temperature.</p>\n<p>Brew Watch: When the water has reached the desired temperature, you can use the timer for your brewing action.</p>\n<p>The gooseneck provides full pour control and make your filter brew more consistent. Stagg Kettles have a weighted handle to provide a counterbalance and greater stability when pouring.</p>\n<ul>\n<li>\n<span style=\"font-size: 1.0em;\">Capacity: 900ml</span><br>\n</li>\n<li><span style=\"font-size: 1.0em;\">Colour: Black or White</span></li>\n<li>\n<span style=\"font-size: 1.0em;\">Material: Stainless Steel (body), covered with food-safe matte black paint.</span><br>\n</li>\n<li>\n<span style=\"font-size: 1.0em;\">Power: 1200 Watt (220V, EU Plug)</span><br>\n</li>\n<li><span style=\"font-size: 1.0em;\">Dimensions: 29cm x 17cm x 20cm</span></li>\n</ul>",
+   "published_at": "2023-11-10T14:48:16+01:00",
+   "created_at": "2020-11-06T15:53:23+01:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "Fellow",
+   "product_type": "",
+   "tags": [
+    "Active",
+    "Favourites",
+    "Fellow",
+    "misc"
+   ],
+   "variants": [
+    {
+     "id": 44695339794699,
+     "title": "White",
+     "option1": "White",
+     "option2": null,
+     "option3": null,
+     "sku": "1X STAGG KETTLE WHITE",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 44844930662667,
+      "product_id": 4835958489168,
+      "position": 3,
+      "created_at": "2023-11-14T12:51:24+01:00",
+      "updated_at": "2024-07-22T09:47:56+02:00",
+      "alt": "FELLOW STAGG EKG KETTLE - THE BARN Coffee Roasters Berlin",
+      "width": 3581,
+      "height": 3581,
+      "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/34A2150.jpg?v=1721634476",
+      "variant_ids": [
+       44695339794699
+      ]
+     },
+     "available": false,
+     "price": "170.00",
+     "grams": 1400,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 4835958489168,
+     "created_at": "2023-11-14T12:23:27+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 44695339761931,
+     "title": "Black",
+     "option1": "Black",
+     "option2": null,
+     "option3": null,
+     "sku": "1X STAGG KETTLE BLACK",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 44945570988299,
+      "product_id": 4835958489168,
+      "position": 1,
+      "created_at": "2023-11-24T09:31:05+01:00",
+      "updated_at": "2024-07-22T09:47:35+02:00",
+      "alt": "FELLOW STAGG EKG KETTLE - THE BARN Coffee Roasters Berlin",
+      "width": 2838,
+      "height": 2838,
+      "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/34A1921_9bbe6819-8c2c-4ae5-a84a-b10adc6471ca.jpg?v=1721634455",
+      "variant_ids": [
+       44695339761931
+      ]
+     },
+     "available": false,
+     "price": "180.00",
+     "grams": 1400,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 4835958489168,
+     "created_at": "2023-11-14T12:23:27+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 44945570988299,
+     "created_at": "2023-11-24T09:31:05+01:00",
+     "position": 1,
+     "updated_at": "2024-07-22T09:47:35+02:00",
+     "product_id": 4835958489168,
+     "variant_ids": [
+      44695339761931
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/34A1921_9bbe6819-8c2c-4ae5-a84a-b10adc6471ca.jpg?v=1721634455",
+     "width": 2838,
+     "height": 2838
+    },
+    {
+     "id": 44844930629899,
+     "created_at": "2023-11-14T12:51:24+01:00",
+     "position": 2,
+     "updated_at": "2024-07-22T09:47:48+02:00",
+     "product_id": 4835958489168,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/34A2154.jpg?v=1721634468",
+     "width": 3648,
+     "height": 3648
+    },
+    {
+     "id": 44844930662667,
+     "created_at": "2023-11-14T12:51:24+01:00",
+     "position": 3,
+     "updated_at": "2024-07-22T09:47:56+02:00",
+     "product_id": 4835958489168,
+     "variant_ids": [
+      44695339794699
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/34A2150.jpg?v=1721634476",
+     "width": 3581,
+     "height": 3581
+    }
+   ],
+   "options": [
+    {
+     "name": "Color",
+     "position": 1,
+     "values": [
+      "White",
+      "Black"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 9427968711,
+   "title": "ACAIA LUNAR SCALE",
+   "handle": "acaia-lunar-scale",
+   "body_html": "<p>The Acaia Lunar Scale was designed to fit in the drip tray of an espresso machine. It is also perfect in size and functionality for filter brews. The Lunar has a durable, water-resistant aluminium body, so you can monitor the weight, time, and flow-rate. It has functions to automatically start the timer when the first drop hits the vessel on the scale.</p>\n<ul>\n<li>Accurate to 0.1g</li>\n<li>Sensitive even to weight changes as a result of evaporation</li>\n<li>Built-in auto-modes including automatic tare, start, and stop</li>\n<li>Rechargeable USB power supply that lasts 20-30 hours</li>\n<li>Mobile app compatible</li>\n<li>2 year warranty</li>\n<li>2000g capacity</li>\n</ul>\n<p>Acaia is one of the preferred brew scale manufacturers in Specialty Coffee. Their modern and minimalistic scales are designed with functionality in mind, and compatible with the Acaia iPhone &amp; Android app.</p>\n<p>This product can only be shipped within Europe.</p>\n<p><strong>More details:</strong><span> Our headbarista Jake explains more in this video </span><a href=\"https://youtu.be/YHLJwRXkbdA\"><strong>here</strong></a><span>.</span></p>",
+   "published_at": "2023-06-23T18:10:53+02:00",
+   "created_at": "2016-11-20T17:20:36+01:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "Acaia",
+   "product_type": "",
+   "tags": [
+    "Equipment",
+    "Scales"
+   ],
+   "variants": [
+    {
+     "id": 34440262727,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "ACAIA LUNAR SCALE",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": false,
+     "price": "280.00",
+     "grams": 240,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 9427968711,
+     "created_at": "2016-11-20T17:20:36+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 74175371805047,
+     "created_at": "2025-04-17T10:43:21+02:00",
+     "position": 1,
+     "updated_at": "2025-04-17T10:43:44+02:00",
+     "product_id": 9427968711,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/P_Lunar2021_1500x1000_01_black_wood_1.png?v=1744879424",
+     "width": 829,
+     "height": 823
+    },
+    {
+     "id": 14936707924048,
+     "created_at": "2020-04-23T21:31:42+02:00",
+     "position": 2,
+     "updated_at": "2025-04-17T10:43:44+02:00",
+     "product_id": 9427968711,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/acaialunar.jpg?v=1744879424",
+     "width": 3024,
+     "height": 3024
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 6569995698256,
+   "title": "SHOPPER BAG",
+   "handle": "tote-bag",
+   "body_html": "<p data-pm-slice=\"1 1 []\"><span><meta charset=\"utf-8\"> <strong>One of our most sought-after pieces, back in a new limited edition.</strong></span></p>\n<p><span>Our illustrated tote bag returns with the same soft denim-grey, made in Germany from recycled cotton.</span></p>\n<p><span>Featuring an original illustration by London-based artist Oliver Arndt, the design captures a quiet moment at the bar of our Schönhauser Allee Café: one of our dear customers enjoying a book and a coffee in the window seat.</span></p>\n<p><span>Soft to the touch, spacious, and easy to carry, this everyday companion is perfect for coffee runs, shopping trips, and everything in between.</span></p>\n<p data-pm-slice=\"1 3 []\"><strong><span>Product Details</span></strong></p>\n<ul>\n<li>\n<strong><span>Colour:</span></strong><span> Grey</span>\n</li>\n<li>\n<strong><span>Illustration:</span></strong><span> Oliver Arndt, London</span>\n</li>\n<li>\n<strong><span>Made in:</span></strong><span> Germany</span>\n</li>\n<li>\n<strong><span>Dimensions:</span></strong><span> 38 × 42 cm</span>\n</li>\n<li>\n<strong><span>Handles:</span></strong><span> 2.5 × 70 cm</span>\n</li>\n<li>\n<strong><span>Bottom Fold:</span></strong><span> 10 cm</span>\n</li>\n<li>\n<strong><span>Material:</span></strong><span> 90 % <meta charset=\"utf-8\">Recycled Cotton, 10 % Polyester (210 g/m²)</span>\n</li>\n</ul>",
+   "published_at": "2026-10-19T12:14:08+02:00",
+   "created_at": "2021-05-25T20:56:08+02:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "The Barn Coffee Roasters",
+   "product_type": "Merchandise",
+   "tags": [
+    "Active",
+    "Gifts_Merch",
+    "Merchandise"
+   ],
+   "variants": [
+    {
+     "id": 39414258434128,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "TOTE BAG RECYCLED GREY ILLUSTRATION",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "25.00",
+     "grams": 100,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 6569995698256,
+     "created_at": "2021-05-25T20:56:08+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 28189871407184,
+     "created_at": "2021-05-25T20:57:48+02:00",
+     "position": 1,
+     "updated_at": "2026-10-19T16:55:39+02:00",
+     "product_id": 6569995698256,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/Shopper_bag_THE_BARN.jpg?v=1792421739",
+     "width": 3024,
+     "height": 3024
+    },
+    {
+     "id": 28189871374416,
+     "created_at": "2021-05-25T20:57:47+02:00",
+     "position": 2,
+     "updated_at": "2026-10-19T16:55:55+02:00",
+     "product_id": 6569995698256,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/Shopper_bag_THE_BARN_2.jpg?v=1792421755",
+     "width": 3024,
+     "height": 3024
+    },
+    {
+     "id": 87122514510199,
+     "created_at": "2026-10-19T11:07:19+02:00",
+     "position": 3,
+     "updated_at": "2026-10-19T16:57:04+02:00",
+     "product_id": 6569995698256,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/shopper_bag_cold_brew.jpg?v=1792421824",
+     "width": 1102,
+     "height": 1102
+    },
+    {
+     "id": 28189854105680,
+     "created_at": "2021-05-25T20:56:10+02:00",
+     "position": 4,
+     "updated_at": "2026-10-19T16:57:22+02:00",
+     "product_id": 6569995698256,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/the_barn_bag_illustration.jpg?v=1792421842",
+     "width": 1190,
+     "height": 1190
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 9469321031,
+   "title": "DIGITAL GIFT CARD",
+   "handle": "gift-card",
+   "body_html": "<p class=\"p1\">Our digital gift card can be redeemed <span class=\"s1\"><b>online and in all THE BARN cafés</b></span><b class=\"\"></b></p>\n<p>Treat your friends with a voucher for our online shop for their immediate enjoyment, gift giving made simple.</p>\n<p>Our Webshop Gift Card can be used to buy freshly roasted beans, brew equipment, merchandise. <span style=\"text-decoration: underline;\">Please note that the card cannot be used to book our subscriptions.</span> </p>\n<div class=\"AppleOriginalContents\">\n<div class=\"AppleOriginalContents\">\n<strong>The card will be sent out as an electronic voucher that will be issued by email right after payment.</strong><br>\n</div>\n</div>",
+   "published_at": "2017-11-29T20:43:50+01:00",
+   "created_at": "2016-11-29T08:09:52+01:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "FOR ONLINE SHOPPING",
+   "product_type": "Vouchers",
+   "tags": [
+    "Active",
+    "Gifts_Beans_and_Bundles",
+    "Vouchers",
+    "x-mas-2022",
+    "x-mas-essentials"
+   ],
+   "variants": [
+    {
+     "id": 45522026135819,
+     "title": "10€",
+     "option1": "10€",
+     "option2": null,
+     "option3": null,
+     "sku": "gift card webshop 10",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": {
+      "id": 83631180677495,
+      "product_id": 9469321031,
+      "position": 5,
+      "created_at": "2025-12-12T09:51:22+01:00",
+      "updated_at": "2025-12-12T09:51:27+01:00",
+      "alt": null,
+      "width": 2278,
+      "height": 2278,
+      "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/gift_card_10.jpg?v=1765529487",
+      "variant_ids": [
+       45522026135819
+      ]
+     },
+     "available": true,
+     "price": "10.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 9469321031,
+     "created_at": "2024-06-21T11:11:29+02:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 34685909255,
+     "title": "25€",
+     "option1": "25€",
+     "option2": null,
+     "option3": null,
+     "sku": "gift card webshop 25",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": {
+      "id": 83631180710263,
+      "product_id": 9469321031,
+      "position": 6,
+      "created_at": "2025-12-12T09:51:22+01:00",
+      "updated_at": "2025-12-12T09:51:27+01:00",
+      "alt": null,
+      "width": 2278,
+      "height": 2278,
+      "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/gift_card_25.jpg?v=1765529487",
+      "variant_ids": [
+       34685909255
+      ]
+     },
+     "available": true,
+     "price": "25.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 9469321031,
+     "created_at": "2016-11-29T08:09:52+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 34685909383,
+     "title": "50€",
+     "option1": "50€",
+     "option2": null,
+     "option3": null,
+     "sku": "gift card webshop 50",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": {
+      "id": 83631180644727,
+      "product_id": 9469321031,
+      "position": 7,
+      "created_at": "2025-12-12T09:51:22+01:00",
+      "updated_at": "2025-12-12T09:51:27+01:00",
+      "alt": null,
+      "width": 2278,
+      "height": 2278,
+      "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/gift_card_50.jpg?v=1765529487",
+      "variant_ids": [
+       34685909383
+      ]
+     },
+     "available": true,
+     "price": "50.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 3,
+     "product_id": 9469321031,
+     "created_at": "2016-11-29T08:09:52+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    },
+    {
+     "id": 34685909447,
+     "title": "100€",
+     "option1": "100€",
+     "option2": null,
+     "option3": null,
+     "sku": "gift card webshop 100",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": {
+      "id": 83631180611959,
+      "product_id": 9469321031,
+      "position": 8,
+      "created_at": "2025-12-12T09:51:22+01:00",
+      "updated_at": "2025-12-12T09:51:27+01:00",
+      "alt": null,
+      "width": 2278,
+      "height": 2278,
+      "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/gift_card_100.jpg?v=1765529487",
+      "variant_ids": [
+       34685909447
+      ]
+     },
+     "available": true,
+     "price": "100.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 4,
+     "product_id": 9469321031,
+     "created_at": "2016-11-29T08:09:52+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 83587325493623,
+     "created_at": "2025-12-11T15:12:05+01:00",
+     "position": 1,
+     "updated_at": "2025-12-11T15:12:16+01:00",
+     "product_id": 9469321031,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/gift_card_offer.jpg?v=1765462336",
+     "width": 2278,
+     "height": 2278
+    },
+    {
+     "id": 46738241618187,
+     "created_at": "2024-04-15T15:25:16+02:00",
+     "position": 2,
+     "updated_at": "2025-12-11T15:12:16+01:00",
+     "product_id": 9469321031,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/BARN3R9A7433.jpg?v=1765462336",
+     "width": 960,
+     "height": 960
+    },
+    {
+     "id": 83590506643831,
+     "created_at": "2025-12-11T16:14:58+01:00",
+     "position": 3,
+     "updated_at": "2025-12-11T16:15:32+01:00",
+     "product_id": 9469321031,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/7BE7C939-192E-4EDA-836B-B5AB3E0334C7-313-0000033DFCA3C25D.jpg?v=1765466132",
+     "width": 1174,
+     "height": 1174
+    },
+    {
+     "id": 14631098712144,
+     "created_at": "2020-03-26T10:29:13+01:00",
+     "position": 4,
+     "updated_at": "2025-12-11T16:15:32+01:00",
+     "product_id": 9469321031,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/IMG_8548.jpg?v=1765466132",
+     "width": 1280,
+     "height": 1280
+    },
+    {
+     "id": 83631180677495,
+     "created_at": "2025-12-12T09:51:22+01:00",
+     "position": 5,
+     "updated_at": "2025-12-12T09:51:27+01:00",
+     "product_id": 9469321031,
+     "variant_ids": [
+      45522026135819
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/gift_card_10.jpg?v=1765529487",
+     "width": 2278,
+     "height": 2278
+    },
+    {
+     "id": 83631180710263,
+     "created_at": "2025-12-12T09:51:22+01:00",
+     "position": 6,
+     "updated_at": "2025-12-12T09:51:27+01:00",
+     "product_id": 9469321031,
+     "variant_ids": [
+      34685909255
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/gift_card_25.jpg?v=1765529487",
+     "width": 2278,
+     "height": 2278
+    },
+    {
+     "id": 83631180644727,
+     "created_at": "2025-12-12T09:51:22+01:00",
+     "position": 7,
+     "updated_at": "2025-12-12T09:51:27+01:00",
+     "product_id": 9469321031,
+     "variant_ids": [
+      34685909383
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/gift_card_50.jpg?v=1765529487",
+     "width": 2278,
+     "height": 2278
+    },
+    {
+     "id": 83631180611959,
+     "created_at": "2025-12-12T09:51:22+01:00",
+     "position": 8,
+     "updated_at": "2025-12-12T09:51:27+01:00",
+     "product_id": 9469321031,
+     "variant_ids": [
+      34685909447
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/gift_card_100.jpg?v=1765529487",
+     "width": 2278,
+     "height": 2278
+    }
+   ],
+   "options": [
+    {
+     "name": "Value",
+     "position": 1,
+     "values": [
+      "10€",
+      "25€",
+      "50€",
+      "100€"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 9427968967,
+   "title": "WORLD ATLAS OF COFFEE",
+   "handle": "the-world-atlas-of-coffee-book",
+   "body_html": "<style type=\"text/css\"><!--\ntd {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}\n--></style>\n<p>Gone are the days of gifting DVDs, CDs, and consumable media.<br></p>\n<p><span data-sheets-value='{\"1\":2,\"2\":\"Coffee has never been better, or more interesting, than it is today. Where coffee comes from, how it was harvested, the roasting process and the water used to make the brew are just a few of the factors that influence the taste of what we drink. \\n\\nIn The World Atlas of Coffee, champion barista and coffee expert James Hoffmann examines these key factors. Country by country he looks at varietals, the influence of terroir, harvesting and processing, roasting methods, and finally, brew methods.\\n\\n- Second edition\\n- Hardcover\\n- Pages: 272\\n- Language: English\"}' data-sheets-userformat='{\"2\":957,\"3\":{\"1\":0},\"5\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"6\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"7\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"8\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"10\":0,\"11\":4,\"12\":0}'>Yet the book endures as a truly amazing and thoughtful gift – for birthdays and holidays. There are several amazing reads on the market, but the true “Bible” of specialty lovers is The World Atlas of Coffee by James Hoffmann. </span></p>\n<p><span data-sheets-value='{\"1\":2,\"2\":\"Coffee has never been better, or more interesting, than it is today. Where coffee comes from, how it was harvested, the roasting process and the water used to make the brew are just a few of the factors that influence the taste of what we drink. \\n\\nIn The World Atlas of Coffee, champion barista and coffee expert James Hoffmann examines these key factors. Country by country he looks at varietals, the influence of terroir, harvesting and processing, roasting methods, and finally, brew methods.\\n\\n- Second edition\\n- Hardcover\\n- Pages: 272\\n- Language: English\"}' data-sheets-userformat='{\"2\":957,\"3\":{\"1\":0},\"5\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"6\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"7\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"8\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"10\":0,\"11\":4,\"12\":0}'>Coffee has never been better, or more interesting, than it is today. Where coffee comes from, how it was harvested, the roasting process, and the water used to make the brew are just a few of the factors that influence the taste of what we drink. <br><br>In The World Atlas of Coffee, champion barista and coffee expert James Hoffmann examines these key factors. Country by country he looks at varietals, the influence of terroir, harvesting and processing, roasting methods, and finally, brew methods.<br></span></p>\n<ul>\n<li><span data-sheets-value='{\"1\":2,\"2\":\"Coffee has never been better, or more interesting, than it is today. Where coffee comes from, how it was harvested, the roasting process and the water used to make the brew are just a few of the factors that influence the taste of what we drink. \\n\\nIn The World Atlas of Coffee, champion barista and coffee expert James Hoffmann examines these key factors. Country by country he looks at varietals, the influence of terroir, harvesting and processing, roasting methods, and finally, brew methods.\\n\\n- Second edition\\n- Hardcover\\n- Pages: 272\\n- Language: English\"}' data-sheets-userformat='{\"2\":957,\"3\":{\"1\":0},\"5\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"6\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"7\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"8\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"10\":0,\"11\":4,\"12\":0}'>Second edition</span></li>\n<li><span data-sheets-value='{\"1\":2,\"2\":\"Coffee has never been better, or more interesting, than it is today. Where coffee comes from, how it was harvested, the roasting process and the water used to make the brew are just a few of the factors that influence the taste of what we drink. \\n\\nIn The World Atlas of Coffee, champion barista and coffee expert James Hoffmann examines these key factors. Country by country he looks at varietals, the influence of terroir, harvesting and processing, roasting methods, and finally, brew methods.\\n\\n- Second edition\\n- Hardcover\\n- Pages: 272\\n- Language: English\"}' data-sheets-userformat='{\"2\":957,\"3\":{\"1\":0},\"5\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"6\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"7\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"8\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"10\":0,\"11\":4,\"12\":0}'>Hardcover</span></li>\n<li><span data-sheets-value='{\"1\":2,\"2\":\"Coffee has never been better, or more interesting, than it is today. Where coffee comes from, how it was harvested, the roasting process and the water used to make the brew are just a few of the factors that influence the taste of what we drink. \\n\\nIn The World Atlas of Coffee, champion barista and coffee expert James Hoffmann examines these key factors. Country by country he looks at varietals, the influence of terroir, harvesting and processing, roasting methods, and finally, brew methods.\\n\\n- Second edition\\n- Hardcover\\n- Pages: 272\\n- Language: English\"}' data-sheets-userformat='{\"2\":957,\"3\":{\"1\":0},\"5\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"6\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"7\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"8\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"10\":0,\"11\":4,\"12\":0}'>Pages: 272</span></li>\n<li><span data-sheets-value='{\"1\":2,\"2\":\"Coffee has never been better, or more interesting, than it is today. Where coffee comes from, how it was harvested, the roasting process and the water used to make the brew are just a few of the factors that influence the taste of what we drink. \\n\\nIn The World Atlas of Coffee, champion barista and coffee expert James Hoffmann examines these key factors. Country by country he looks at varietals, the influence of terroir, harvesting and processing, roasting methods, and finally, brew methods.\\n\\n- Second edition\\n- Hardcover\\n- Pages: 272\\n- Language: English\"}' data-sheets-userformat='{\"2\":957,\"3\":{\"1\":0},\"5\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"6\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"7\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"8\":{\"1\":[{\"1\":2,\"2\":0,\"5\":[null,2,0]},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":1}]},\"10\":0,\"11\":4,\"12\":0}'>Language: English</span></li>\n</ul>",
+   "published_at": "2022-10-28T10:28:46+02:00",
+   "created_at": "2016-11-20T17:20:37+01:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "THE BARN Coffee Roasters Berlin",
+   "product_type": "Book",
+   "tags": [
+    "Active"
+   ],
+   "variants": [
+    {
+     "id": 44795264532747,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "World Atlas Of Coffee",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "32.50",
+     "grams": 100,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 9427968967,
+     "created_at": "2023-12-14T10:20:18+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 41038842560779,
+     "created_at": "2022-10-28T10:57:13+02:00",
+     "position": 1,
+     "updated_at": "2024-07-22T09:52:51+02:00",
+     "product_id": 9427968967,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/28E5A4A6-8645-4B8C-8540-BD25EB0DA964.jpg?v=1721634771",
+     "width": 936,
+     "height": 936
+    },
+    {
+     "id": 41038550073611,
+     "created_at": "2022-10-28T09:33:16+02:00",
+     "position": 2,
+     "updated_at": "2024-07-22T09:52:55+02:00",
+     "product_id": 9427968967,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/IMG_3260.jpg?v=1721634775",
+     "width": 1492,
+     "height": 1492
+    },
+    {
+     "id": 16794375290960,
+     "created_at": "2020-11-13T12:26:02+01:00",
+     "position": 3,
+     "updated_at": "2024-07-22T09:53:02+02:00",
+     "product_id": 9427968967,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/image00031.jpg?v=1721634782",
+     "width": 2564,
+     "height": 2564
+    },
+    {
+     "id": 16794375356496,
+     "created_at": "2020-11-13T12:26:03+01:00",
+     "position": 4,
+     "updated_at": "2024-07-22T09:53:11+02:00",
+     "product_id": 9427968967,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/products/image00030_dc44c394-8ba8-4111-8cb0-4e7e869caf57.jpg?v=1721634791",
+     "width": 2450,
+     "height": 2450
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 15234319319415,
+   "title": "GENESIS COFFEE & KINTO BUNDLE",
+   "handle": "genesis-coffee-kinto-gift-bundle",
+   "body_html": "<p>Our Kinto Coffee bundle combines our new Genesis Coffee with a beautiful mug from Japanese manufacturer Kinto.</p>\n<p><meta charset=\"utf-8\"><span>With a supple shape fitting comfortably in the hand, the finely textured Japanese porcelain will elevate the experience of your daily coffee ritual. </span>Together with the flavour of our Genesis Coffee, it is an invitation to slow down and embrace a perfect seasonal moment. </p>\n<p><span>This bundle contains:</span><span> </span></p>\n<ul>\n<li>Kinto Sandstone Mug</li>\n<li>250g freshly roasted Genesis Coffee<br>\n</li>\n</ul>",
+   "published_at": "2026-02-09T11:45:28+01:00",
+   "created_at": "2025-11-10T14:56:44+01:00",
+   "updated_at": "2026-11-09T11:32:36+01:00",
+   "vendor": "THE BARN Berlin Coffee Roasters",
+   "product_type": "Filter Coffee",
+   "tags": [
+    "Beans",
+    "Bundles",
+    "Espresso",
+    "Filter",
+    "Gifts_Beans_and_Bundles",
+    "Specials"
+   ],
+   "variants": [
+    {
+     "id": 56154080870775,
+     "title": "250g",
+     "option1": "250g",
+     "option2": null,
+     "option3": null,
+     "sku": "GENESIS COFFEE & KINTO BUNDLE",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "32.00",
+     "grams": 1200,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 15234319319415,
+     "created_at": "2025-11-10T14:56:44+01:00",
+     "updated_at": "2026-11-09T11:32:36+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 84887539548535,
+     "created_at": "2026-02-27T18:01:30+01:00",
+     "position": 1,
+     "updated_at": "2026-03-03T16:11:49+01:00",
+     "product_id": 15234319319415,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/FEEAA609-9E4A-485E-9369-8F02724F2CBF-55407-000004FB3B60A64C_2_e47bdec5-d57f-484a-a838-52a483e8087b.jpg?v=1772550709",
+     "width": 1184,
+     "height": 1184
+    },
+    {
+     "id": 81345865286007,
+     "created_at": "2025-11-10T14:57:01+01:00",
+     "position": 2,
+     "updated_at": "2026-02-27T18:01:40+01:00",
+     "product_id": 15234319319415,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/64253DE6-666F-40D5-8C9F-FFBF10C75226-2975-000000F83CFA7A74.jpg?v=1772211700",
+     "width": 1184,
+     "height": 1184
+    },
+    {
+     "id": 85575921074551,
+     "created_at": "2026-05-07T11:56:18+02:00",
+     "position": 3,
+     "updated_at": "2026-05-07T11:58:54+02:00",
+     "product_id": 15234319319415,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_espresso_coffee.jpg?v=1778147934",
+     "width": 2200,
+     "height": 2200
+    },
+    {
+     "id": 84811969331575,
+     "created_at": "2026-02-18T19:17:31+01:00",
+     "position": 4,
+     "updated_at": "2026-05-07T11:54:03+02:00",
+     "product_id": 15234319319415,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0831/4141/files/the_barn_filter_coffee.jpg?v=1778147643",
+     "width": 1536,
+     "height": 1536
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "250g"
+     ]
+    }
+   ]
+  }
+ ]
+}

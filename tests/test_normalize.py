@@ -40,6 +40,15 @@ NOW = datetime(2026, 10, 22, tzinfo=UTC)
         ("Default Title", None),
         ("", None),
         ("Whole bean, 2 pack", None),
+        ("2 x 250g", 500),  # a multi-pack is the sum of its bags
+        ("2x250g", 500),
+        ("3 x 1000g", 3000),
+        ("2 × 250 g", 500),
+        ("250g x 2", 500),
+        ("Filter / 2 x 250g / Every 4 weeks", 500),
+        ("12 x Box of 10", None),
+        ("250g", 250),  # no multiplier: unchanged
+        ("Colombia 250g x 2kg", 250),  # "x 2kg" is a size, not a count
         ("1,000g", 1000),  # comma is a thousands separator, not a decimal point
         ("1,000 g", 1000),
         ("2,5 kg", 2500),  # but a single digit after the comma is a decimal comma
@@ -88,7 +97,15 @@ def test_price_per_100g() -> None:
         ("Costa Rica Tarrazu", "Costa Rica"),
         ("Ethiopia and Kenya blend", None),  # multi-origin: do not invent one
         ("Panama Geisha", "Panama"),
-        ("Peruvian roast", None),  # whole-word match only
+        ("Perusing the roast notes", None),  # whole-word match only: not "Peru"
+        ("the new Kenyan season", "Kenya"),  # nationality words count
+        ("our Guatemalan portfolio", "Guatemala"),
+        ("a Costa Rican washed lot", "Costa Rica"),
+        ("Salvadoran Pacamara", "El Salvador"),
+        ("Colombia and Colombian terroir", "Colombia"),  # same country twice is still one
+        ("Ethiopian and Kenyan blend", None),
+        ("an Indian summer of flavour", None),  # India and China are deliberately not aliased
+        ("Chinese New Year edition", None),
         ("Gesha - Natural", None),
     ],
 )

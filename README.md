@@ -6,9 +6,9 @@ Scrapes specialty coffee roasters, normalizes their products into one searchable
 keeps a price and stock history for every size, so "what is new" and "what changed price" are
 questions you can ask the database.
 
-Python 3.12, PostgreSQL, SQLAlchemy 2, Alembic, httpx, Typer. 282 offline tests, strict mypy.
+Python 3.12, PostgreSQL, SQLAlchemy 2, Alembic, httpx, Typer. 321 offline tests, strict mypy.
 
-**Status:** Phase 1 is done: four roasters (three Shopify shops configured in YAML, one custom
+**Status:** Phase 1 is done: six roasters (five Shopify shops configured in YAML, one custom
 HTML scraper), a CLI, per-run health checks and a stored history. Not built yet: web UI, API,
 alerts, scheduling. See [Limitations and roadmap](#limitations-and-roadmap).
 
@@ -142,6 +142,8 @@ accepts the new normal.
 | `nomena` | Nomena Roasters (Israel) | Shopify, ILS | Hebrew titles; a `-light` handle suffix means a lighter roast |
 | `september` | September Coffee | Shopify, USD | Whole back catalog is listed, mostly sold out. Its feed has no descriptions, so the origin, process and roast level of in-stock coffees are read from their product pages |
 | `hydrangea` | Hydrangea Coffee Roasters | Shopify, USD | Sizes in ounces; the site's own `grams` field is unreliable |
+| `lacabra` | La Cabra (Denmark) | Shopify, DKK | Short prose descriptions: origin comes from country names, nationality words and known places, and is left empty for blends. Equipment, apparel, cups, bundles and gift cards are excluded |
+| `thebarn` | The Barn (Berlin) | Shopify, EUR | Many sold-out lots; origin is often only a nationality in the prose ("our Guatemalan portfolio"). Multi-packs such as `2 x 250g` are weighed as the sum of their bags |
 | `dak` | DAK Coffee Roasters | WooCommerce HTML, EUR | Custom adapter; only the default size is priced |
 
 ### Adding a roaster
@@ -183,7 +185,7 @@ src/beantracker/
   adapters/              base protocol, registry, generic Shopify adapter, DAK
   normalize/             weight, price, origin, process/roast, and the pipeline
   http/                  PoliteClient, robots.txt matcher, per-host throttle
-tests/                   282 tests; fixtures/ holds real captured pages and feeds
+tests/                   321 tests; fixtures/ holds real captured pages and feeds
 ```
 
 ## Development

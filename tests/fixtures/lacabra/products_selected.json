@@ -1,0 +1,3004 @@
+{
+ "products": [
+  {
+   "id": 10828574622043,
+   "title": "Esmeralda",
+   "handle": "esmeralda",
+   "body_html": "<p><span>A washed Geisha from Hacienda La Esmeralda in Boquete, Panama, with notes of Meyer lemon, white peach and jasmine.</span></p>",
+   "published_at": "2026-11-06T06:40:32+01:00",
+   "created_at": "2026-10-23T15:14:51+02:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "La Cabra ",
+   "product_type": "Coffee",
+   "tags": [
+    "exclude_from_product_sync",
+    "Rare"
+   ],
+   "variants": [
+    {
+     "id": 54477237649755,
+     "title": "100g",
+     "option1": "100g",
+     "option2": null,
+     "option3": null,
+     "sku": "C10EWA26",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 76652324520283,
+      "product_id": 10828574622043,
+      "position": 1,
+      "created_at": "2026-11-04T11:16:30+01:00",
+      "updated_at": "2026-11-04T11:17:11+01:00",
+      "alt": "Esmeralda La Cabra Rare Coffee Box 100g",
+      "width": 1722,
+      "height": 1722,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Esmeralda_La_Cabra_Rare_Coffee_Box_100g.webp?v=1793787431",
+      "variant_ids": [
+       54477237649755
+      ]
+     },
+     "available": true,
+     "price": "469.00",
+     "grams": 100,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10828574622043,
+     "created_at": "2026-10-23T15:14:53+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 76652324520283,
+     "created_at": "2026-11-04T11:16:30+01:00",
+     "position": 1,
+     "updated_at": "2026-11-04T11:17:11+01:00",
+     "product_id": 10828574622043,
+     "variant_ids": [
+      54477237649755
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Esmeralda_La_Cabra_Rare_Coffee_Box_100g.webp?v=1793787431",
+     "width": 1722,
+     "height": 1722
+    }
+   ],
+   "options": [
+    {
+     "name": "Amount",
+     "position": 1,
+     "values": [
+      "100g"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10839970840923,
+   "title": "Chevas Natural",
+   "handle": "chevas-natural",
+   "body_html": "<p>A natural Geisha from José Luis Chevas in Boquete, finished in a Dark Room with notes of strawberry, rosehip and orange.</p>",
+   "published_at": "2026-10-30T09:28:33+01:00",
+   "created_at": "2026-10-26T15:17:01+01:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "La Cabra ",
+   "product_type": "Coffee",
+   "tags": [
+    "Rare"
+   ],
+   "variants": [
+    {
+     "id": 54536688599387,
+     "title": "100g",
+     "option1": "100g",
+     "option2": null,
+     "option3": null,
+     "sku": "C10CHENAT26",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 76478845387099,
+      "product_id": 10839970840923,
+      "position": 1,
+      "created_at": "2026-10-28T16:09:36+01:00",
+      "updated_at": "2026-10-28T16:10:06+01:00",
+      "alt": "Chevas Natural Dark Room La Cabra Rare Coffee Box 100g",
+      "width": 1722,
+      "height": 1722,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Chevas_Natural_Dark_Room_La_Cabra_Rare_Coffee_Box_100g.webp?v=1793200206",
+      "variant_ids": [
+       54536688599387
+      ]
+     },
+     "available": true,
+     "price": "345.00",
+     "grams": 100,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10839970840923,
+     "created_at": "2026-10-28T09:24:56+01:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 76478845387099,
+     "created_at": "2026-10-28T16:09:36+01:00",
+     "position": 1,
+     "updated_at": "2026-10-28T16:10:06+01:00",
+     "product_id": 10839970840923,
+     "variant_ids": [
+      54536688599387
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Chevas_Natural_Dark_Room_La_Cabra_Rare_Coffee_Box_100g.webp?v=1793200206",
+     "width": 1722,
+     "height": 1722
+    }
+   ],
+   "options": [
+    {
+     "name": "Amount",
+     "position": 1,
+     "values": [
+      "100g"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10817144160603,
+   "title": "Haji Bule",
+   "handle": "haji-bule",
+   "body_html": "<p>Haji Bule is a lot by Bette Buna in Guji; a bright and floral profile with jasmine, black tea and apricot notes.</p>",
+   "published_at": "2026-10-28T14:48:11+01:00",
+   "created_at": "2026-10-21T08:54:37+02:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "La Cabra ",
+   "product_type": "Coffee",
+   "tags": [
+    "Seasonal"
+   ],
+   "variants": [
+    {
+     "id": 54443203887451,
+     "title": "250g",
+     "option1": "250g",
+     "option2": null,
+     "option3": null,
+     "sku": "C2HBU26",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 76604565979483,
+      "product_id": 10817144160603,
+      "position": 1,
+      "created_at": "2026-11-02T14:42:50+01:00",
+      "updated_at": "2026-11-02T14:43:40+01:00",
+      "alt": "Haji Bule La Cabra Seasonal Coffee 250g",
+      "width": 1722,
+      "height": 1688,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Haji_Bule_La_Cabra_Seasonal_Coffee_250g.webp?v=1793627020",
+      "variant_ids": [
+       54443203887451
+      ]
+     },
+     "available": false,
+     "price": "159.00",
+     "grams": 250,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10817144160603,
+     "created_at": "2026-10-21T08:54:38+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 54443204313435,
+     "title": "1kg",
+     "option1": "1kg",
+     "option2": null,
+     "option3": null,
+     "sku": "C1HBU26",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 76258524758363,
+      "product_id": 10817144160603,
+      "position": 2,
+      "created_at": "2026-10-21T10:13:31+02:00",
+      "updated_at": "2026-10-21T10:24:19+02:00",
+      "alt": "Haji Bule La Cabra Seasonal Coffee Bag 1kg",
+      "width": 3196,
+      "height": 3196,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Haji_Bule_La_Cabra_Seasonal_Coffee_Bag_1kg.webp?v=1792571059",
+      "variant_ids": [
+       54443204313435
+      ]
+     },
+     "available": true,
+     "price": "599.00",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 10817144160603,
+     "created_at": "2026-10-21T08:54:54+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 76604565979483,
+     "created_at": "2026-11-02T14:42:50+01:00",
+     "position": 1,
+     "updated_at": "2026-11-02T14:43:40+01:00",
+     "product_id": 10817144160603,
+     "variant_ids": [
+      54443203887451
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Haji_Bule_La_Cabra_Seasonal_Coffee_250g.webp?v=1793627020",
+     "width": 1722,
+     "height": 1688
+    },
+    {
+     "id": 76258524758363,
+     "created_at": "2026-10-21T10:13:31+02:00",
+     "position": 2,
+     "updated_at": "2026-10-21T10:24:19+02:00",
+     "product_id": 10817144160603,
+     "variant_ids": [
+      54443204313435
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Haji_Bule_La_Cabra_Seasonal_Coffee_Bag_1kg.webp?v=1792571059",
+     "width": 3196,
+     "height": 3196
+    }
+   ],
+   "options": [
+    {
+     "name": "Amount",
+     "position": 1,
+     "values": [
+      "250g",
+      "1kg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10778788757851,
+   "title": "Karimikui",
+   "handle": "karimikui",
+   "body_html": "<p dir=\"ltr\">Crisp blackcurrant, cherry and lemon in this returning favourite from the Rungeto Cooperative’s Karimikui station.</p>",
+   "published_at": "2026-10-16T11:07:05+02:00",
+   "created_at": "2026-10-05T10:30:23+02:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "La Cabra ",
+   "product_type": "Coffee",
+   "tags": [
+    "Highlights",
+    "out of season",
+    "tag_out of season"
+   ],
+   "variants": [
+    {
+     "id": 54249763340635,
+     "title": "200g",
+     "option1": "200g",
+     "option2": null,
+     "option3": null,
+     "sku": "C5KAR26",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 75891279921499,
+      "product_id": 10778788757851,
+      "position": 1,
+      "created_at": "2026-10-08T12:14:14+02:00",
+      "updated_at": "2026-10-08T12:14:40+02:00",
+      "alt": "Karimikui La Cabra Highlight Coffee Box 250g",
+      "width": 1722,
+      "height": 1688,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Karimikui_La_Cabra_Highlight_Coffee_Box_250g.webp?v=1791454480",
+      "variant_ids": [
+       54249763340635
+      ]
+     },
+     "available": true,
+     "price": "139.00",
+     "grams": 200,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10778788757851,
+     "created_at": "2026-10-05T10:30:24+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 54249771532635,
+     "title": "1kg",
+     "option1": "1kg",
+     "option2": null,
+     "option3": null,
+     "sku": "C1KAR26",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 75891279888731,
+      "product_id": 10778788757851,
+      "position": 2,
+      "created_at": "2026-10-08T12:14:14+02:00",
+      "updated_at": "2026-10-08T12:14:59+02:00",
+      "alt": "Karimikui La Cabra Highlight Coffee Bag 1kg",
+      "width": 3196,
+      "height": 3196,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Karimikui_La_Cabra_Highlight_Coffee_Bag_1kg.webp?v=1791454499",
+      "variant_ids": [
+       54249771532635
+      ]
+     },
+     "available": true,
+     "price": "669.00",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 10778788757851,
+     "created_at": "2026-10-05T10:34:09+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 75891279921499,
+     "created_at": "2026-10-08T12:14:14+02:00",
+     "position": 1,
+     "updated_at": "2026-10-08T12:14:40+02:00",
+     "product_id": 10778788757851,
+     "variant_ids": [
+      54249763340635
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Karimikui_La_Cabra_Highlight_Coffee_Box_250g.webp?v=1791454480",
+     "width": 1722,
+     "height": 1688
+    },
+    {
+     "id": 75891279888731,
+     "created_at": "2026-10-08T12:14:14+02:00",
+     "position": 2,
+     "updated_at": "2026-10-08T12:14:59+02:00",
+     "product_id": 10778788757851,
+     "variant_ids": [
+      54249771532635
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Karimikui_La_Cabra_Highlight_Coffee_Bag_1kg.webp?v=1791454499",
+     "width": 3196,
+     "height": 3196
+    }
+   ],
+   "options": [
+    {
+     "name": "Amount",
+     "position": 1,
+     "values": [
+      "200g",
+      "1kg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10628819386715,
+   "title": "Las Flores de Cafe",
+   "handle": "las-flores-de-cafe",
+   "body_html": "<p>Soft red berries and sweet dark chocolate, produced by smallholders in the Huehuetenango region.</p>",
+   "published_at": "2026-09-02T10:03:41+02:00",
+   "created_at": "2026-08-06T08:46:45+02:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "La Cabra ",
+   "product_type": "Coffee",
+   "tags": [
+    "bestsellers",
+    "Seasonal"
+   ],
+   "variants": [
+    {
+     "id": 53725208740187,
+     "title": "250g",
+     "option1": "250g",
+     "option2": null,
+     "option3": null,
+     "sku": "C2LFCW26",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 74932231536987,
+      "product_id": 10628819386715,
+      "position": 1,
+      "created_at": "2026-08-31T13:21:26+02:00",
+      "updated_at": "2026-08-31T13:38:28+02:00",
+      "alt": "Las Flores de Cafe La Cabra Seasonal Coffee box 250g",
+      "width": 1722,
+      "height": 1688,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Las_Flores_de_Cafe_La_Cabra_Seasonal_Coffee_box_250g.webp?v=1788176308",
+      "variant_ids": [
+       53725208740187
+      ]
+     },
+     "available": false,
+     "price": "155.00",
+     "grams": 250,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10628819386715,
+     "created_at": "2026-08-06T08:46:46+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53886634885467,
+     "title": "1kg",
+     "option1": "1kg",
+     "option2": null,
+     "option3": null,
+     "sku": "C1LFCW26",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 74932231504219,
+      "product_id": 10628819386715,
+      "position": 2,
+      "created_at": "2026-08-31T13:21:26+02:00",
+      "updated_at": "2026-08-31T13:38:45+02:00",
+      "alt": "Las Flores de Cafe La Cabra Seasonal Coffee bag 1kg",
+      "width": 3196,
+      "height": 3196,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Las_Flores_de_Cafe_La_Cabra_Seasonal_Coffee_bag_1kg.webp?v=1788176325",
+      "variant_ids": [
+       53886634885467
+      ]
+     },
+     "available": true,
+     "price": "589.00",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 10628819386715,
+     "created_at": "2026-08-26T13:35:50+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 74932231536987,
+     "created_at": "2026-08-31T13:21:26+02:00",
+     "position": 1,
+     "updated_at": "2026-08-31T13:38:28+02:00",
+     "product_id": 10628819386715,
+     "variant_ids": [
+      53725208740187
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Las_Flores_de_Cafe_La_Cabra_Seasonal_Coffee_box_250g.webp?v=1788176308",
+     "width": 1722,
+     "height": 1688
+    },
+    {
+     "id": 74932231504219,
+     "created_at": "2026-08-31T13:21:26+02:00",
+     "position": 2,
+     "updated_at": "2026-08-31T13:38:45+02:00",
+     "product_id": 10628819386715,
+     "variant_ids": [
+      53886634885467
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Las_Flores_de_Cafe_La_Cabra_Seasonal_Coffee_bag_1kg.webp?v=1788176325",
+     "width": 3196,
+     "height": 3196
+    }
+   ],
+   "options": [
+    {
+     "name": "Amount",
+     "position": 1,
+     "values": [
+      "250g",
+      "1kg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 9631541592411,
+   "title": "Rituals",
+   "handle": "rituals-subscription",
+   "body_html": "<p><meta charset=\"utf-8\">Seasonal exclusives and micro-lots from our partners around the world.<!-- notionvc: 29875849-03a0-45f1-9a41-ea2b05afce00 --></p>",
+   "published_at": "2024-12-12T09:53:41+01:00",
+   "created_at": "2024-12-12T09:53:41+01:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "La Cabra ",
+   "product_type": "Coffee",
+   "tags": [],
+   "variants": [
+    {
+     "id": 49676206408027,
+     "title": "2 x 250g",
+     "option1": "2 x 250g",
+     "option2": null,
+     "option3": null,
+     "sku": "RM1002",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 76478516003163,
+      "product_id": 9631541592411,
+      "position": 1,
+      "created_at": "2026-10-28T15:54:12+01:00",
+      "updated_at": "2026-10-28T15:54:14+01:00",
+      "alt": null,
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Rituals_Subscription_Product_1929cf93-c2a2-4ff1-9871-d5cdfc9f81cf.webp?v=1793199254",
+      "variant_ids": [
+       49676206408027,
+       49676206440795
+      ]
+     },
+     "available": true,
+     "price": "329.00",
+     "grams": 500,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 9631541592411,
+     "created_at": "2024-12-12T09:53:43+01:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 49676206440795,
+     "title": "4 x 250g",
+     "option1": "4 x 250g",
+     "option2": null,
+     "option3": null,
+     "sku": "RM1004",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 76478516003163,
+      "product_id": 9631541592411,
+      "position": 1,
+      "created_at": "2026-10-28T15:54:12+01:00",
+      "updated_at": "2026-10-28T15:54:14+01:00",
+      "alt": null,
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Rituals_Subscription_Product_1929cf93-c2a2-4ff1-9871-d5cdfc9f81cf.webp?v=1793199254",
+      "variant_ids": [
+       49676206408027,
+       49676206440795
+      ]
+     },
+     "available": true,
+     "price": "649.00",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 3,
+     "product_id": 9631541592411,
+     "created_at": "2024-12-12T09:53:43+01:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 76478516003163,
+     "created_at": "2026-10-28T15:54:12+01:00",
+     "position": 1,
+     "updated_at": "2026-10-28T15:54:14+01:00",
+     "product_id": 9631541592411,
+     "variant_ids": [
+      49676206408027,
+      49676206440795
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Rituals_Subscription_Product_1929cf93-c2a2-4ff1-9871-d5cdfc9f81cf.webp?v=1793199254",
+     "width": 2000,
+     "height": 2000
+    }
+   ],
+   "options": [
+    {
+     "name": "Amount",
+     "position": 1,
+     "values": [
+      "2 x 250g",
+      "4 x 250g"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10247336329563,
+   "title": "Profiles",
+   "handle": "profiles-subscription",
+   "body_html": "<p><meta charset=\"utf-8\">Constant taste profiles, built from rotating lots and selected to hold the same character, cup after cup.<!-- notionvc: f2bb6dd1-ed74-4f1f-bbaf-80ca16856c31 --></p>",
+   "published_at": "2026-01-02T11:39:28+01:00",
+   "created_at": "2025-12-11T15:45:23+01:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "La Cabra ",
+   "product_type": "COFFEE",
+   "tags": [],
+   "variants": [
+    {
+     "id": 54548680835419,
+     "title": "Terra / 250g",
+     "option1": "Terra",
+     "option2": "250g",
+     "option3": null,
+     "sku": "PTM1004",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 76699894186331,
+      "product_id": 10247336329563,
+      "position": 8,
+      "created_at": "2026-11-06T09:21:11+01:00",
+      "updated_at": "2026-11-06T09:21:13+01:00",
+      "alt": null,
+      "width": 1722,
+      "height": 1688,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Terra_250g.webp?v=1793953273",
+      "variant_ids": [
+       54548680835419
+      ]
+     },
+     "available": true,
+     "price": "139.00",
+     "grams": 250,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10247336329563,
+     "created_at": "2026-10-29T15:38:36+01:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 54146270232923,
+     "title": "Terra / 0.5 kg",
+     "option1": "Terra",
+     "option2": "0.5 kg",
+     "option3": null,
+     "sku": "PTM1005",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 75492845289819,
+      "product_id": 10247336329563,
+      "position": 5,
+      "created_at": "2026-09-22T14:13:49+02:00",
+      "updated_at": "2026-09-22T14:13:52+02:00",
+      "alt": null,
+      "width": 1000,
+      "height": 1000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Terra_500g.png?v=1790079232",
+      "variant_ids": [
+       54146270232923
+      ]
+     },
+     "available": true,
+     "price": "278.00",
+     "grams": 500,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 10247336329563,
+     "created_at": "2026-09-22T12:57:25+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 51884805718363,
+     "title": "Terra / 1 kg",
+     "option1": "Terra",
+     "option2": "1 kg",
+     "option3": null,
+     "sku": "PTM1001",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 72912376562011,
+      "product_id": 10247336329563,
+      "position": 1,
+      "created_at": "2026-06-02T14:12:26+02:00",
+      "updated_at": "2026-08-17T11:03:05+02:00",
+      "alt": "Terra La Cabra Profiles Subscription 1kg",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Terra_La_Cabra_Profiles_Subscription_1kg.webp?v=1786957385",
+      "variant_ids": [
+       51884805718363,
+       51884805751131,
+       54146270265691
+      ]
+     },
+     "available": true,
+     "price": "515.00",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 3,
+     "product_id": 10247336329563,
+     "created_at": "2025-12-11T15:52:03+01:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 51884805751131,
+     "title": "Terra / 2 kg",
+     "option1": "Terra",
+     "option2": "2 kg",
+     "option3": null,
+     "sku": "PTM1002",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 72912376562011,
+      "product_id": 10247336329563,
+      "position": 1,
+      "created_at": "2026-06-02T14:12:26+02:00",
+      "updated_at": "2026-08-17T11:03:05+02:00",
+      "alt": "Terra La Cabra Profiles Subscription 1kg",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Terra_La_Cabra_Profiles_Subscription_1kg.webp?v=1786957385",
+      "variant_ids": [
+       51884805718363,
+       51884805751131,
+       54146270265691
+      ]
+     },
+     "available": true,
+     "price": "1030.00",
+     "grams": 2000,
+     "compare_at_price": null,
+     "position": 4,
+     "product_id": 10247336329563,
+     "created_at": "2025-12-11T15:52:03+01:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 54146270265691,
+     "title": "Terra / 3 kg",
+     "option1": "Terra",
+     "option2": "3 kg",
+     "option3": null,
+     "sku": "PTM1003",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 72912376562011,
+      "product_id": 10247336329563,
+      "position": 1,
+      "created_at": "2026-06-02T14:12:26+02:00",
+      "updated_at": "2026-08-17T11:03:05+02:00",
+      "alt": "Terra La Cabra Profiles Subscription 1kg",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Terra_La_Cabra_Profiles_Subscription_1kg.webp?v=1786957385",
+      "variant_ids": [
+       51884805718363,
+       51884805751131,
+       54146270265691
+      ]
+     },
+     "available": true,
+     "price": "1545.00",
+     "grams": 3000,
+     "compare_at_price": null,
+     "position": 5,
+     "product_id": 10247336329563,
+     "created_at": "2026-09-22T12:57:25+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 54548681654619,
+     "title": "Luna / 250g",
+     "option1": "Luna",
+     "option2": "250g",
+     "option3": null,
+     "sku": "PLM1004",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 76699892154715,
+      "product_id": 10247336329563,
+      "position": 9,
+      "created_at": "2026-11-06T09:21:08+01:00",
+      "updated_at": "2026-11-06T09:21:11+01:00",
+      "alt": null,
+      "width": 1722,
+      "height": 1688,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Luna_250g.webp?v=1793953271",
+      "variant_ids": [
+       54548681654619
+      ]
+     },
+     "available": true,
+     "price": "139.00",
+     "grams": 250,
+     "compare_at_price": null,
+     "position": 6,
+     "product_id": 10247336329563,
+     "created_at": "2026-10-29T15:39:11+01:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 54146270298459,
+     "title": "Luna / 0.5 kg",
+     "option1": "Luna",
+     "option2": "0.5 kg",
+     "option3": null,
+     "sku": "PLM1005",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 75492851679579,
+      "product_id": 10247336329563,
+      "position": 6,
+      "created_at": "2026-09-22T14:14:04+02:00",
+      "updated_at": "2026-09-22T14:14:06+02:00",
+      "alt": null,
+      "width": 1000,
+      "height": 1000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Luna_500g.png?v=1790079246",
+      "variant_ids": [
+       54146270298459
+      ]
+     },
+     "available": true,
+     "price": "278.00",
+     "grams": 500,
+     "compare_at_price": null,
+     "position": 7,
+     "product_id": 10247336329563,
+     "created_at": "2026-09-22T12:57:25+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 51884772327771,
+     "title": "Luna / 1 kg",
+     "option1": "Luna",
+     "option2": "1 kg",
+     "option3": null,
+     "sku": "PLM1001",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 72928780452187,
+      "product_id": 10247336329563,
+      "position": 2,
+      "created_at": "2026-06-03T11:04:42+02:00",
+      "updated_at": "2026-08-17T11:02:42+02:00",
+      "alt": "Luna La Cabra Profiles Subscription 1kg",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Luna_La_Cabra_Profiles_Subscription_1kg.webp?v=1786957362",
+      "variant_ids": [
+       51884772327771,
+       51884805685595,
+       54146270331227
+      ]
+     },
+     "available": true,
+     "price": "515.00",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 8,
+     "product_id": 10247336329563,
+     "created_at": "2025-12-11T15:48:17+01:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 51884805685595,
+     "title": "Luna / 2 kg",
+     "option1": "Luna",
+     "option2": "2 kg",
+     "option3": null,
+     "sku": "PLM1002",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 72928780452187,
+      "product_id": 10247336329563,
+      "position": 2,
+      "created_at": "2026-06-03T11:04:42+02:00",
+      "updated_at": "2026-08-17T11:02:42+02:00",
+      "alt": "Luna La Cabra Profiles Subscription 1kg",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Luna_La_Cabra_Profiles_Subscription_1kg.webp?v=1786957362",
+      "variant_ids": [
+       51884772327771,
+       51884805685595,
+       54146270331227
+      ]
+     },
+     "available": true,
+     "price": "1030.00",
+     "grams": 2000,
+     "compare_at_price": null,
+     "position": 9,
+     "product_id": 10247336329563,
+     "created_at": "2025-12-11T15:52:03+01:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 54146270331227,
+     "title": "Luna / 3 kg",
+     "option1": "Luna",
+     "option2": "3 kg",
+     "option3": null,
+     "sku": "PLM1003",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 72928780452187,
+      "product_id": 10247336329563,
+      "position": 2,
+      "created_at": "2026-06-03T11:04:42+02:00",
+      "updated_at": "2026-08-17T11:02:42+02:00",
+      "alt": "Luna La Cabra Profiles Subscription 1kg",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Luna_La_Cabra_Profiles_Subscription_1kg.webp?v=1786957362",
+      "variant_ids": [
+       51884772327771,
+       51884805685595,
+       54146270331227
+      ]
+     },
+     "available": true,
+     "price": "1545.00",
+     "grams": 3000,
+     "compare_at_price": null,
+     "position": 10,
+     "product_id": 10247336329563,
+     "created_at": "2026-09-22T12:57:25+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 54146270363995,
+     "title": "Terra + Luna / 0.5 kg",
+     "option1": "Terra + Luna",
+     "option2": "0.5 kg",
+     "option3": null,
+     "sku": "PLTM1005",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 74127873343835,
+      "product_id": 10247336329563,
+      "position": 4,
+      "created_at": "2026-07-27T11:22:58+02:00",
+      "updated_at": "2026-08-17T11:03:59+02:00",
+      "alt": "Terra and Luna La Cabra Profiles Subscription 2x250g",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Terra_and_Luna_La_Cabra_Profiles_Subscription_2x250g.webp?v=1786957439",
+      "variant_ids": [
+       52767665029467,
+       54146270363995
+      ]
+     },
+     "available": true,
+     "price": "278.00",
+     "grams": 500,
+     "compare_at_price": null,
+     "position": 11,
+     "product_id": 10247336329563,
+     "created_at": "2026-09-22T12:57:25+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 52767665029467,
+     "title": "Terra + Luna / 1 kg",
+     "option1": "Terra + Luna",
+     "option2": "1 kg",
+     "option3": null,
+     "sku": "PLTM1002",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 74127873343835,
+      "product_id": 10247336329563,
+      "position": 4,
+      "created_at": "2026-07-27T11:22:58+02:00",
+      "updated_at": "2026-08-17T11:03:59+02:00",
+      "alt": "Terra and Luna La Cabra Profiles Subscription 2x250g",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Terra_and_Luna_La_Cabra_Profiles_Subscription_2x250g.webp?v=1786957439",
+      "variant_ids": [
+       52767665029467,
+       54146270363995
+      ]
+     },
+     "available": true,
+     "price": "515.00",
+     "grams": 1000,
+     "compare_at_price": null,
+     "position": 12,
+     "product_id": 10247336329563,
+     "created_at": "2026-04-07T11:40:08+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 52767665062235,
+     "title": "Terra + Luna / 2 kg",
+     "option1": "Terra + Luna",
+     "option2": "2 kg",
+     "option3": null,
+     "sku": "PLTM1001",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 72912380428635,
+      "product_id": 10247336329563,
+      "position": 3,
+      "created_at": "2026-06-02T14:13:45+02:00",
+      "updated_at": "2026-08-17T11:03:40+02:00",
+      "alt": "Terra and Luna La Cabra Profiles Subscription 2x1kg",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Terra_and_Luna_La_Cabra_Profiles_Subscription_2x1kg.webp?v=1786957420",
+      "variant_ids": [
+       52767665062235
+      ]
+     },
+     "available": true,
+     "price": "1030.00",
+     "grams": 2000,
+     "compare_at_price": null,
+     "position": 13,
+     "product_id": 10247336329563,
+     "created_at": "2026-04-07T11:40:08+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 54212177428827,
+     "title": "Terra + Luna / 3 kg",
+     "option1": "Terra + Luna",
+     "option2": "3 kg",
+     "option3": null,
+     "sku": "PLTM1003",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 75685838487899,
+      "product_id": 10247336329563,
+      "position": 7,
+      "created_at": "2026-09-28T23:42:07+02:00",
+      "updated_at": "2026-09-28T23:42:10+02:00",
+      "alt": null,
+      "width": 1000,
+      "height": 1000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Profiles_Subscription_3kg.png?v=1790631730",
+      "variant_ids": [
+       54212177428827
+      ]
+     },
+     "available": true,
+     "price": "1545.00",
+     "grams": 3000,
+     "compare_at_price": null,
+     "position": 14,
+     "product_id": 10247336329563,
+     "created_at": "2026-09-28T23:41:49+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 72912376562011,
+     "created_at": "2026-06-02T14:12:26+02:00",
+     "position": 1,
+     "updated_at": "2026-08-17T11:03:05+02:00",
+     "product_id": 10247336329563,
+     "variant_ids": [
+      51884805718363,
+      51884805751131,
+      54146270265691
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Terra_La_Cabra_Profiles_Subscription_1kg.webp?v=1786957385",
+     "width": 2000,
+     "height": 2000
+    },
+    {
+     "id": 72928780452187,
+     "created_at": "2026-06-03T11:04:42+02:00",
+     "position": 2,
+     "updated_at": "2026-08-17T11:02:42+02:00",
+     "product_id": 10247336329563,
+     "variant_ids": [
+      51884772327771,
+      51884805685595,
+      54146270331227
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Luna_La_Cabra_Profiles_Subscription_1kg.webp?v=1786957362",
+     "width": 2000,
+     "height": 2000
+    },
+    {
+     "id": 72912380428635,
+     "created_at": "2026-06-02T14:13:45+02:00",
+     "position": 3,
+     "updated_at": "2026-08-17T11:03:40+02:00",
+     "product_id": 10247336329563,
+     "variant_ids": [
+      52767665062235
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Terra_and_Luna_La_Cabra_Profiles_Subscription_2x1kg.webp?v=1786957420",
+     "width": 2000,
+     "height": 2000
+    },
+    {
+     "id": 74127873343835,
+     "created_at": "2026-07-27T11:22:58+02:00",
+     "position": 4,
+     "updated_at": "2026-08-17T11:03:59+02:00",
+     "product_id": 10247336329563,
+     "variant_ids": [
+      52767665029467,
+      54146270363995
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Terra_and_Luna_La_Cabra_Profiles_Subscription_2x250g.webp?v=1786957439",
+     "width": 2000,
+     "height": 2000
+    },
+    {
+     "id": 75492845289819,
+     "created_at": "2026-09-22T14:13:49+02:00",
+     "position": 5,
+     "updated_at": "2026-09-22T14:13:52+02:00",
+     "product_id": 10247336329563,
+     "variant_ids": [
+      54146270232923
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Terra_500g.png?v=1790079232",
+     "width": 1000,
+     "height": 1000
+    },
+    {
+     "id": 75492851679579,
+     "created_at": "2026-09-22T14:14:04+02:00",
+     "position": 6,
+     "updated_at": "2026-09-22T14:14:06+02:00",
+     "product_id": 10247336329563,
+     "variant_ids": [
+      54146270298459
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Luna_500g.png?v=1790079246",
+     "width": 1000,
+     "height": 1000
+    },
+    {
+     "id": 75685838487899,
+     "created_at": "2026-09-28T23:42:07+02:00",
+     "position": 7,
+     "updated_at": "2026-09-28T23:42:10+02:00",
+     "product_id": 10247336329563,
+     "variant_ids": [
+      54212177428827
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Profiles_Subscription_3kg.png?v=1790631730",
+     "width": 1000,
+     "height": 1000
+    },
+    {
+     "id": 76699894186331,
+     "created_at": "2026-11-06T09:21:11+01:00",
+     "position": 8,
+     "updated_at": "2026-11-06T09:21:13+01:00",
+     "product_id": 10247336329563,
+     "variant_ids": [
+      54548680835419
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Terra_250g.webp?v=1793953273",
+     "width": 1722,
+     "height": 1688
+    },
+    {
+     "id": 76699892154715,
+     "created_at": "2026-11-06T09:21:08+01:00",
+     "position": 9,
+     "updated_at": "2026-11-06T09:21:11+01:00",
+     "product_id": 10247336329563,
+     "variant_ids": [
+      54548681654619
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Luna_250g.webp?v=1793953271",
+     "width": 1722,
+     "height": 1688
+    }
+   ],
+   "options": [
+    {
+     "name": "Profile",
+     "position": 1,
+     "values": [
+      "Terra",
+      "Luna",
+      "Terra + Luna"
+     ]
+    },
+    {
+     "name": "Amount",
+     "position": 2,
+     "values": [
+      "250g",
+      "0.5 kg",
+      "1 kg",
+      "2 kg",
+      "3 kg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10564032856411,
+   "title": "Gift Card",
+   "handle": "gift-card",
+   "body_html": "<p><meta charset=\"utf-8\"><span>A convenient</span> and flexible way to share La Cabra with family and friends.</p>",
+   "published_at": "2026-07-01T20:36:03+02:00",
+   "created_at": "2026-07-01T20:36:02+02:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "La Cabra ",
+   "product_type": "Gift card",
+   "tags": [
+    "giftcard-sync"
+   ],
+   "variants": [
+    {
+     "id": 53484374163803,
+     "title": "50",
+     "option1": "50",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-1",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "50.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53484374196571,
+     "title": "100",
+     "option1": "100",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-2",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "100.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53484374229339,
+     "title": "150",
+     "option1": "150",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-3",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "150.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 3,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53484374262107,
+     "title": "200",
+     "option1": "200",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-4",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "200.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 4,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53484374294875,
+     "title": "250",
+     "option1": "250",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-5",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "250.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 5,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53484374327643,
+     "title": "300",
+     "option1": "300",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-6",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "300.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 6,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53927349813595,
+     "title": "350",
+     "option1": "350",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-65",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "350.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 7,
+     "product_id": 10564032856411,
+     "created_at": "2026-08-31T09:11:00+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53484374360411,
+     "title": "400",
+     "option1": "400",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-7",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "400.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 8,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53927349846363,
+     "title": "450",
+     "option1": "450",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-75",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "450.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 9,
+     "product_id": 10564032856411,
+     "created_at": "2026-08-31T09:11:00+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53484374393179,
+     "title": "500",
+     "option1": "500",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-8",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "500.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 10,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53927349879131,
+     "title": "550",
+     "option1": "550",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-85",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "550.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 11,
+     "product_id": 10564032856411,
+     "created_at": "2026-08-31T09:11:00+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53484374425947,
+     "title": "600",
+     "option1": "600",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-9",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "600.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 12,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53927349911899,
+     "title": "650",
+     "option1": "650",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-95",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "650.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 13,
+     "product_id": 10564032856411,
+     "created_at": "2026-08-31T09:11:00+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53484374458715,
+     "title": "700",
+     "option1": "700",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-10",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "700.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 14,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53927349944667,
+     "title": "750",
+     "option1": "750",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-105",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "750.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 15,
+     "product_id": 10564032856411,
+     "created_at": "2026-08-31T09:11:00+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53484374491483,
+     "title": "800",
+     "option1": "800",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-11",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "800.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 16,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53927349977435,
+     "title": "850",
+     "option1": "850",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-115",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "850.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 17,
+     "product_id": 10564032856411,
+     "created_at": "2026-08-31T09:11:00+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53484374524251,
+     "title": "900",
+     "option1": "900",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-12",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "900.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 18,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53927350010203,
+     "title": "950",
+     "option1": "950",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-125",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "950.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 19,
+     "product_id": 10564032856411,
+     "created_at": "2026-08-31T09:11:00+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53484374557019,
+     "title": "1000",
+     "option1": "1000",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-13",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "1000.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 20,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53484374589787,
+     "title": "1500",
+     "option1": "1500",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-14",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "1500.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 21,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53484374622555,
+     "title": "2000",
+     "option1": "2000",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-15",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "2000.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 22,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 53484374655323,
+     "title": "5000",
+     "option1": "5000",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTCARDDK-16",
+     "requires_shipping": false,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "5000.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 23,
+     "product_id": 10564032856411,
+     "created_at": "2026-07-01T20:36:02+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 73544822030683,
+     "created_at": "2026-07-01T20:38:36+02:00",
+     "position": 1,
+     "updated_at": "2026-08-17T11:09:27+02:00",
+     "product_id": 10564032856411,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/La_Cabra_Gift_Card.webp?v=1786957767",
+     "width": 1000,
+     "height": 1000
+    }
+   ],
+   "options": [
+    {
+     "name": "Amount",
+     "position": 1,
+     "values": [
+      "50",
+      "100",
+      "150",
+      "200",
+      "250",
+      "300",
+      "350",
+      "400",
+      "450",
+      "500",
+      "550",
+      "600",
+      "650",
+      "700",
+      "750",
+      "800",
+      "850",
+      "900",
+      "950",
+      "1000",
+      "1500",
+      "2000",
+      "5000"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 307039567882,
+   "title": "V60 Dripper - Wood",
+   "handle": "hario-v60-dripper-wood",
+   "body_html": "<p><meta charset=\"utf-8\">Hario V60 Dripper in Wood is a pour over brewer designed for controlled extraction, producing a clean and expressive cup.<!-- notionvc: f969c3bb-d4e4-4678-b5e2-55eea6e2fb37 --></p>",
+   "published_at": "2018-01-19T13:31:21+01:00",
+   "created_at": "2017-11-14T20:18:59+01:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "La Cabra",
+   "product_type": "Equipment",
+   "tags": [
+    "AA STOCK",
+    "exclude_from_product_sync",
+    "grid_medium",
+    "Stock",
+    "type_Brew Equipment",
+    "type_Filter Brew"
+   ],
+   "variants": [
+    {
+     "id": 1120767868938,
+     "title": "1 Cup",
+     "option1": "1 Cup",
+     "option2": null,
+     "option3": null,
+     "sku": "E16V601030800",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 53972333429083,
+      "product_id": 307039567882,
+      "position": 1,
+      "created_at": "2024-02-21T19:53:45+01:00",
+      "updated_at": "2024-02-21T19:53:49+01:00",
+      "alt": "V60 Dripper Wood",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/V60Dripper-Wood.png?v=1708541629",
+      "variant_ids": [
+       1120767868938,
+       1120767934474
+      ]
+     },
+     "available": true,
+     "price": "319.00",
+     "grams": 325,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 307039567882,
+     "created_at": "2017-11-14T20:19:00+01:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 1120767934474,
+     "title": "2 Cups",
+     "option1": "2 Cups",
+     "option2": null,
+     "option3": null,
+     "sku": "E17V601030800",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 53972333429083,
+      "product_id": 307039567882,
+      "position": 1,
+      "created_at": "2024-02-21T19:53:45+01:00",
+      "updated_at": "2024-02-21T19:53:49+01:00",
+      "alt": "V60 Dripper Wood",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/V60Dripper-Wood.png?v=1708541629",
+      "variant_ids": [
+       1120767868938,
+       1120767934474
+      ]
+     },
+     "available": true,
+     "price": "389.00",
+     "grams": 400,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 307039567882,
+     "created_at": "2017-11-14T20:19:00+01:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 53972333429083,
+     "created_at": "2024-02-21T19:53:45+01:00",
+     "position": 1,
+     "updated_at": "2024-02-21T19:53:49+01:00",
+     "product_id": 307039567882,
+     "variant_ids": [
+      1120767868938,
+      1120767934474
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/V60Dripper-Wood.png?v=1708541629",
+     "width": 2000,
+     "height": 2000
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "1 Cup",
+      "2 Cups"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 9826568241499,
+   "title": "La Cabra T-shirt - Black",
+   "handle": "t-shirt-la-cabra-jet-black",
+   "body_html": "<p>A classic black t-shirt, with discreet logos on front and back, produced by Another Aspect.</p>",
+   "published_at": "2025-04-04T13:03:55+02:00",
+   "created_at": "2025-04-03T14:19:35+02:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "Wholesale",
+   "product_type": "Apparel",
+   "tags": [
+    "Inventory"
+   ],
+   "variants": [
+    {
+     "id": 50352989372763,
+     "title": "XS",
+     "option1": "XS",
+     "option2": null,
+     "option3": null,
+     "sku": "TSLCJB25XS",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 65309905781083,
+      "product_id": 9826568241499,
+      "position": 1,
+      "created_at": "2025-08-21T15:27:42+02:00",
+      "updated_at": "2025-08-21T15:28:32+02:00",
+      "alt": "La Cabra Another Aspect T-shirt Black With Logo",
+      "width": 1500,
+      "height": 1500,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/La_Cabra_Another_Aspect_T-shirt_Black_With_Logo.webp?v=1755782912",
+      "variant_ids": [
+       50352989372763,
+       50352989405531,
+       50352989438299,
+       50352989471067,
+       50352989503835,
+       50352989536603,
+       52685061292379
+      ]
+     },
+     "available": true,
+     "price": "399.00",
+     "grams": 200,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 9826568241499,
+     "created_at": "2025-04-03T14:19:35+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50352989405531,
+     "title": "S",
+     "option1": "S",
+     "option2": null,
+     "option3": null,
+     "sku": "TSLCJB25S",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 65309905781083,
+      "product_id": 9826568241499,
+      "position": 1,
+      "created_at": "2025-08-21T15:27:42+02:00",
+      "updated_at": "2025-08-21T15:28:32+02:00",
+      "alt": "La Cabra Another Aspect T-shirt Black With Logo",
+      "width": 1500,
+      "height": 1500,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/La_Cabra_Another_Aspect_T-shirt_Black_With_Logo.webp?v=1755782912",
+      "variant_ids": [
+       50352989372763,
+       50352989405531,
+       50352989438299,
+       50352989471067,
+       50352989503835,
+       50352989536603,
+       52685061292379
+      ]
+     },
+     "available": true,
+     "price": "399.00",
+     "grams": 200,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 9826568241499,
+     "created_at": "2025-04-03T14:19:35+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50352989438299,
+     "title": "M",
+     "option1": "M",
+     "option2": null,
+     "option3": null,
+     "sku": "TSLCJB25M",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 65309905781083,
+      "product_id": 9826568241499,
+      "position": 1,
+      "created_at": "2025-08-21T15:27:42+02:00",
+      "updated_at": "2025-08-21T15:28:32+02:00",
+      "alt": "La Cabra Another Aspect T-shirt Black With Logo",
+      "width": 1500,
+      "height": 1500,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/La_Cabra_Another_Aspect_T-shirt_Black_With_Logo.webp?v=1755782912",
+      "variant_ids": [
+       50352989372763,
+       50352989405531,
+       50352989438299,
+       50352989471067,
+       50352989503835,
+       50352989536603,
+       52685061292379
+      ]
+     },
+     "available": true,
+     "price": "399.00",
+     "grams": 200,
+     "compare_at_price": null,
+     "position": 3,
+     "product_id": 9826568241499,
+     "created_at": "2025-04-03T14:19:35+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50352989471067,
+     "title": "L",
+     "option1": "L",
+     "option2": null,
+     "option3": null,
+     "sku": "TSLCJB25L",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 65309905781083,
+      "product_id": 9826568241499,
+      "position": 1,
+      "created_at": "2025-08-21T15:27:42+02:00",
+      "updated_at": "2025-08-21T15:28:32+02:00",
+      "alt": "La Cabra Another Aspect T-shirt Black With Logo",
+      "width": 1500,
+      "height": 1500,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/La_Cabra_Another_Aspect_T-shirt_Black_With_Logo.webp?v=1755782912",
+      "variant_ids": [
+       50352989372763,
+       50352989405531,
+       50352989438299,
+       50352989471067,
+       50352989503835,
+       50352989536603,
+       52685061292379
+      ]
+     },
+     "available": true,
+     "price": "399.00",
+     "grams": 200,
+     "compare_at_price": null,
+     "position": 4,
+     "product_id": 9826568241499,
+     "created_at": "2025-04-03T14:19:35+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50352989503835,
+     "title": "XL",
+     "option1": "XL",
+     "option2": null,
+     "option3": null,
+     "sku": "TSLCJB25XL",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 65309905781083,
+      "product_id": 9826568241499,
+      "position": 1,
+      "created_at": "2025-08-21T15:27:42+02:00",
+      "updated_at": "2025-08-21T15:28:32+02:00",
+      "alt": "La Cabra Another Aspect T-shirt Black With Logo",
+      "width": 1500,
+      "height": 1500,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/La_Cabra_Another_Aspect_T-shirt_Black_With_Logo.webp?v=1755782912",
+      "variant_ids": [
+       50352989372763,
+       50352989405531,
+       50352989438299,
+       50352989471067,
+       50352989503835,
+       50352989536603,
+       52685061292379
+      ]
+     },
+     "available": false,
+     "price": "399.00",
+     "grams": 200,
+     "compare_at_price": null,
+     "position": 5,
+     "product_id": 9826568241499,
+     "created_at": "2025-04-03T14:19:35+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50352989536603,
+     "title": "2XL",
+     "option1": "2XL",
+     "option2": null,
+     "option3": null,
+     "sku": "TSLCJB25XXL",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 65309905781083,
+      "product_id": 9826568241499,
+      "position": 1,
+      "created_at": "2025-08-21T15:27:42+02:00",
+      "updated_at": "2025-08-21T15:28:32+02:00",
+      "alt": "La Cabra Another Aspect T-shirt Black With Logo",
+      "width": 1500,
+      "height": 1500,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/La_Cabra_Another_Aspect_T-shirt_Black_With_Logo.webp?v=1755782912",
+      "variant_ids": [
+       50352989372763,
+       50352989405531,
+       50352989438299,
+       50352989471067,
+       50352989503835,
+       50352989536603,
+       52685061292379
+      ]
+     },
+     "available": true,
+     "price": "399.00",
+     "grams": 200,
+     "compare_at_price": null,
+     "position": 6,
+     "product_id": 9826568241499,
+     "created_at": "2025-04-03T14:19:35+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 52685061292379,
+     "title": "3XL",
+     "option1": "3XL",
+     "option2": null,
+     "option3": null,
+     "sku": "TSLCJB25XXXL",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 65309905781083,
+      "product_id": 9826568241499,
+      "position": 1,
+      "created_at": "2025-08-21T15:27:42+02:00",
+      "updated_at": "2025-08-21T15:28:32+02:00",
+      "alt": "La Cabra Another Aspect T-shirt Black With Logo",
+      "width": 1500,
+      "height": 1500,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/La_Cabra_Another_Aspect_T-shirt_Black_With_Logo.webp?v=1755782912",
+      "variant_ids": [
+       50352989372763,
+       50352989405531,
+       50352989438299,
+       50352989471067,
+       50352989503835,
+       50352989536603,
+       52685061292379
+      ]
+     },
+     "available": true,
+     "price": "399.00",
+     "grams": 200,
+     "compare_at_price": null,
+     "position": 7,
+     "product_id": 9826568241499,
+     "created_at": "2026-03-30T10:58:00+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 65309905781083,
+     "created_at": "2025-08-21T15:27:42+02:00",
+     "position": 1,
+     "updated_at": "2025-08-21T15:28:32+02:00",
+     "product_id": 9826568241499,
+     "variant_ids": [
+      50352989372763,
+      50352989405531,
+      50352989438299,
+      50352989471067,
+      50352989503835,
+      50352989536603,
+      52685061292379
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/La_Cabra_Another_Aspect_T-shirt_Black_With_Logo.webp?v=1755782912",
+     "width": 1500,
+     "height": 1500
+    },
+    {
+     "id": 64325458624859,
+     "created_at": "2025-07-21T13:59:50+02:00",
+     "position": 2,
+     "updated_at": "2025-08-21T15:28:27+02:00",
+     "product_id": 9826568241499,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/La_Cabra_T-shirt_Black_Detail.png?v=1755782907",
+     "width": 1000,
+     "height": 1000
+    },
+    {
+     "id": 64325458723163,
+     "created_at": "2025-07-21T13:59:52+02:00",
+     "position": 3,
+     "updated_at": "2025-08-21T15:28:27+02:00",
+     "product_id": 9826568241499,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/La_Cabra_T-shirt_Black_Hanging.png?v=1755782907",
+     "width": 1000,
+     "height": 1000
+    },
+    {
+     "id": 64325458657627,
+     "created_at": "2025-07-21T13:59:52+02:00",
+     "position": 4,
+     "updated_at": "2025-08-21T15:28:27+02:00",
+     "product_id": 9826568241499,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/La_Cabra_T-shirt_Black_Environment.png?v=1755782907",
+     "width": 1000,
+     "height": 1000
+    },
+    {
+     "id": 64325458690395,
+     "created_at": "2025-07-21T13:59:51+02:00",
+     "position": 5,
+     "updated_at": "2025-08-21T15:28:27+02:00",
+     "product_id": 9826568241499,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/La_Cabra_T-shirt_Black_Folded.png?v=1755782907",
+     "width": 1000,
+     "height": 1000
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL",
+      "3XL"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10802296553819,
+   "title": "Jose Guevara - Single Serve",
+   "handle": "jose-guevara-single-serve",
+   "body_html": "<p>A floral washed Typica with notes of aromatic citrus and dense blackberry jam, from Jose Guevara in the mountains of Cajamarca.</p>",
+   "published_at": "2026-10-21T15:05:27+02:00",
+   "created_at": "2026-10-16T11:29:20+02:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "La Cabra ",
+   "product_type": "Single Serve",
+   "tags": [],
+   "variants": [
+    {
+     "id": 54445945356635,
+     "title": "Retail bundle (six units)",
+     "option1": "Retail bundle (six units)",
+     "option2": null,
+     "option3": null,
+     "sku": "SS6JOS26",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 76271245033819,
+      "product_id": 10802296553819,
+      "position": 2,
+      "created_at": "2026-10-21T15:00:50+02:00",
+      "updated_at": "2026-10-21T15:01:25+02:00",
+      "alt": "Jose Guevara Single Serve Retail Bundle Six Units",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Jose_Guevara_Single_Serve_Retail_Bundle_Six_Units.webp?v=1792587685",
+      "variant_ids": [
+       54445945356635
+      ]
+     },
+     "available": true,
+     "price": "105.00",
+     "grams": 120,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10802296553819,
+     "created_at": "2026-10-21T11:27:23+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 54445799866715,
+     "title": "Single unit",
+     "option1": "Single unit",
+     "option2": null,
+     "option3": null,
+     "sku": "SS1JOS26",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 76270224900443,
+      "product_id": 10802296553819,
+      "position": 1,
+      "created_at": "2026-10-21T14:42:35+02:00",
+      "updated_at": "2026-10-21T14:43:04+02:00",
+      "alt": "Jose Guevara Single Serve Single Unit",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Jose_Guevara_Single_Serve_Single_Unit.webp?v=1792586584",
+      "variant_ids": [
+       54445799866715
+      ]
+     },
+     "available": true,
+     "price": "20.00",
+     "grams": 20,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 10802296553819,
+     "created_at": "2026-10-21T11:11:01+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 76270224900443,
+     "created_at": "2026-10-21T14:42:35+02:00",
+     "position": 1,
+     "updated_at": "2026-10-21T14:43:04+02:00",
+     "product_id": 10802296553819,
+     "variant_ids": [
+      54445799866715
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Jose_Guevara_Single_Serve_Single_Unit.webp?v=1792586584",
+     "width": 2000,
+     "height": 2000
+    },
+    {
+     "id": 76271245033819,
+     "created_at": "2026-10-21T15:00:50+02:00",
+     "position": 2,
+     "updated_at": "2026-10-21T15:01:25+02:00",
+     "product_id": 10802296553819,
+     "variant_ids": [
+      54445945356635
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Jose_Guevara_Single_Serve_Retail_Bundle_Six_Units.webp?v=1792587685",
+     "width": 2000,
+     "height": 2000
+    }
+   ],
+   "options": [
+    {
+     "name": "Amount",
+     "position": 1,
+     "values": [
+      "Retail bundle (six units)",
+      "Single unit"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10490289488219,
+   "title": "K.H. Würtz Cup - Justicia",
+   "handle": "k-h-wurtz-cup-justicia",
+   "body_html": "<p class=\"p1\">A cup with a rose-toned glaze, handmade in Denmark in collaboration with K.H. Würtz for our Madrid location.</p>",
+   "published_at": "2026-11-05T13:55:27+01:00",
+   "created_at": "2026-05-20T20:59:15+02:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "La Cabra ",
+   "product_type": "Würtz",
+   "tags": [],
+   "variants": [
+    {
+     "id": 54281089646939,
+     "title": "180ml",
+     "option1": "180ml",
+     "option2": null,
+     "option3": null,
+     "sku": "W180JUS26",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 75919453061467,
+      "product_id": 10490289488219,
+      "position": 1,
+      "created_at": "2026-10-09T15:07:54+02:00",
+      "updated_at": "2026-10-09T15:10:17+02:00",
+      "alt": "K.H Würtz Cup Justicia Sides",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/K.H_W_rtz_Cup_Justicia_Sides.webp?v=1791551417",
+      "variant_ids": [
+       54281089646939
+      ]
+     },
+     "available": true,
+     "price": "399.00",
+     "grams": 300,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10490289488219,
+     "created_at": "2026-10-09T15:09:35+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 75919453061467,
+     "created_at": "2026-10-09T15:07:54+02:00",
+     "position": 1,
+     "updated_at": "2026-10-09T15:10:17+02:00",
+     "product_id": 10490289488219,
+     "variant_ids": [
+      54281089646939
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/K.H_W_rtz_Cup_Justicia_Sides.webp?v=1791551417",
+     "width": 2000,
+     "height": 2000
+    },
+    {
+     "id": 75919453028699,
+     "created_at": "2026-10-09T15:07:54+02:00",
+     "position": 2,
+     "updated_at": "2026-10-09T15:10:45+02:00",
+     "product_id": 10490289488219,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/K.H_W_rtz_Cup_Justicia_Profile.webp?v=1791551445",
+     "width": 2000,
+     "height": 2000
+    },
+    {
+     "id": 75919452930395,
+     "created_at": "2026-10-09T15:07:54+02:00",
+     "position": 3,
+     "updated_at": "2026-10-09T15:11:09+02:00",
+     "product_id": 10490289488219,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/K.H_W_rtz_Cup_Justicia_Bottom.webp?v=1791551469",
+     "width": 2000,
+     "height": 2000
+    },
+    {
+     "id": 75919473967451,
+     "created_at": "2026-10-09T15:08:58+02:00",
+     "position": 4,
+     "updated_at": "2026-10-09T15:11:48+02:00",
+     "product_id": 10490289488219,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/K.H_W_rtz_Cup_Justicia_Environment_picture.webp?v=1791551508",
+     "width": 2000,
+     "height": 2000
+    },
+    {
+     "id": 75919452995931,
+     "created_at": "2026-10-09T15:07:54+02:00",
+     "position": 5,
+     "updated_at": "2026-10-09T15:13:08+02:00",
+     "product_id": 10490289488219,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/K.H_W_rtz_Cup_Justicia_Focus.webp?v=1791551588",
+     "width": 2000,
+     "height": 2000
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "180ml"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10843114176859,
+   "title": "Rare Set",
+   "handle": "gift-box-2x-100g",
+   "body_html": "<p class=\"p1\">A gift of two Rare coffees, each with its own expression. Rare Set brings together two washed Geishas from two farms in Boquete, Panama.</p>",
+   "published_at": "2026-10-30T09:50:12+01:00",
+   "created_at": "2026-10-28T00:19:13+01:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "La Cabra ",
+   "product_type": "Coffee bundle",
+   "tags": [],
+   "variants": [
+    {
+     "id": 54531501949275,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "GIFTBOXRARE26",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "849.00",
+     "grams": 750,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10843114176859,
+     "created_at": "2026-10-28T00:19:14+01:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 76702667080027,
+     "created_at": "2026-11-06T11:18:25+01:00",
+     "position": 1,
+     "updated_at": "2026-11-06T11:18:28+01:00",
+     "product_id": 10843114176859,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/ChevasW_Esmeralda_Rareset.png?v=1793960308",
+     "width": 1500,
+     "height": 1500
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10846893572443,
+   "title": "Ground Chocolate - Bejofo",
+   "handle": "ground-chocolate-bejofo",
+   "body_html": "<p>Ground chocolate for making hot cocoa. 70% Chocolate, to be mixed 1:7 with warm milk.</p>",
+   "published_at": "2026-10-30T13:24:35+01:00",
+   "created_at": "2026-10-30T09:34:21+01:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "La Cabra ",
+   "product_type": "Chocolate",
+   "tags": [
+    "exclude_from_product_sync"
+   ],
+   "variants": [
+    {
+     "id": 54564560699739,
+     "title": "200g",
+     "option1": "200g",
+     "option2": null,
+     "option3": null,
+     "sku": "CHBEJ200G26",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 76531813581147,
+      "product_id": 10846893572443,
+      "position": 1,
+      "created_at": "2026-10-30T13:11:37+01:00",
+      "updated_at": "2026-10-30T13:11:40+01:00",
+      "alt": null,
+      "width": 1000,
+      "height": 1000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Ground_Chocolate_Bejofo_200g.png?v=1793362300",
+      "variant_ids": [
+       54564560699739
+      ]
+     },
+     "available": true,
+     "price": "159.00",
+     "grams": 200,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10846893572443,
+     "created_at": "2026-10-30T09:34:22+01:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 76531813581147,
+     "created_at": "2026-10-30T13:11:37+01:00",
+     "position": 1,
+     "updated_at": "2026-10-30T13:11:40+01:00",
+     "product_id": 10846893572443,
+     "variant_ids": [
+      54564560699739
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Ground_Chocolate_Bejofo_200g.png?v=1793362300",
+     "width": 1000,
+     "height": 1000
+    }
+   ],
+   "options": [
+    {
+     "name": "Variant",
+     "position": 1,
+     "values": [
+      "200g"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 9979173798235,
+   "title": "Profiles Subscription - Gift",
+   "handle": "profiles-subscription-gift",
+   "body_html": "<p class=\"p1\"><meta charset=\"utf-8\"><span>Give the gift of our Profiles subscription, tailored to home use and espresso-profiles, offering consistency and quality. Perfect for smaller households or individuals with a higher coffee consumption.</span></p>",
+   "published_at": "2025-06-26T14:06:56+02:00",
+   "created_at": "2025-06-26T09:22:06+02:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "La Cabra ",
+   "product_type": "Subscription gift card",
+   "tags": [
+    "Recharge Gift Product",
+    "sub_gift_card",
+    "type_Gift Card"
+   ],
+   "variants": [
+    {
+     "id": 50891803787611,
+     "title": "2 Deliveries / 1 x 1kg",
+     "option1": "2 Deliveries",
+     "option2": "1 x 1kg",
+     "option3": null,
+     "sku": "G1K2D25",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": null,
+     "available": true,
+     "price": "718.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 9979173798235,
+     "created_at": "2025-06-26T09:22:07+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50891844354395,
+     "title": "2 Deliveries / 2 x 1kg",
+     "option1": "2 Deliveries",
+     "option2": "2 x 1kg",
+     "option3": null,
+     "sku": "G2K2D25",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": null,
+     "available": true,
+     "price": "1278.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 9979173798235,
+     "created_at": "2025-06-26T09:26:28+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50891803820379,
+     "title": "3 Deliveries / 1 x 1kg",
+     "option1": "3 Deliveries",
+     "option2": "1 x 1kg",
+     "option3": null,
+     "sku": "G1K3D25",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": null,
+     "available": true,
+     "price": "1077.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 3,
+     "product_id": 9979173798235,
+     "created_at": "2025-06-26T09:22:07+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50891844387163,
+     "title": "3 Deliveries / 2 x 1kg",
+     "option1": "3 Deliveries",
+     "option2": "2 x 1kg",
+     "option3": null,
+     "sku": "G2K3D25",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": null,
+     "available": true,
+     "price": "1917.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 4,
+     "product_id": 9979173798235,
+     "created_at": "2025-06-26T09:26:28+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50891803853147,
+     "title": "4 Deliveries / 1 x 1kg",
+     "option1": "4 Deliveries",
+     "option2": "1 x 1kg",
+     "option3": null,
+     "sku": "G1K4D25",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": null,
+     "available": true,
+     "price": "1436.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 5,
+     "product_id": 9979173798235,
+     "created_at": "2025-06-26T09:22:07+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50891844419931,
+     "title": "4 Deliveries / 2 x 1kg",
+     "option1": "4 Deliveries",
+     "option2": "2 x 1kg",
+     "option3": null,
+     "sku": "G2K4D25",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": null,
+     "available": true,
+     "price": "2556.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 6,
+     "product_id": 9979173798235,
+     "created_at": "2025-06-26T09:26:28+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50891803885915,
+     "title": "5 Deliveries / 1 x 1kg",
+     "option1": "5 Deliveries",
+     "option2": "1 x 1kg",
+     "option3": null,
+     "sku": "G1K5D25",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": null,
+     "available": true,
+     "price": "1795.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 7,
+     "product_id": 9979173798235,
+     "created_at": "2025-06-26T09:22:07+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50891844452699,
+     "title": "5 Deliveries / 2 x 1kg",
+     "option1": "5 Deliveries",
+     "option2": "2 x 1kg",
+     "option3": null,
+     "sku": "G2K5D25",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": null,
+     "available": true,
+     "price": "3195.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 8,
+     "product_id": 9979173798235,
+     "created_at": "2025-06-26T09:26:28+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50891803918683,
+     "title": "6 Deliveries / 1 x 1kg",
+     "option1": "6 Deliveries",
+     "option2": "1 x 1kg",
+     "option3": null,
+     "sku": "G1K6D25",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": null,
+     "available": true,
+     "price": "2154.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 9,
+     "product_id": 9979173798235,
+     "created_at": "2025-06-26T09:22:07+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50891844485467,
+     "title": "6 Deliveries / 2 x 1kg",
+     "option1": "6 Deliveries",
+     "option2": "2 x 1kg",
+     "option3": null,
+     "sku": "G2K6D25",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": null,
+     "available": true,
+     "price": "3834.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 10,
+     "product_id": 9979173798235,
+     "created_at": "2025-06-26T09:26:28+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50891803951451,
+     "title": "12 Deliveries / 1 x 1kg",
+     "option1": "12 Deliveries",
+     "option2": "1 x 1kg",
+     "option3": null,
+     "sku": "G1K12D25",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": null,
+     "available": true,
+     "price": "4308.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 11,
+     "product_id": 9979173798235,
+     "created_at": "2025-06-26T09:22:07+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 50891844518235,
+     "title": "12 Deliveries / 2 x 1kg",
+     "option1": "12 Deliveries",
+     "option2": "2 x 1kg",
+     "option3": null,
+     "sku": "G2K12D25",
+     "requires_shipping": false,
+     "taxable": false,
+     "featured_image": null,
+     "available": true,
+     "price": "7668.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 12,
+     "product_id": 9979173798235,
+     "created_at": "2025-06-26T09:26:28+02:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 69248477561179,
+     "created_at": "2026-01-02T11:26:39+01:00",
+     "position": 1,
+     "updated_at": "2026-01-02T11:26:41+01:00",
+     "product_id": 9979173798235,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/E-Gift-Card-Subscription-Profiles.webp?v=1767349601",
+     "width": 2000,
+     "height": 2000
+    }
+   ],
+   "options": [
+    {
+     "name": "How many deliveries would you like to gift?",
+     "position": 1,
+     "values": [
+      "2 Deliveries",
+      "3 Deliveries",
+      "4 Deliveries",
+      "5 Deliveries",
+      "6 Deliveries",
+      "12 Deliveries"
+     ]
+    },
+    {
+     "name": "How much coffee per delivery?",
+     "position": 2,
+     "values": [
+      "1 x 1kg",
+      "2 x 1kg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10331488813403,
+   "title": "Heven Glass",
+   "handle": "heven-glass",
+   "body_html": "<p><meta charset=\"utf-8\"><meta charset=\"utf-8\">A glass developed in collaboration with Peter Dupont and Breanna Box from Home in Heven in Brooklyn, and used across our cafés.<!-- notionvc: dea651ec-3183-4c1f-a525-0af53e6f1ce0 --><br></p>",
+   "published_at": "2026-03-18T10:10:32+01:00",
+   "created_at": "2026-02-10T14:49:35+01:00",
+   "updated_at": "2026-11-09T11:31:11+01:00",
+   "vendor": "La Cabra ",
+   "product_type": "EQUIPMENT",
+   "tags": [],
+   "variants": [
+    {
+     "id": 52273801167195,
+     "title": "Medium 350ml",
+     "option1": "Medium 350ml",
+     "option2": null,
+     "option3": null,
+     "sku": "HVGLA12OZ25",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 71979708383579,
+      "product_id": 10331488813403,
+      "position": 2,
+      "created_at": "2026-04-23T16:13:49+02:00",
+      "updated_at": "2026-08-17T11:14:01+02:00",
+      "alt": "Heven Glassware La Cabra 350ml",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Heven_Glassware_La_Cabra_350ml.webp?v=1786958041",
+      "variant_ids": [
+       52273801167195
+      ]
+     },
+     "available": false,
+     "price": "275.00",
+     "grams": 335,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10331488813403,
+     "created_at": "2026-02-10T14:49:36+01:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    },
+    {
+     "id": 52277731623259,
+     "title": "Large 470ml",
+     "option1": "Large 470ml",
+     "option2": null,
+     "option3": null,
+     "sku": "HVGLA16OZ25",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 70186312008027,
+      "product_id": 10331488813403,
+      "position": 1,
+      "created_at": "2026-02-11T08:26:21+01:00",
+      "updated_at": "2026-08-17T11:13:50+02:00",
+      "alt": "Heven Glassware La Cabra 470ml",
+      "width": 1000,
+      "height": 1000,
+      "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Heven_Glassware_La_Cabra_470ml.png?v=1786958030",
+      "variant_ids": [
+       52277731623259
+      ]
+     },
+     "available": false,
+     "price": "310.00",
+     "grams": 355,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 10331488813403,
+     "created_at": "2026-02-10T15:55:01+01:00",
+     "updated_at": "2026-11-09T11:31:11+01:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 70186312008027,
+     "created_at": "2026-02-11T08:26:21+01:00",
+     "position": 1,
+     "updated_at": "2026-08-17T11:13:50+02:00",
+     "product_id": 10331488813403,
+     "variant_ids": [
+      52277731623259
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Heven_Glassware_La_Cabra_470ml.png?v=1786958030",
+     "width": 1000,
+     "height": 1000
+    },
+    {
+     "id": 71979708383579,
+     "created_at": "2026-04-23T16:13:49+02:00",
+     "position": 2,
+     "updated_at": "2026-08-17T11:14:01+02:00",
+     "product_id": 10331488813403,
+     "variant_ids": [
+      52273801167195
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Heven_Glassware_La_Cabra_350ml.webp?v=1786958041",
+     "width": 2000,
+     "height": 2000
+    },
+    {
+     "id": 71979708711259,
+     "created_at": "2026-04-23T16:13:49+02:00",
+     "position": 3,
+     "updated_at": "2026-08-17T11:14:37+02:00",
+     "product_id": 10331488813403,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Heven_Glassware_La_Cabra_350ml_environment.webp?v=1786958077",
+     "width": 1500,
+     "height": 1500
+    },
+    {
+     "id": 71979708678491,
+     "created_at": "2026-04-23T16:13:49+02:00",
+     "position": 4,
+     "updated_at": "2026-08-17T11:15:02+02:00",
+     "product_id": 10331488813403,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Heven_Glassware_La_Cabra_470ml_environment.webp?v=1786958102",
+     "width": 1500,
+     "height": 1500
+    },
+    {
+     "id": 71979709038939,
+     "created_at": "2026-04-23T16:13:50+02:00",
+     "position": 5,
+     "updated_at": "2026-08-17T11:15:37+02:00",
+     "product_id": 10331488813403,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Heven_Glassware_La_Cabra_350ml_environment_2.webp?v=1786958137",
+     "width": 1500,
+     "height": 1500
+    },
+    {
+     "id": 71979709006171,
+     "created_at": "2026-04-23T16:13:50+02:00",
+     "position": 6,
+     "updated_at": "2026-08-17T11:16:17+02:00",
+     "product_id": 10331488813403,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1094/5212/files/Heven_Glassware_La_Cabra_470ml_environment_2.webp?v=1786958177",
+     "width": 1500,
+     "height": 1500
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "Medium 350ml",
+      "Large 470ml"
+     ]
+    }
+   ]
+  }
+ ]
+}
