@@ -49,7 +49,7 @@ roasters:
         [equipment, merchandise, misc, coffee bundle, subscription, gift subscription, instant & capsules, book, vouchers]
       # Some non-coffee products have no product type at all.
       exclude_title_keywords:
-        [advent calendar, matcha, tote bag, canister, kettle, scale, server, bundle]
+        [advent calendar, matcha, tote bag, canister, kettle, scale, server, bundle, gift box]
   - slug: dak
     name: DAK Coffee Roasters
     base_url: https://www.dakcoffeeroasters.com

@@ -50,6 +50,18 @@ def parse_process_stated(text: str) -> str | None:
     return None
 
 
+# "A washed Geisha", "a floral washed Typica": the process word sits right before a capitalised
+# variety, after an article and at most two lowercase adjectives. Case-sensitive on purpose, so
+# "natural sweetness" and a sentence starting "Natural wines" do not match.
+_ADJECTIVE_PROCESS = re.compile(r"\b[Aa]n? (?:[a-z]+ ){0,2}(washed|natural|honey) (?=[A-Z])")
+
+
+def parse_process_adjective(text: str) -> str | None:
+    """Process named as an adjective of the variety, as in 'A washed Geisha from ...'."""
+    match = _ADJECTIVE_PROCESS.search(text or "")
+    return match.group(1).capitalize() if match else None
+
+
 _ROAST_RULES: list[tuple[str, str]] = [
     (r"medium[- ]dark|בינונית[- ]כהה", "medium-dark"),
     # Before "light": "medium-light roast" also contains "light roast".

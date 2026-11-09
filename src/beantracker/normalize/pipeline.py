@@ -4,6 +4,7 @@ from beantracker.domain.bean import Bean
 from beantracker.domain.raw import RawProduct
 from beantracker.normalize.attributes import (
     parse_process,
+    parse_process_adjective,
     parse_process_stated,
     parse_roast,
     parse_roast_label,
@@ -27,9 +28,11 @@ def normalize(product: RawProduct, roaster: str, currency: str, scraped_at: date
 
     country, region = parse_origin(attrs.get("origin") or fields.get("origin"), product.title, text)
     region = clean_region(attrs.get("region"), country) or region
-    process = parse_process(
-        attrs.get("process", ""), fields.get("process", ""), product.title
-    ) or parse_process_stated(text)
+    process = (
+        parse_process(attrs.get("process", ""), fields.get("process", ""), product.title)
+        or parse_process_stated(text)
+        or parse_process_adjective(text)
+    )
     # A roast level the adapter already knows (stated by the roaster's own convention) beats
     # anything guessed from prose.
     roast = (
