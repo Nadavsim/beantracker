@@ -156,6 +156,12 @@ exit non-zero, so a scheduler's own failure alert fires when a roaster degrades:
 Each run is compared with the previous healthy ones, so history is what makes the health checks
 meaningful. The database needs somewhere to live between runs (the compose volume does that).
 
+The **scrape** workflow (`.github/workflows/scrape.yml`) does this on GitHub: every day it runs
+`scrape-all` into the Postgres database in the `DATABASE_URL` repository secret (a hosted
+database such as Neon; use the direct, non-pooled connection string with the
+`postgresql+psycopg://` scheme). A failed run fails the job, which emails the repo owner; run it
+by hand from the Actions tab with "Run workflow".
+
 A separate **canary** workflow (`.github/workflows/canary.yml`) scrapes every roaster live once a
 week into a throwaway database and fails if any adapter stopped working. It is not a data
 pipeline; it exists so a site redesign is noticed within a week.
