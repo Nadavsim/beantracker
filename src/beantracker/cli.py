@@ -285,9 +285,16 @@ def catalog(
     delisted: Annotated[
         bool, typer.Option("--delisted", help="Include coffees no longer on the site.")
     ] = False,
-    limit: int = 30,
+    currency: Annotated[
+        str | None, typer.Option(help="Only prices in this currency, e.g. USD.")
+    ] = None,
+    limit: Annotated[int, typer.Option(help="At most this many sizes per currency.")] = 30,
 ) -> None:
-    """Search the stored catalog: the latest price of every size, cheapest per 100 g first."""
+    """Search the stored catalog: the latest price of every size, cheapest per 100 g first.
+
+    Prices are never converted between currencies, so the list is sorted, and limited, within
+    each currency.
+    """
     engine = make_engine()
     try:
         with make_session_factory(engine)() as session:
@@ -299,11 +306,19 @@ def catalog(
                 search=search,
                 in_stock=True if in_stock else None,
                 include_delisted=delisted,
+                currency=currency,
                 limit=limit,
             )
     finally:
         engine.dispose()
     console.print(_bean_table(f"Catalog: {len(beans)} sizes", beans, roaster_column=True))
+    codes = sorted({b.currency for b in beans})
+    if len(codes) > 1:
+        console.print(
+            f"[dim]Prices are in several currencies ({', '.join(codes)}) and are never converted, "
+            "so the list is sorted and limited within each currency. "
+            "Use --currency to compare like with like.[/dim]"
+        )
 
 
 @runs_app.command("list")

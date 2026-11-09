@@ -227,9 +227,16 @@ def current_beans(
     search: str | None = None,
     in_stock: bool | None = None,
     include_delisted: bool = False,
+    currency: str | None = None,
     limit: int | None = None,
 ) -> list[Bean]:
-    """The catalog as it stands now: the latest snapshot of every size, cheapest per 100 g first.
+    """The catalog as it stands now: the latest snapshot of every size.
+
+    Ordered by currency, then cheapest per 100 g. Prices in different currencies are never
+    compared (no exchange rates are applied), so each currency forms its own ranked group, and
+    `limit` means at most that many sizes *per currency*: a plain cap on the whole list would
+    hand all of it to whichever currency sorts first and hide the rest. `currency` narrows the
+    catalog to one, for comparing like with like.
 
     "Now" means seen in the roaster's latest *ok* run. A size missing from it is delisted and
     hidden unless `include_delisted`; one that first appeared in a later warning run shows up
@@ -248,7 +255,12 @@ def current_beans(
         .join(Offer, Offer.coffee_id == Coffee.id)
         .join(latest, latest.offer_id == Offer.id)
         .join(Roaster, Roaster.id == Coffee.roaster_id)
-        .order_by(latest.price_per_100g.asc().nulls_last(), Coffee.name, Offer.weight_g)
+        .order_by(
+            latest.currency,
+            latest.price_per_100g.asc().nulls_last(),
+            Coffee.name,
+            Offer.weight_g,
+        )
     )
     if not include_delisted:
         latest_ok = (
@@ -267,8 +279,14 @@ def current_beans(
         query = query.where(Coffee.name.ilike(f"%{search}%"))
     if in_stock is not None:
         query = query.where(latest.in_stock == in_stock)
-    if limit:
-        query = query.limit(limit)
+    if currency:
+        query = query.where(latest.currency == currency.upper())
+    per_currency: dict[str, int] = {}
+
+    def within_limit(code: str) -> bool:
+        per_currency[code] = per_currency.get(code, 0) + 1
+        return limit is None or limit <= 0 or per_currency[code] <= limit
+
     return [
         Bean(
             roaster=slug,
@@ -290,6 +308,7 @@ def current_beans(
             scraped_at=snap.scraped_at,
         )
         for coffee, offer, snap, slug in session.execute(query)
+        if within_limit(snap.currency)
     ]
 
 

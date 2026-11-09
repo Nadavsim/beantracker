@@ -6,7 +6,7 @@ Scrapes specialty coffee roasters, normalizes their products into one searchable
 keeps a price and stock history for every size, so "what is new" and "what changed price" are
 questions you can ask the database.
 
-Python 3.12, PostgreSQL, SQLAlchemy 2, Alembic, httpx, Typer. 222 offline tests, strict mypy.
+Python 3.12, PostgreSQL, SQLAlchemy 2, Alembic, httpx, Typer. 227 offline tests, strict mypy.
 
 **Status:** Phase 1 is done: four roasters (three Shopify shops configured in YAML, one custom
 HTML scraper), a CLI, per-run health checks and a stored history. Not built yet: web UI, API,
@@ -69,7 +69,7 @@ The defaults match `docker-compose.yml`, so no configuration is needed. To overr
 | `scrape <slug> --no-store` | Fetch live and print what would be stored. Writes nothing; the manual check for an adapter. `--cache` reuses pages for a few hours (only allowed here) |
 | `scrape <slug>` | One stored run. `--strict` also fails on warnings; `--reset-baseline` accepts a new catalog size |
 | `scrape-all` | Every roaster, concurrently (`--concurrency`, default 4), sharing one per-host throttle. One failing roaster does not stop the others |
-| `catalog` | Search stored data: `--roaster --origin --process --search --in-stock --delisted --limit` |
+| `catalog` | Search stored data: `--roaster --origin --process --search --in-stock --delisted --currency --limit`. Sorted by price per 100 g within each currency; `--limit` is per currency |
 | `runs list` | Recent runs with status, product count, missing-field rate and health flags |
 | `db upgrade` | Apply Alembic migrations |
 
@@ -181,7 +181,7 @@ src/beantracker/
   adapters/              base protocol, registry, generic Shopify adapter, DAK
   normalize/             weight, price, origin, process/roast, and the pipeline
   http/                  PoliteClient, robots.txt matcher, per-host throttle
-tests/                   222 tests; fixtures/ holds real captured pages and feeds
+tests/                   227 tests; fixtures/ holds real captured pages and feeds
 ```
 
 ## Development
@@ -201,8 +201,10 @@ CI runs lint, the format check, mypy and the full suite against a Postgres servi
 
 ## Limitations and roadmap
 
-- **Prices are not converted between currencies.** The catalog sorts by price per 100 g as a
-  plain number, so rows in ILS and USD are not comparable; filter with `--roaster` for now.
+- **Prices are not converted between currencies** (exchange rates change and cannot be checked
+  offline). The catalog ranks each currency on its own: it sorts, and applies `--limit`, within
+  each currency, says so when a list mixes currencies, and `--currency` compares like with like.
+  A true cross-currency ranking would need exchange rates.
 - **DAK shows only the default size's price**, because the other sizes need WooCommerce's Store
   API.
 - **Origin and process depend on what a roaster writes.** For example only about 58% of September

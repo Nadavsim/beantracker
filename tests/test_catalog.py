@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session, sessionmaker
 
 from beantracker import repo
 from beantracker.config import RoasterConfig
+from beantracker.domain.bean import Bean
 from beantracker.domain.raw import RawProduct, RawVariant
 from beantracker.runner import run_scrape
 
@@ -108,3 +109,74 @@ async def test_a_coffee_first_seen_in_a_warning_run_waits_for_an_ok_run(
     await run_scrape(sessions, Adapter([*ten, coffee("99", "Brand New Brazil")]), CONFIG)
     with sessions() as s:
         assert "Brand New Brazil" in {b.name for b in repo.current_beans(s)}
+
+
+EURO = RoasterConfig(
+    slug="euro", name="Euro", base_url="https://euro.test", adapter="fake", currency="EUR"
+)
+
+
+async def seed_two_currencies(sessions: sessionmaker[Session]) -> None:
+    """Per 100 g, USD sizes cost 7.00, 7.00, 8.00, 12.00 and EUR sizes 4.00, 5.00, 9.00, 10.00.
+
+    Compared as bare numbers the two currencies interleave (4, 5, 7, 7, 8, 9, 10, 12), which
+    is exactly the mistake the catalog must not make."""
+    usd = [coffee("1", "Ethiopia Guji Natural"), coffee("2", "Colombia Huila Washed", p250="30.00")]
+    eur = [
+        coffee("10", "Kenya Nyeri Washed", p250="25.00", p1kg="50.00"),
+        coffee("11", "Brazil Cerrado Natural", p250="10.00", p1kg="90.00"),
+    ]
+    await run_scrape(sessions, Adapter(usd), CONFIG)
+    await run_scrape(sessions, Adapter(eur), EURO)
+
+
+def pairs(beans: list[Bean]) -> list[tuple[str, float]]:
+    return [(b.currency, float(b.price_per_100g or 0)) for b in beans]
+
+
+async def test_each_currency_is_ranked_on_its_own(sessions: sessionmaker[Session]) -> None:
+    await seed_two_currencies(sessions)
+    with sessions() as s:
+        got = pairs(repo.current_beans(s))
+    assert got == [
+        ("EUR", 4.0),
+        ("EUR", 5.0),
+        ("EUR", 9.0),
+        ("EUR", 10.0),
+        ("USD", 7.0),
+        ("USD", 7.0),
+        ("USD", 8.0),
+        ("USD", 12.0),
+    ]
+
+
+async def test_the_currency_filter_is_case_insensitive(sessions: sessionmaker[Session]) -> None:
+    await seed_two_currencies(sessions)
+    with sessions() as s:
+        beans = repo.current_beans(s, currency="usd")
+    assert {b.currency for b in beans} == {"USD"}
+    assert len(beans) == 4
+
+
+async def test_limit_applies_per_currency_not_to_the_whole_list(
+    sessions: sessionmaker[Session],
+) -> None:
+    await seed_two_currencies(sessions)
+    with sessions() as s:
+        # A plain cap of 2 would return only EUR (it sorts first) and hide USD entirely.
+        assert pairs(repo.current_beans(s, limit=2)) == [
+            ("EUR", 4.0),
+            ("EUR", 5.0),
+            ("USD", 7.0),
+            ("USD", 7.0),
+        ]
+        assert len(repo.current_beans(s, limit=3)) == 6
+        assert len(repo.current_beans(s, limit=99)) == 8
+        assert len(repo.current_beans(s, limit=None)) == 8
+
+
+async def test_a_currency_filter_with_a_limit(sessions: sessionmaker[Session]) -> None:
+    await seed_two_currencies(sessions)
+    with sessions() as s:
+        assert pairs(repo.current_beans(s, currency="EUR", limit=1)) == [("EUR", 4.0)]
+        assert repo.current_beans(s, currency="JPY") == []

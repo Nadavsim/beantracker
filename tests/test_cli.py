@@ -50,16 +50,16 @@ def _fake_state() -> Iterator[None]:
     yield
 
 
-def write_config(path: Path, *entries: tuple[str, str]) -> Path:
-    """entries are (slug, adapter name)."""
+def write_config(path: Path, *entries: tuple[str, ...]) -> Path:
+    """entries are (slug, adapter name) or (slug, adapter name, currency)."""
     lines = ["roasters:"]
-    for slug, adapter in entries:
+    for slug, adapter, *rest in entries:
         lines += [
             f"  - slug: {slug}",
             f"    name: {slug.title()}",
             "    base_url: https://fake.test",
             f"    adapter: {adapter}",
-            "    currency: USD",
+            f"    currency: {rest[0] if rest else 'USD'}",
         ]
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     return path
@@ -233,3 +233,24 @@ def test_catalog_command_lists_stored_sizes(
     assert "2 sizes" in listing.output
     assert "0 sizes" in runner.invoke(app, ["catalog", "--origin", "Kenya"]).output
     assert "delisted" in runner.invoke(app, args).output  # the run summary reports it
+
+
+@pytest.mark.integration
+def test_catalog_says_so_when_currencies_are_mixed(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, sessions: sessionmaker[Session]
+) -> None:
+    monkeypatch.setitem(ADAPTERS, "fake", FakeAdapter)
+    cfg = write_config(tmp_path / "r.yaml", ("usd", "fake", "USD"), ("eur", "fake", "EUR"))
+    FAKE["count"] = 2
+    assert runner.invoke(app, ["scrape-all", "--config", str(cfg)]).exit_code == 0
+
+    wide = {"COLUMNS": "200"}
+    both = " ".join(runner.invoke(app, ["catalog"], env=wide).output.split())
+    assert "several currencies (EUR, USD)" in both
+    assert "--currency" in both
+
+    only_usd = runner.invoke(app, ["catalog", "--currency", "usd"], env=wide)
+    assert only_usd.exit_code == 0
+    assert "several currencies" not in " ".join(only_usd.output.split())
+    assert "EUR" not in only_usd.output
+    assert "2 sizes" in only_usd.output  # the fake adapter sells 1 size per product
