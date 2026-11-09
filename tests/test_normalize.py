@@ -262,3 +262,14 @@ def test_from_minor_respects_the_currency_exponent(minor: int, currency: str, sh
     from beantracker.normalize.price import from_minor
 
     assert str(from_minor(minor, currency)) == shown
+
+
+def test_padded_titles_are_cleaned_in_the_name() -> None:
+    product = RawProduct(
+        external_id="1",
+        title="  Lot   One \n Colombia ",
+        url="https://x.test/p",
+        variants=[RawVariant(external_id="a", title="250g", price="25.00", available=True)],
+    )
+    (bean,) = normalize(product, "x", "USD", NOW)
+    assert bean.name == "Lot One Colombia"

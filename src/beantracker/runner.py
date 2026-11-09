@@ -57,7 +57,7 @@ def _record_failure(
             repo.finish_run(
                 session,
                 session.get_one(ScrapeRun, run_id),
-                HealthReport(RunStatus.failed, [], 0.0),
+                HealthReport(RunStatus.failed, [], None),
                 product_count,
                 error[:2000],
             )

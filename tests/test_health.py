@@ -10,6 +10,7 @@ from beantracker.health import (
     baseline_coverage,
     evaluate,
     field_coverage,
+    missing_field_rate,
 )
 from beantracker.models.orm import RunStatus
 
@@ -138,3 +139,9 @@ def test_a_rarely_filled_field_is_never_a_signal() -> None:
 def test_no_coverage_history_means_no_coverage_check() -> None:
     assert evaluate(10, 10, [bean()] * 10, T, None).flags == []
     assert evaluate(10, 10, [bean()] * 10, T, {}).flags == []
+
+
+def test_nothing_measured_is_none_not_zero_percent() -> None:
+    assert missing_field_rate([]) is None
+    assert missing_field_rate([bean()]) == 0.0
+    assert evaluate(0, None, [], T).missing_field_rate is None

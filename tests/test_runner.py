@@ -268,3 +268,15 @@ async def test_a_partial_warning_run_delists_nothing(sessions: sessionmaker[Sess
     warned = await run_scrape(sessions, FakeAdapter(many(3)), CONFIG)
     assert warned.status == RunStatus.warning
     assert warned.delisted == 0  # seven coffees are missing, but a partial run proves nothing
+
+
+async def test_runs_that_measured_nothing_record_null_not_zero_percent(
+    sessions: sessionmaker[Session],
+) -> None:
+    empty = await run_scrape(sessions, FakeAdapter([]), CONFIG)
+    crashed = await run_scrape(sessions, FakeAdapter(RuntimeError("boom")), CONFIG)
+    measured = await run_scrape(sessions, FakeAdapter(many(3)), CONFIG)
+    with sessions() as s:
+        assert s.get_one(ScrapeRun, empty.run_id).missing_field_rate is None
+        assert s.get_one(ScrapeRun, crashed.run_id).missing_field_rate is None
+        assert s.get_one(ScrapeRun, measured.run_id).missing_field_rate == 0

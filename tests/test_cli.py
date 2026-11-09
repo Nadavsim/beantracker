@@ -164,7 +164,7 @@ def test_scrape_all_keeps_going_after_one_roaster_blows_up(
 
     monkeypatch.setattr("beantracker.cli.run_scrape", fake_run)
     result = runner.invoke(app, ["scrape-all", "--config", str(cfg)])
-    assert attempted == ["first", "second"]
+    assert sorted(attempted) == ["first", "second"]
     assert "database unreachable" in result.output
     assert result.exit_code == 1  # one roaster failed, and the exit code says so
 

@@ -170,7 +170,8 @@ def finish_run(
     run.finished_at = datetime.now(UTC)
     run.status = report.status
     run.product_count = product_count
-    run.missing_field_rate = Decimal(str(round(report.missing_field_rate, 4)))
+    rate = report.missing_field_rate
+    run.missing_field_rate = None if rate is None else Decimal(str(round(rate, 4)))
     run.health_flags = report.flags
     run.field_coverage = report.coverage or None
     run.error = error

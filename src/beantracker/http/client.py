@@ -58,6 +58,7 @@ class PoliteClient:
         throttle: DomainThrottle | None = None,
         cache_ttl_s: float | None = None,
         max_retry_wait_s: float = 60.0,
+        max_crawl_delay_s: float = 30.0,
     ) -> None:
         self._token = agent_token(user_agent)
         self._client = httpx.AsyncClient(
@@ -71,6 +72,7 @@ class PoliteClient:
         self._cache_ttl_s = cache_ttl_s
         self._max_retries = max_retries
         self._max_retry_wait_s = max_retry_wait_s
+        self._max_crawl_delay_s = max_crawl_delay_s
         self._robots: dict[str, tuple[Robots, str]] = {}  # origin -> (rules, why if blanket)
 
     async def aclose(self) -> None:
@@ -89,13 +91,27 @@ class PoliteClient:
             else:
                 status = resp.status_code
                 if 200 <= status < 300:
-                    result = (Robots.parse(resp.text), "")
+                    result = self._with_crawl_delay(origin, Robots.parse(resp.text))
                 elif status in (401, 403, 429) or status >= 500:
                     result = (Robots.disallow_all(), f"robots.txt unavailable (HTTP {status})")
                 else:
                     result = (Robots.allow_all(), "")
             self._robots[origin] = result
         return self._robots[origin]
+
+    def _with_crawl_delay(self, origin: str, robots: Robots) -> tuple[Robots, str]:
+        """Honour the site's Crawl-delay for us, up to `max_crawl_delay_s`. A site asking for
+        more than that is treated as off limits, loudly, instead of being quietly hammered
+        faster than it asked; raise the setting to scrape such a site anyway."""
+        asked = robots.crawl_delay(self._token)
+        if asked is None:
+            return robots, ""
+        if asked > self._max_crawl_delay_s:
+            limit = self._max_crawl_delay_s
+            why = f"robots.txt asks for a {asked:g}s crawl-delay, over our {limit:g}s limit"
+            return Robots.disallow_all(), why
+        self._throttle.require_delay(urlsplit(origin).netloc, asked)
+        return robots, ""
 
     async def _check_allowed(self, url: str) -> None:
         parts = urlsplit(url)

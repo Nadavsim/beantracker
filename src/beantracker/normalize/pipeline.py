@@ -53,7 +53,7 @@ def normalize(product: RawProduct, roaster: str, currency: str, scraped_at: date
             roaster=roaster,
             external_id=product.external_id,
             variant_external_id=v.external_id,
-            name=product.title,
+            name=" ".join(product.title.split()),  # some shops pad titles with spaces
             url=product.url,
             origin_country=country,
             origin_region=region,

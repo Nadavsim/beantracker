@@ -19,6 +19,7 @@ from beantracker.config import RoasterConfig, Settings, load_roasters
 from beantracker.db import make_engine, make_session_factory
 from beantracker.domain.bean import Bean
 from beantracker.http.client import PoliteClient
+from beantracker.http.throttle import DomainThrottle
 from beantracker.models.orm import RunStatus
 from beantracker.normalize.price import from_minor
 from beantracker.runner import RunResult, collect, run_scrape
@@ -72,16 +73,21 @@ def _check_adapters(roasters: Iterable[RoasterConfig], path: Path) -> None:
         )
 
 
-def _client(cache: bool, store: bool) -> PoliteClient:
+def _client(cache: bool, store: bool, throttle: DomainThrottle | None = None) -> PoliteClient:
     """A stored run never reads the cache: cached pages would be saved as fresh snapshots
-    under today's timestamp. The cache only serves the live check (`--no-store`)."""
+    under today's timestamp. The cache only serves the live check (`--no-store`).
+
+    Pass one shared `throttle` to every client that runs at the same time, so the spacing
+    between requests holds per host across all of them, not per client."""
     settings = Settings()
     cache_dir = None if store else (Path(".http_cache") if cache else settings.cache_dir)
     return PoliteClient(
         settings.user_agent,
         settings.request_delay_s,
         cache_dir,
+        throttle=throttle,
         cache_ttl_s=settings.cache_ttl_hours * 3600,
+        max_crawl_delay_s=settings.max_crawl_delay_s,
     )
 
 
@@ -139,30 +145,46 @@ def scrape(
 def scrape_all(
     config: ConfigOpt = Path("config/roasters.yaml"),
     strict: StrictOpt = False,
+    concurrency: Annotated[
+        int, typer.Option(min=1, help="How many roasters to scrape at the same time.")
+    ] = 4,
 ) -> None:
     """Scrape every configured roaster and store the results.
 
-    Each roaster is isolated: an unexpected error in one is reported and the rest still run.
+    Roasters run concurrently (different sites, so no extra load on any one) and are isolated:
+    an unexpected error in one is reported and the rest still finish.
     """
     roasters = _load_config(config)
     _check_adapters(roasters.values(), config)
     engine = make_engine()
-    sessions = make_session_factory(engine)
-    results: list[RunResult] = []
     try:
-        for cfg in roasters.values():
-            try:
-                result = asyncio.run(_scrape_one(cfg, False, sessions, False))
-            except Exception as exc:  # not KeyboardInterrupt: Ctrl+C must still stop everything
-                error = f"{type(exc).__name__}: {exc}"
-                console.print(f"[bold]{cfg.slug}[/bold]: [red]failed[/red] before it could run")
-                console.print(f"  error: {error}")
-                result = RunResult(None, RunStatus.failed, error=error)
-            if result is not None:
-                results.append(result)
+        sessions = make_session_factory(engine)
+        results = asyncio.run(_scrape_many(list(roasters.values()), sessions, concurrency))
     finally:
         engine.dispose()
     _exit_for(results, strict)
+
+
+async def _scrape_many(
+    roasters: list[RoasterConfig], sessions: sessionmaker[Session], concurrency: int
+) -> list[RunResult]:
+    # One throttle for all clients: two roasters that share a host still get spaced requests.
+    throttle = DomainThrottle(Settings().request_delay_s)
+    gate = asyncio.Semaphore(concurrency)
+
+    async def one(cfg: RoasterConfig) -> RunResult:
+        async with gate:
+            try:
+                result = await _scrape_one(cfg, False, sessions, False, throttle)
+            except Exception as exc:  # not Ctrl+C or cancellation: those must stop everything
+                error = f"{type(exc).__name__}: {exc}"
+                console.print(f"[bold]{cfg.slug}[/bold]: [red]failed[/red] before it could run")
+                console.print(f"  error: {error}")
+                return RunResult(None, RunStatus.failed, error=error)
+        assert result is not None  # a stored run always has a result
+        return result
+
+    return list(await asyncio.gather(*(one(cfg) for cfg in roasters)))
 
 
 async def _scrape_one(
@@ -170,9 +192,10 @@ async def _scrape_one(
     cache: bool,
     sessions: sessionmaker[Session] | None,
     reset_baseline: bool,
+    throttle: DomainThrottle | None = None,
 ) -> RunResult | None:
     """`sessions=None` is the live check: print what would be stored, store nothing."""
-    client = _client(cache, store=sessions is not None)
+    client = _client(cache, store=sessions is not None, throttle=throttle)
     try:
         adapter = build_adapter(cfg, client)
         if sessions is None:
@@ -186,15 +209,21 @@ async def _scrape_one(
 
 
 def _bean_table(title: str, beans: Iterable[Bean], *, roaster_column: bool = False) -> Table:
-    table = Table(title=title)
+    table = Table(title=title, expand=True)
     columns = ["Name", "Size", "Price", "/100g", "Stock", "Origin", "Process"]
     if roaster_column:
         columns.insert(0, "Roaster")
     for col in columns:
-        table.add_column(col)
+        # One line per size. Only the name gives way when space is short: it takes whatever
+        # the other columns leave (ratio) and is cut with an ellipsis instead of wrapping over
+        # several rows, which made 80-column output unreadable, Hebrew titles especially.
+        if col == "Name":
+            table.add_column(col, ratio=1, no_wrap=True, overflow="ellipsis")
+        else:
+            table.add_column(col, no_wrap=True)
     for b in beans:
         row = [
-            b.name[:48],
+            " ".join(b.name.split()),
             f"{b.weight_g} g" if b.weight_g else "?",
             f"{from_minor(b.price_minor, b.currency)} {b.currency}",
             f"{b.price_per_100g}" if b.price_per_100g else "?",
@@ -268,8 +297,9 @@ def runs_list(limit: int = 15) -> None:
     """Show recent scrape runs with their health status."""
     engine = make_engine()
     table = Table(title="Recent runs")
-    for col in ("Run", "Roaster", "Started", "Status", "Products", "Missing", "Flags"):
-        table.add_column(col)
+    for col in ("Run", "Roaster", "Started", "Status", "Products", "Missing"):
+        table.add_column(col, no_wrap=True)  # a date or a count split over two lines is noise
+    table.add_column("Flags")  # may hold an error message, so this one is allowed to wrap
     try:
         with make_session_factory(engine)() as session:
             for run, slug in repo.recent_runs(session, limit):
@@ -279,7 +309,10 @@ def runs_list(limit: int = 15) -> None:
                     run.started_at.strftime("%Y-%m-%d %H:%M"),
                     run.status.value,
                     str(run.product_count),
-                    f"{float(run.missing_field_rate or 0):.0%}",
+                    # NULL means "not measured" (failed runs), which is not the same as 0%.
+                    "-"
+                    if run.missing_field_rate is None
+                    else f"{float(run.missing_field_rate):.0%}",
                     ", ".join(run.health_flags) or run.error or "",
                 )
     finally:

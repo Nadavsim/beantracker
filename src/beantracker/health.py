@@ -47,14 +47,17 @@ def baseline_coverage(recent: list[dict[str, float]]) -> dict[str, float]:
 class HealthReport:
     status: RunStatus
     flags: list[str]
-    missing_field_rate: float
+    missing_field_rate: float | None  # None: not measured (failed run, or no sizes)
     coverage: dict[str, float] = field(default_factory=dict)
 
 
-def missing_field_rate(beans: list[Bean]) -> float:
-    """Share of beans lacking a required field (price is always set by construction)."""
+def missing_field_rate(beans: list[Bean]) -> float | None:
+    """Share of beans lacking a required field (price is always set by construction).
+
+    None when there are no beans at all: nothing was measured, which is not the same as
+    nothing missing."""
     if not beans:
-        return 0.0
+        return None
     bad = sum(1 for b in beans if not b.name or b.weight_g is None or b.price_minor <= 0)
     return bad / len(beans)
 
@@ -81,7 +84,7 @@ def evaluate(
         drop_pct = (baseline - product_count) / baseline * 100
         if drop_pct > thresholds.max_drop_pct:
             flags.append(COUNT_DROP)
-    if rate > thresholds.max_missing_rate:
+    if rate is not None and rate > thresholds.max_missing_rate:
         flags.append(MISSING_FIELDS)
     if baseline_cov and coverage:
         for name, usual in sorted(baseline_cov.items()):
