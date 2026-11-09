@@ -6,7 +6,7 @@ Scrapes specialty coffee roasters, normalizes their products into one searchable
 keeps a price and stock history for every size, so "what is new" and "what changed price" are
 questions you can ask the database.
 
-Python 3.12, PostgreSQL, SQLAlchemy 2, Alembic, httpx, Typer. 227 offline tests, strict mypy.
+Python 3.12, PostgreSQL, SQLAlchemy 2, Alembic, httpx, Typer. 268 offline tests, strict mypy.
 
 **Status:** Phase 1 is done: four roasters (three Shopify shops configured in YAML, one custom
 HTML scraper), a CLI, per-run health checks and a stored history. Not built yet: web UI, API,
@@ -140,7 +140,7 @@ accepts the new normal.
 | Slug | Site | Kind | Notes |
 | --- | --- | --- | --- |
 | `nomena` | Nomena Roasters (Israel) | Shopify, ILS | Hebrew titles; a `-light` handle suffix means a lighter roast |
-| `september` | September Coffee | Shopify, USD | Whole back catalog is listed, mostly sold out |
+| `september` | September Coffee | Shopify, USD | Whole back catalog is listed, mostly sold out. Its feed has no descriptions, so the origin, process and roast level of in-stock coffees are read from their product pages |
 | `hydrangea` | Hydrangea Coffee Roasters | Shopify, USD | Sizes in ounces; the site's own `grams` field is unreliable |
 | `dak` | DAK Coffee Roasters | WooCommerce HTML, EUR | Custom adapter; only the default size is priced |
 
@@ -159,6 +159,8 @@ A Shopify shop is configuration, not code. Add an entry to `config/roasters.yaml
     exclude_title_keywords: [gift card]
     min_price: 3
     roast_from_handle: {"-light": light}
+    # if the feed has no description, read each in-stock product page (theme-specific parser)
+    details_from_pages: {parser: parameter_list, only: in_stock}
 ```
 
 Check it with `beantracker scrape example --no-store`. A site that is not Shopify needs an
@@ -181,7 +183,7 @@ src/beantracker/
   adapters/              base protocol, registry, generic Shopify adapter, DAK
   normalize/             weight, price, origin, process/roast, and the pipeline
   http/                  PoliteClient, robots.txt matcher, per-host throttle
-tests/                   227 tests; fixtures/ holds real captured pages and feeds
+tests/                   268 tests; fixtures/ holds real captured pages and feeds
 ```
 
 ## Development
@@ -207,8 +209,9 @@ CI runs lint, the format check, mypy and the full suite against a Postgres servi
   A true cross-currency ranking would need exchange rates.
 - **DAK shows only the default size's price**, because the other sizes need WooCommerce's Store
   API.
-- **Origin and process depend on what a roaster writes.** For example only about 58% of September
-  sizes had an origin on 2026-11-09, because many titles do not name a country.
+- **Origin and process depend on what a roaster writes.** September's in-stock coffees are read
+  from their product pages, but its sold-out back catalog only has what the title says, so about
+  61% of all its sizes have an origin (2026-11-09).
 - **Sold-out coffees are kept**, as some roasters list their whole back catalog; use `--in-stock`.
 - Not built yet: scheduled scraping, a Dockerfile, a web UI and API, alerts for new lots that
   match your criteria. The data model already supports them (new-lot and delisting queries, a

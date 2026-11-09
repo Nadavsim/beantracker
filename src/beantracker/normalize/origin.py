@@ -79,6 +79,21 @@ def find_region(text: str) -> tuple[str, str] | None:
     return None
 
 
+def clean_region(value: str | None, country: str | None) -> str | None:
+    """A region as a site writes it ('Cauca, Colombia', 'Piendamó, Cauca, Colombia', 'Huila')
+    reduced to its last part once the repeated country is dropped, in canonical spelling when
+    it is a known region."""
+    if not value:
+        return None
+    parts = [p.strip() for p in value.split(",") if p.strip()]
+    if country:
+        parts = [p for p in parts if find_country(p) != country]
+    if not parts:
+        return None
+    hit = find_region(parts[-1])
+    return hit[0] if hit and (country is None or hit[1] == country) else parts[-1]
+
+
 def _labelled_region(before_country: list[str], country: str) -> str | None:
     """Region from the parts preceding the country in 'Farm, Region, Country'.
 

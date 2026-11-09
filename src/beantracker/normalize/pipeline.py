@@ -6,9 +6,10 @@ from beantracker.normalize.attributes import (
     parse_process,
     parse_process_stated,
     parse_roast,
+    parse_roast_label,
     split_notes,
 )
-from beantracker.normalize.origin import parse_origin
+from beantracker.normalize.origin import clean_region, parse_origin
 from beantracker.normalize.price import price_per_100g, to_minor
 from beantracker.normalize.text import html_to_text, labelled_fields
 from beantracker.normalize.weight import parse_weight_g
@@ -25,14 +26,16 @@ def normalize(product: RawProduct, roaster: str, currency: str, scraped_at: date
     attrs = product.attributes
 
     country, region = parse_origin(attrs.get("origin") or fields.get("origin"), product.title, text)
-    region = attrs.get("region") or region
+    region = clean_region(attrs.get("region"), country) or region
     process = parse_process(
         attrs.get("process", ""), fields.get("process", ""), product.title
     ) or parse_process_stated(text)
     # A roast level the adapter already knows (stated by the roaster's own convention) beats
     # anything guessed from prose.
-    roast = attrs.get("roast_level") or parse_roast(
-        attrs.get("roast", ""), fields.get("roast", ""), product.title, text
+    roast = (
+        attrs.get("roast_level")
+        or parse_roast_label(attrs.get("roast", ""))  # a dedicated 'Roast Level' field
+        or parse_roast(fields.get("roast", ""), product.title, text)
     )
     varietal = attrs.get("varietal") or fields.get("variety") or fields.get("varietal")
     notes = split_notes(

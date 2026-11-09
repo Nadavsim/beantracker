@@ -2,16 +2,32 @@ import json
 from decimal import Decimal, InvalidOperation
 from typing import Any, Literal
 
+import httpx
 from pydantic import BaseModel, ConfigDict, Field
 
+from beantracker.adapters.pages import PAGE_PARSERS
 from beantracker.config import RoasterConfig
 from beantracker.domain.raw import RawProduct, RawVariant
-from beantracker.http.client import PoliteClient
+from beantracker.http.client import PoliteClient, RobotsDisallowed, TooManyRedirects
 
-Roast = Literal["light", "medium", "medium-dark", "dark"]  # what normalize/attributes emits
+Roast = Literal["light", "medium-light", "medium", "medium-dark", "dark"]  # what normalize emits
 
 PAGE_SIZE = 250
 MAX_PAGES = 40  # safety stop against a misbehaving paginator
+
+
+class PageDetails(BaseModel):
+    """Read extra product details from each product's own page.
+
+    For a theme whose feed leaves the description empty and shows country, process and roast
+    level only on the page. `only: in_stock` limits this to what can be bought now, which keeps
+    the cost to a few dozen extra requests; sold-out back catalog keeps what its title says.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    parser: Literal["parameter_list"]  # how this theme lays the details out (adapters/pages.py)
+    only: Literal["in_stock", "all"] = "in_stock"
 
 
 class ShopifyOptions(BaseModel):
@@ -34,6 +50,8 @@ class ShopifyOptions(BaseModel):
     # roaster whose "<bean>-light" listing is the lighter roast of "<bean>". The site's own
     # convention, so it is stated per roaster rather than guessed; the longest suffix wins.
     roast_from_handle: dict[str, Roast] = Field(default_factory=dict)
+    # fetch product pages for details the feed lacks; off unless set
+    details_from_pages: PageDetails | None = None
 
 
 class ShopifyAdapter:
@@ -52,6 +70,7 @@ class ShopifyAdapter:
             ((s.lower(), roast) for s, roast in opts.roast_from_handle.items()),
             key=lambda pair: -len(pair[0]),
         )
+        self._details = opts.details_from_pages
 
     def _roast_from_handle(self, handle: str) -> str | None:
         handle = handle.lower()
@@ -71,6 +90,39 @@ class ShopifyAdapter:
             products.extend(p for item in items if (p := self._parse(item)) is not None)
             if len(items) < PAGE_SIZE:
                 break
+        if self._details is not None:
+            products = await self._with_page_details(products, self._details)
+        return products
+
+    async def _with_page_details(
+        self, products: list[RawProduct], details: PageDetails
+    ) -> list[RawProduct]:
+        """Add what the product pages say. A page that cannot be read costs that product its
+        details, not the run: they are supplementary. But if *every* page fails (robots now
+        forbids /products/, the site is blocking us, the layout moved) that is systemic, so it
+        raises instead of quietly degrading the whole catalog."""
+        read = PAGE_PARSERS[details.parser]
+        wanted = [
+            i
+            for i, p in enumerate(products)
+            if details.only == "all" or any(v.available for v in p.variants)
+        ]
+        failures = 0
+        for i in wanted:
+            product = products[i]
+            try:
+                html = await self._client.get_text(product.url)
+            except (httpx.HTTPError, RobotsDisallowed, TooManyRedirects):
+                failures += 1
+                continue
+            page = read(html)
+            if page:
+                # Through _parse, so the details also live in `raw` and survive a re-parse.
+                enriched = self._parse({**product.raw, "page_details": page})
+                if enriched is not None:
+                    products[i] = enriched
+        if wanted and failures == len(wanted):
+            raise RuntimeError(f"could not read the product page of any of {len(wanted)} products")
         return products
 
     def _parse(self, item: dict[str, Any]) -> RawProduct | None:
@@ -95,7 +147,10 @@ class ShopifyAdapter:
         tags = item.get("tags", [])
         if isinstance(tags, str):  # the storefront API sometimes returns a comma string
             tags = [t.strip() for t in tags.split(",") if t.strip()]
+        attributes: dict[str, str] = dict(item.get("page_details") or {})
         roast = self._roast_from_handle(str(item["handle"]))
+        if roast:  # the roaster's own handle convention is stated in config, so it wins
+            attributes["roast_level"] = roast
         return RawProduct(
             external_id=str(item["id"]),
             title=title,
@@ -104,7 +159,7 @@ class ShopifyAdapter:
             tags=tags,
             product_type=ptype,
             variants=variants,
-            attributes={"roast_level": roast} if roast else {},
+            attributes=attributes,
             raw=_slim(item),
         )
 
@@ -124,6 +179,7 @@ _KEEP = (
     "created_at",
     "updated_at",
     "published_at",
+    "page_details",  # added by _with_page_details; the feed itself never has it
 )
 _VARIANT_KEEP = ("id", "title", "price", "grams", "available", "sku")
 

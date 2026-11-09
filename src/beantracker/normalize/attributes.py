@@ -52,6 +52,8 @@ def parse_process_stated(text: str) -> str | None:
 
 _ROAST_RULES: list[tuple[str, str]] = [
     (r"medium[- ]dark|בינונית[- ]כהה", "medium-dark"),
+    # Before "light": "medium-light roast" also contains "light roast".
+    (r"(?:medium[- ]light|light[- ]medium)[- ]roast", "medium-light"),
     (r"(?:extra|ultra)[- ]?light|light[- ]roast|קלי?יה בהירה", "light"),
     (r"medium[- ]roast|קלי?יה בינונית", "medium"),
     (r"dark[- ]roast|קלי?יה כהה", "dark"),
@@ -65,6 +67,24 @@ def parse_roast(*texts: str) -> str | None:
         for pattern, label in _ROAST_RULES:
             if re.search(pattern, lowered):
                 return label
+    return None
+
+
+def parse_roast_label(value: str) -> str | None:
+    """Roast level from a field that is only about roast ('Medium - Light', 'Dark').
+
+    Unlike `parse_roast`, which must find roast phrasing inside prose, a dedicated
+    'Roast Level' value can be read by its words alone. Order does not matter, so
+    'Medium - Light' and 'Light - Medium' agree.
+    """
+    words = set(re.findall(r"light|medium|dark", (value or "").lower()))
+    if {"medium", "dark"} <= words:
+        return "medium-dark"
+    if {"medium", "light"} <= words:
+        return "medium-light"
+    for word in ("dark", "light", "medium"):
+        if word in words:
+            return word
     return None
 
 
