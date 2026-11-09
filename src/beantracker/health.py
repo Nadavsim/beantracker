@@ -1,3 +1,4 @@
+import statistics
 from dataclasses import dataclass
 
 from beantracker.config import HealthThresholds
@@ -7,6 +8,20 @@ from beantracker.models.orm import RunStatus
 ZERO_PRODUCTS = "zero_products"
 COUNT_DROP = "count_drop"
 MISSING_FIELDS = "missing_fields"
+# Informational: an operator declared this run the new normal (`scrape --reset-baseline`).
+# It never changes a run's status; it marks where the baseline window restarts.
+BASELINE_RESET = "baseline_reset"
+
+
+def baseline_count(recent_ok_counts: list[int]) -> float | None:
+    """Expected product count: the median of recent healthy runs, None without history.
+
+    Comparing with only the latest ok run lets a slow decline slip through, because the
+    baseline drifts down with it (30% per run never trips a 40% limit). A median of a few
+    runs holds the older level in view, and unlike a maximum a single odd high run does
+    not inflate it.
+    """
+    return statistics.median(recent_ok_counts) if recent_ok_counts else None
 
 
 @dataclass(frozen=True)
@@ -26,11 +41,11 @@ def missing_field_rate(beans: list[Bean]) -> float:
 
 def evaluate(
     product_count: int,
-    previous_ok_count: int | None,
+    baseline: float | None,
     beans: list[Bean],
     thresholds: HealthThresholds,
 ) -> HealthReport:
-    """Judge a finished scrape against the previous healthy run.
+    """Judge a finished scrape against the recent healthy baseline (see baseline_count).
 
     Silent breakage is the main scraper failure mode (a redesign yields an empty or partial
     page, not an exception), so these checks compare against history instead of trusting
@@ -40,8 +55,8 @@ def evaluate(
     flags: list[str] = []
     if product_count == 0:
         flags.append(ZERO_PRODUCTS)
-    elif previous_ok_count and previous_ok_count > 0:
-        drop_pct = (previous_ok_count - product_count) / previous_ok_count * 100
+    elif baseline and baseline > 0:
+        drop_pct = (baseline - product_count) / baseline * 100
         if drop_pct > thresholds.max_drop_pct:
             flags.append(COUNT_DROP)
     if rate > thresholds.max_missing_rate:

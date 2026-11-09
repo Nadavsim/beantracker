@@ -6,16 +6,16 @@ Identity vs observation: `coffee` / `offer` rows are upserted by natural key, wh
 """
 
 from dataclasses import dataclass
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from decimal import Decimal
 
-from sqlalchemy import select
+from sqlalchemy import func, select, update
 from sqlalchemy.orm import Session
 
 from beantracker.config import RoasterConfig
 from beantracker.domain.bean import Bean
 from beantracker.domain.raw import RawProduct
-from beantracker.health import HealthReport
+from beantracker.health import BASELINE_RESET, HealthReport
 from beantracker.models.orm import Coffee, Offer, OfferSnapshot, Roaster, RunStatus, ScrapeRun
 
 
@@ -42,18 +42,53 @@ def start_run(session: Session, roaster: Roaster) -> ScrapeRun:
     return run
 
 
-def previous_ok_count(session: Session, roaster_id: int, before_run_id: int) -> int | None:
-    """Product count of the latest *ok* run. Warning runs are excluded so one bad scrape
-    cannot lower the baseline and mask the next one."""
-    return session.scalar(
-        select(ScrapeRun.product_count)
+def recent_ok_counts(
+    session: Session, roaster_id: int, before_run_id: int, limit: int
+) -> list[int]:
+    """Product counts of the latest `limit` *ok* runs, newest first.
+
+    Warning runs are excluded so one bad scrape cannot lower the baseline and mask the
+    next one. History stops at the latest run flagged `baseline_reset`: after an operator
+    accepts a new catalog size, the old, larger counts must no longer count.
+    """
+    reset_id = session.scalar(
+        select(func.max(ScrapeRun.id)).where(
+            ScrapeRun.roaster_id == roaster_id,
+            ScrapeRun.id < before_run_id,
+            ScrapeRun.health_flags.contains([BASELINE_RESET]),
+        )
+    )
+    return list(
+        session.scalars(
+            select(ScrapeRun.product_count)
+            .where(
+                ScrapeRun.roaster_id == roaster_id,
+                ScrapeRun.status == RunStatus.ok,
+                ScrapeRun.id < before_run_id,
+                ScrapeRun.id >= (reset_id or 0),
+            )
+            .order_by(ScrapeRun.id.desc())
+            .limit(limit)
+        )
+    )
+
+
+def fail_stale_runs(session: Session, roaster_id: int, older_than: timedelta) -> None:
+    """Close out runs still 'running' after `older_than`: their process died (kill, power
+    loss) before it could record a result. Runs younger than the cutoff are left alone, as
+    they may be a legitimately concurrent scrape."""
+    session.execute(
+        update(ScrapeRun)
         .where(
             ScrapeRun.roaster_id == roaster_id,
-            ScrapeRun.status == RunStatus.ok,
-            ScrapeRun.id < before_run_id,
+            ScrapeRun.status == RunStatus.running,
+            ScrapeRun.started_at < datetime.now(UTC) - older_than,
         )
-        .order_by(ScrapeRun.id.desc())
-        .limit(1)
+        .values(
+            status=RunStatus.failed,
+            finished_at=datetime.now(UTC),
+            error="Stale: the process ended before this run finished",
+        )
     )
 
 

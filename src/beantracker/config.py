@@ -20,6 +20,8 @@ class Settings(BaseSettings):
 class HealthThresholds(BaseModel):
     max_drop_pct: float = 40.0
     max_missing_rate: float = 0.3
+    # How many recent ok runs form the baseline for the count-drop check (their median).
+    baseline_runs: int = Field(default=5, ge=1)
 
 
 class RoasterConfig(BaseModel):

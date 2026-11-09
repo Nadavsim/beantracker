@@ -2,7 +2,13 @@ from datetime import UTC, datetime
 
 from beantracker.config import HealthThresholds
 from beantracker.domain.bean import Bean
-from beantracker.health import COUNT_DROP, MISSING_FIELDS, ZERO_PRODUCTS, evaluate
+from beantracker.health import (
+    COUNT_DROP,
+    MISSING_FIELDS,
+    ZERO_PRODUCTS,
+    baseline_count,
+    evaluate,
+)
 from beantracker.models.orm import RunStatus
 
 T = HealthThresholds(max_drop_pct=40, max_missing_rate=0.3)
@@ -68,3 +74,16 @@ def test_missing_fields_warns() -> None:
 def test_flags_combine() -> None:
     report = evaluate(5, 20, [bean(None)] * 5, T)
     assert report.flags == [COUNT_DROP, MISSING_FIELDS]
+
+
+def test_baseline_count_is_the_median_of_recent_ok_runs() -> None:
+    assert baseline_count([]) is None
+    assert baseline_count([10]) == 10
+    assert baseline_count([273, 390]) == 331.5
+    assert baseline_count([100, 100, 300, 100, 100]) == 100  # one spike does not move it
+
+
+def test_drop_is_measured_against_a_fractional_baseline() -> None:
+    # 191 vs a baseline of 331.5 is a 42% drop; vs the latest value (273) it was only 30%.
+    assert evaluate(191, 331.5, [bean()] * 191, T).flags == [COUNT_DROP]
+    assert evaluate(191, 273, [bean()] * 191, T).flags == []
