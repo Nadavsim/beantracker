@@ -226,7 +226,8 @@ def test_catalog_command_lists_stored_sizes(
     args = ["scrape", "fake", "--config", str(config_file)]
     FAKE["count"] = 2
     runner.invoke(app, args)
-    listing = runner.invoke(app, ["catalog", "--roaster", "fake"])
+    # Nine columns need a real terminal; at the 80-column default the names would be cut.
+    listing = runner.invoke(app, ["catalog", "--roaster", "fake"], env={"COLUMNS": "140"})
     assert listing.exit_code == 0, listing.output
     assert "Lot 1" in listing.output
     assert "2 sizes" in listing.output

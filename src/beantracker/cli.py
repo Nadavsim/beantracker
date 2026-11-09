@@ -14,7 +14,7 @@ from sqlalchemy.orm import Session, sessionmaker
 
 from beantracker import repo
 from beantracker.adapters.base import RoasterAdapter
-from beantracker.adapters.registry import ADAPTERS, build_adapter
+from beantracker.adapters.registry import ADAPTERS, build_adapter, validate_options
 from beantracker.config import RoasterConfig, Settings, load_roasters
 from beantracker.db import make_engine, make_session_factory
 from beantracker.domain.bean import Bean
@@ -63,14 +63,21 @@ def _load_config(path: Path) -> dict[str, RoasterConfig]:
 
 
 def _check_adapters(roasters: Iterable[RoasterConfig], path: Path) -> None:
-    """Refuse to start when a config names an adapter that does not exist, before any
-    scraping, so a typo is a clear usage error and not a traceback halfway through."""
+    """Refuse to start when a config names an adapter that does not exist, or options its
+    adapter does not accept, before any scraping, so a typo is a clear usage error and not a
+    traceback halfway through (or an option that silently does nothing)."""
+    roasters = list(roasters)
     unknown = sorted({r.adapter for r in roasters} - ADAPTERS.keys())
     if unknown:
         _usage_error(
             f"Unknown adapter(s) {', '.join(unknown)} in {path}. "
             f"Known: {', '.join(sorted(ADAPTERS))}"
         )
+    for r in roasters:
+        try:
+            validate_options(r)
+        except ValidationError as exc:
+            _usage_error(f"Invalid options for roaster {r.slug!r} in {path}:\n{exc}")
 
 
 def _client(cache: bool, store: bool, throttle: DomainThrottle | None = None) -> PoliteClient:
@@ -208,19 +215,25 @@ async def _scrape_one(
         await client.aclose()
 
 
+# The free-text columns share whatever space the short fixed ones leave, name getting most.
+FLEXIBLE_COLUMNS = {"Name": 3, "Origin": 2, "Process": 2}
+
+
 def _bean_table(title: str, beans: Iterable[Bean], *, roaster_column: bool = False) -> Table:
     table = Table(title=title, expand=True)
-    columns = ["Name", "Size", "Price", "/100g", "Stock", "Origin", "Process"]
+    columns = ["Name", "Size", "Price", "/100g", "Stock", "Origin", "Process", "Roast"]
     if roaster_column:
         columns.insert(0, "Roaster")
     for col in columns:
         # One line per size. Only the name gives way when space is short: it takes whatever
         # the other columns leave (ratio) and is cut with an ellipsis instead of wrapping over
         # several rows, which made 80-column output unreadable, Hebrew titles especially.
-        if col == "Name":
-            table.add_column(col, ratio=1, no_wrap=True, overflow="ellipsis")
+        if col in FLEXIBLE_COLUMNS:
+            table.add_column(
+                col, ratio=FLEXIBLE_COLUMNS[col], min_width=6, no_wrap=True, overflow="ellipsis"
+            )
         else:
-            table.add_column(col, no_wrap=True)
+            table.add_column(col, no_wrap=True)  # sizes, prices, stock, roast keep their width
     for b in beans:
         row = [
             " ".join(b.name.split()),
@@ -230,6 +243,7 @@ def _bean_table(title: str, beans: Iterable[Bean], *, roaster_column: bool = Fal
             "yes" if b.in_stock else "no",
             ", ".join(x for x in (b.origin_country, b.origin_region) if x) or "?",
             b.process or "?",
+            b.roast_level or "?",
         ]
         table.add_row(*([b.roaster, *row] if roaster_column else row))
     return table

@@ -4,6 +4,9 @@ roasters:
     base_url: https://nomenaroasters.com
     adapter: shopify
     currency: ILS
+    options:
+      # Nomena lists a lighter roast of some beans as a second product, "<bean>-light".
+      roast_from_handle: {"-light": light}
   - slug: september
     name: September Coffee
     base_url: https://september.coffee

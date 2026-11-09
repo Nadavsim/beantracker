@@ -29,7 +29,11 @@ def normalize(product: RawProduct, roaster: str, currency: str, scraped_at: date
     process = parse_process(
         attrs.get("process", ""), fields.get("process", ""), product.title
     ) or parse_process_stated(text)
-    roast = parse_roast(attrs.get("roast", ""), fields.get("roast", ""), product.title, text)
+    # A roast level the adapter already knows (stated by the roaster's own convention) beats
+    # anything guessed from prose.
+    roast = attrs.get("roast_level") or parse_roast(
+        attrs.get("roast", ""), fields.get("roast", ""), product.title, text
+    )
     varietal = attrs.get("varietal") or fields.get("variety") or fields.get("varietal")
     notes = split_notes(
         attrs.get("tasting_notes") or fields.get("tastes like") or fields.get("tasting notes")
