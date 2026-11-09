@@ -28,7 +28,8 @@ roasters:
     currency: USD
     options:
       exclude_product_types: [gear, cupping]
-      exclude_title_keywords: [gift card, mineral concentrate, double walled, packs]
+      exclude_title_keywords:
+        [gift card, mineral concentrate, double walled, packs, subscription, sticker, advent calendar, bundle]
   - slug: dak
     name: DAK Coffee Roasters
     base_url: https://www.dakcoffeeroasters.com
